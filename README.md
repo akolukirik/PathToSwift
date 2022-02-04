@@ -14,7 +14,7 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 # My iOS Developer Path
 ## Bootcamp Lessons
 - [ ] Week 1 
-   - [ ] Lesson 1
+   - [x] Lesson 1
    - [ ] Lesson 2
 - [ ] Week 2
    - [ ] Lesson 1
@@ -54,7 +54,7 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
    - [ ] Lesson 2
    
 # Patika.dev
-- [ ] Module 1
+- [x] Module 1
 - [ ] Module 2
 - [ ] Module 3
 - [ ] Module 4
