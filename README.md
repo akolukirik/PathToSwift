@@ -13,9 +13,9 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 
 # My iOS Developer Path
 ## Bootcamp Lessons
-- [ ] Week 1 
+- [x] Week 1 
    - [x] Lesson 1
-   - [ ] Lesson 2
+   - [x] Lesson 2
 - [ ] Week 2
    - [ ] Lesson 1
    - [ ] Lesson 2
