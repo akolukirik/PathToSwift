@@ -7,11 +7,12 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 
 - Bootcamp Dersleri.
 
-- Patika.dev
+- [Hacking With Swift.](https://www.hackingwithswift.com/)
 
-- Hacking With Swift.
+- [iOS Geliştirme Kursu.](https://www.udemy.com/course/ios-gelistirme-kursu/)
 
 # My iOS Developer Path
+
 ## Bootcamp Lessons
 - [x] Week 1 
    - [x] Lesson 1
@@ -52,18 +53,7 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 - [ ] Week 13
    - [ ] Lesson 1
    - [ ] Lesson 2
-   
-# Patika.dev
-- [x] Module 1
-- [ ] Module 2
-- [ ] Module 3
-- [ ] Module 4
-- [ ] Module 5
-- [ ] Module 6
-- [ ] Module 7
-- [ ] Module 8
-- [ ] Module 9
-
+ 
 ## Hacking With Swift
 
 - [ ] Days 1-12: Introduction to Swift
@@ -89,6 +79,43 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 - [ ] Days 92-98: The Final Countdown
 - [ ] Day 99: Consolidation XI 
 - [ ] Days 100 – Final exam
+
+## iOS Geliştirme Kursu
+
+- [ ] Part 1
+- [ ] Part 2
+- [ ] Part 3
+- [ ] Part 4
+- [ ] Part 5
+- [ ] Part 6
+- [ ] Part 7
+- [ ] Part 8
+- [ ] Part 9
+- [ ] Part 10
+- [ ] Part 11
+- [ ] Part 12
+- [ ] Part 13
+- [ ] Part 14
+- [ ] Part 15
+- [ ] Part 16
+- [ ] Part 17
+- [ ] Part 18
+- [ ] Part 19
+- [ ] Part 20
+- [ ] Part 21
+- [ ] Part 22
+- [ ] Part 23
+- [ ] Part 24
+- [ ] Part 25
+- [ ] Part 26
+- [ ] Part 27
+- [ ] Part 28
+- [ ] Part 29
+- [ ] Part 30
+- [ ] Part 31
+- [ ] Part 32
+- [ ] Part 33
+- [ ] Part 34
 
 ## Bana Ulaşın
 
