@@ -18,7 +18,7 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
    - [x] Lesson 1
    - [x] Lesson 2
 - [ ] Week 2
-   - [ ] Lesson 1
+   - [x] Lesson 1
    - [ ] Lesson 2
 - [ ] Week 3
    - [ ] Lesson 1
@@ -84,7 +84,7 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 
 - [x] Part 1
 - [x] Part 2
-- [ ] Part 3
+- [x] Part 3
 - [ ] Part 4
 - [ ] Part 5
 - [ ] Part 6
