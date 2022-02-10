@@ -1,0 +1,4 @@
+Hacking with Swift 6. günü tamamladım.
+Almış olduğum eğitimin 3. videosunu tamamladım.
+iOS geliştirme kursuna başladım.
+	Bölüm 3 | Swift Temelleri
