@@ -1,0 +1,4 @@
+Hacking with Swift 7. günü tamamladım.
+iOS geliştirme kursuna başladım.
+	Bölüm 4 | Problemler ve Çözümler
+	Bölüm 5 | Layout ~
