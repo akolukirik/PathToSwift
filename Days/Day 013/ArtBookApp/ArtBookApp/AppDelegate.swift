@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  TravelBook
+//  ArtBookApp
 //
-//  Created by ali on 19.02.2022.
+//  Created by ali on 20.02.2022.
 //
 
 import UIKit
@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "TravelBook")
+        let container = NSPersistentContainer(name: "ArtBookApp")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

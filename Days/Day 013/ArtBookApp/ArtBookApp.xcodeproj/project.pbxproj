@@ -7,29 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41E6867F27C13D29005A6687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6867E27C13D29005A6687 /* AppDelegate.swift */; };
-		41E6868127C13D29005A6687 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6868027C13D29005A6687 /* SceneDelegate.swift */; };
-		41E6868327C13D29005A6687 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E6868227C13D29005A6687 /* ViewController.swift */; };
-		41E6868627C13D29005A6687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E6868427C13D29005A6687 /* Main.storyboard */; };
-		41E6868927C13D29005A6687 /* TravelBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41E6868727C13D29005A6687 /* TravelBook.xcdatamodeld */; };
-		41E6868B27C13D2B005A6687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41E6868A27C13D2B005A6687 /* Assets.xcassets */; };
-		41E6868E27C13D2B005A6687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E6868C27C13D2B005A6687 /* LaunchScreen.storyboard */; };
+		416116DD27C2DD7A000235A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416116DC27C2DD7A000235A7 /* AppDelegate.swift */; };
+		416116DF27C2DD7A000235A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416116DE27C2DD7A000235A7 /* SceneDelegate.swift */; };
+		416116E127C2DD7A000235A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416116E027C2DD7A000235A7 /* ViewController.swift */; };
+		416116E427C2DD7A000235A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416116E227C2DD7A000235A7 /* Main.storyboard */; };
+		416116E727C2DD7A000235A7 /* ArtBookApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 416116E527C2DD7A000235A7 /* ArtBookApp.xcdatamodeld */; };
+		416116E927C2DD7B000235A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416116E827C2DD7B000235A7 /* Assets.xcassets */; };
+		416116EC27C2DD7B000235A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416116EA27C2DD7B000235A7 /* LaunchScreen.storyboard */; };
+		416116F427C2F2C1000235A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416116F327C2F2C1000235A7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		41E6867B27C13D29005A6687 /* TravelBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		41E6867E27C13D29005A6687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41E6868027C13D29005A6687 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		41E6868227C13D29005A6687 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		41E6868527C13D29005A6687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		41E6868827C13D29005A6687 /* TravelBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelBook.xcdatamodel; sourceTree = "<group>"; };
-		41E6868A27C13D2B005A6687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		41E6868D27C13D2B005A6687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		41E6868F27C13D2B005A6687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		416116D927C2DD7A000235A7 /* ArtBookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtBookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		416116DC27C2DD7A000235A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		416116DE27C2DD7A000235A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		416116E027C2DD7A000235A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		416116E327C2DD7A000235A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		416116E627C2DD7A000235A7 /* ArtBookApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ArtBookApp.xcdatamodel; sourceTree = "<group>"; };
+		416116E827C2DD7B000235A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		416116EB27C2DD7B000235A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		416116ED27C2DD7B000235A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		416116F327C2F2C1000235A7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		41E6867827C13D29005A6687 /* Frameworks */ = {
+		416116D627C2DD7A000235A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +41,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		41E6867227C13D29005A6687 = {
+		416116D027C2DD7A000235A7 = {
 			isa = PBXGroup;
 			children = (
-				41E6867D27C13D29005A6687 /* TravelBook */,
-				41E6867C27C13D29005A6687 /* Products */,
+				416116DB27C2DD7A000235A7 /* ArtBookApp */,
+				416116DA27C2DD7A000235A7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		41E6867C27C13D29005A6687 /* Products */ = {
+		416116DA27C2DD7A000235A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41E6867B27C13D29005A6687 /* TravelBook.app */,
+				416116D927C2DD7A000235A7 /* ArtBookApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		41E6867D27C13D29005A6687 /* TravelBook */ = {
+		416116DB27C2DD7A000235A7 /* ArtBookApp */ = {
 			isa = PBXGroup;
 			children = (
-				41E6867E27C13D29005A6687 /* AppDelegate.swift */,
-				41E6868027C13D29005A6687 /* SceneDelegate.swift */,
-				41E6868227C13D29005A6687 /* ViewController.swift */,
-				41E6868427C13D29005A6687 /* Main.storyboard */,
-				41E6868A27C13D2B005A6687 /* Assets.xcassets */,
-				41E6868C27C13D2B005A6687 /* LaunchScreen.storyboard */,
-				41E6868F27C13D2B005A6687 /* Info.plist */,
-				41E6868727C13D29005A6687 /* TravelBook.xcdatamodeld */,
+				416116DC27C2DD7A000235A7 /* AppDelegate.swift */,
+				416116DE27C2DD7A000235A7 /* SceneDelegate.swift */,
+				416116F327C2F2C1000235A7 /* DetailViewController.swift */,
+				416116E027C2DD7A000235A7 /* ViewController.swift */,
+				416116E227C2DD7A000235A7 /* Main.storyboard */,
+				416116E827C2DD7B000235A7 /* Assets.xcassets */,
+				416116EA27C2DD7B000235A7 /* LaunchScreen.storyboard */,
+				416116ED27C2DD7B000235A7 /* Info.plist */,
+				416116E527C2DD7A000235A7 /* ArtBookApp.xcdatamodeld */,
 			);
-			path = TravelBook;
+			path = ArtBookApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41E6867A27C13D29005A6687 /* TravelBook */ = {
+		416116D827C2DD7A000235A7 /* ArtBookApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41E6869227C13D2B005A6687 /* Build configuration list for PBXNativeTarget "TravelBook" */;
+			buildConfigurationList = 416116F027C2DD7B000235A7 /* Build configuration list for PBXNativeTarget "ArtBookApp" */;
 			buildPhases = (
-				41E6867727C13D29005A6687 /* Sources */,
-				41E6867827C13D29005A6687 /* Frameworks */,
-				41E6867927C13D29005A6687 /* Resources */,
+				416116D527C2DD7A000235A7 /* Sources */,
+				416116D627C2DD7A000235A7 /* Frameworks */,
+				416116D727C2DD7A000235A7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TravelBook;
-			productName = TravelBook;
-			productReference = 41E6867B27C13D29005A6687 /* TravelBook.app */;
+			name = ArtBookApp;
+			productName = ArtBookApp;
+			productReference = 416116D927C2DD7A000235A7 /* ArtBookApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		41E6867327C13D29005A6687 /* Project object */ = {
+		416116D127C2DD7A000235A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					41E6867A27C13D29005A6687 = {
+					416116D827C2DD7A000235A7 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 41E6867627C13D29005A6687 /* Build configuration list for PBXProject "TravelBook" */;
+			buildConfigurationList = 416116D427C2DD7A000235A7 /* Build configuration list for PBXProject "ArtBookApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,56 +116,57 @@
 				en,
 				Base,
 			);
-			mainGroup = 41E6867227C13D29005A6687;
-			productRefGroup = 41E6867C27C13D29005A6687 /* Products */;
+			mainGroup = 416116D027C2DD7A000235A7;
+			productRefGroup = 416116DA27C2DD7A000235A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				41E6867A27C13D29005A6687 /* TravelBook */,
+				416116D827C2DD7A000235A7 /* ArtBookApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		41E6867927C13D29005A6687 /* Resources */ = {
+		416116D727C2DD7A000235A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41E6868E27C13D2B005A6687 /* LaunchScreen.storyboard in Resources */,
-				41E6868B27C13D2B005A6687 /* Assets.xcassets in Resources */,
-				41E6868627C13D29005A6687 /* Main.storyboard in Resources */,
+				416116EC27C2DD7B000235A7 /* LaunchScreen.storyboard in Resources */,
+				416116E927C2DD7B000235A7 /* Assets.xcassets in Resources */,
+				416116E427C2DD7A000235A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		41E6867727C13D29005A6687 /* Sources */ = {
+		416116D527C2DD7A000235A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41E6868927C13D29005A6687 /* TravelBook.xcdatamodeld in Sources */,
-				41E6868327C13D29005A6687 /* ViewController.swift in Sources */,
-				41E6867F27C13D29005A6687 /* AppDelegate.swift in Sources */,
-				41E6868127C13D29005A6687 /* SceneDelegate.swift in Sources */,
+				416116E127C2DD7A000235A7 /* ViewController.swift in Sources */,
+				416116DD27C2DD7A000235A7 /* AppDelegate.swift in Sources */,
+				416116F427C2F2C1000235A7 /* DetailViewController.swift in Sources */,
+				416116E727C2DD7A000235A7 /* ArtBookApp.xcdatamodeld in Sources */,
+				416116DF27C2DD7A000235A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		41E6868427C13D29005A6687 /* Main.storyboard */ = {
+		416116E227C2DD7A000235A7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				41E6868527C13D29005A6687 /* Base */,
+				416116E327C2DD7A000235A7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		41E6868C27C13D2B005A6687 /* LaunchScreen.storyboard */ = {
+		416116EA27C2DD7B000235A7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				41E6868D27C13D2B005A6687 /* Base */,
+				416116EB27C2DD7B000235A7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +174,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		41E6869027C13D2B005A6687 /* Debug */ = {
+		416116EE27C2DD7B000235A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -231,7 +235,7 @@
 			};
 			name = Debug;
 		};
-		41E6869127C13D2B005A6687 /* Release */ = {
+		416116EF27C2DD7B000235A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,7 +290,7 @@
 			};
 			name = Release;
 		};
-		41E6869327C13D2B005A6687 /* Debug */ = {
+		416116F127C2DD7B000235A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -295,7 +299,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W634M6PWQV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TravelBook/Info.plist;
+				INFOPLIST_FILE = ArtBookApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -306,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ali.kolukirik.TravelBook;
+				PRODUCT_BUNDLE_IDENTIFIER = ali.kolukirik.ArtBookApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -314,7 +318,7 @@
 			};
 			name = Debug;
 		};
-		41E6869427C13D2B005A6687 /* Release */ = {
+		416116F227C2DD7B000235A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -323,7 +327,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W634M6PWQV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TravelBook/Info.plist;
+				INFOPLIST_FILE = ArtBookApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +338,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ali.kolukirik.TravelBook;
+				PRODUCT_BUNDLE_IDENTIFIER = ali.kolukirik.ArtBookApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -345,20 +349,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41E6867627C13D29005A6687 /* Build configuration list for PBXProject "TravelBook" */ = {
+		416116D427C2DD7A000235A7 /* Build configuration list for PBXProject "ArtBookApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				41E6869027C13D2B005A6687 /* Debug */,
-				41E6869127C13D2B005A6687 /* Release */,
+				416116EE27C2DD7B000235A7 /* Debug */,
+				416116EF27C2DD7B000235A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41E6869227C13D2B005A6687 /* Build configuration list for PBXNativeTarget "TravelBook" */ = {
+		416116F027C2DD7B000235A7 /* Build configuration list for PBXNativeTarget "ArtBookApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				41E6869327C13D2B005A6687 /* Debug */,
-				41E6869427C13D2B005A6687 /* Release */,
+				416116F127C2DD7B000235A7 /* Debug */,
+				416116F227C2DD7B000235A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -366,17 +370,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		41E6868727C13D29005A6687 /* TravelBook.xcdatamodeld */ = {
+		416116E527C2DD7A000235A7 /* ArtBookApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				41E6868827C13D29005A6687 /* TravelBook.xcdatamodel */,
+				416116E627C2DD7A000235A7 /* ArtBookApp.xcdatamodel */,
 			);
-			currentVersion = 41E6868827C13D29005A6687 /* TravelBook.xcdatamodel */;
-			path = TravelBook.xcdatamodeld;
+			currentVersion = 416116E627C2DD7A000235A7 /* ArtBookApp.xcdatamodel */;
+			path = ArtBookApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 41E6867327C13D29005A6687 /* Project object */;
+	rootObject = 416116D127C2DD7A000235A7 /* Project object */;
 }
