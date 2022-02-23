@@ -11,7 +11,6 @@ import CoreData
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
-    
     var nameArray = [String]()
     var idArray = [UUID]()
     var selectedPainting = ""
@@ -19,6 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -34,9 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @objc func addButtonClicked() {
-        
         selectedPainting = ""
-        performSegue(withIdentifier: "toDetailVC", sender: nil)
+        performSegue(withIdentifier: "toDetailVC2", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +47,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell()
         cell.textLabel?.text = nameArray[indexPath.row]
         return cell
-        
     }
     
     @objc func getData() {
@@ -63,27 +61,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         fetchRequest.returnsObjectsAsFaults = false //cache bellek ile ilgili bunu araştır.
         
         do {
-            let result = try context.fetch(fetchRequest)
-            
-            for result in result as![NSManagedObject] {
-                if let name = result.value(forKey: "name") as? String {
-                    self.nameArray.append(name)
+            let results = try context.fetch(fetchRequest)
+            if results.count > 0 {
+                for result in results as! [NSManagedObject] {
+                    if let name = result.value(forKey: "name") as? String {
+                        self.nameArray.append(name)
+                    }
+                    if let id = result.value(forKey: "id") as? UUID {
+                        self.idArray.append(id)
+                    }
+                    self.tableView.reloadData
                 }
-                if let id = result.value(forKey: "id") as? UUID {
-                    self.idArray.append(id)
-                }
-                
-                self.tableView.reloadData()
             }
-        }
-        catch {
+        } catch {
             print("erroorrrrr")
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "toDetailsVC" {
+        if segue.identifier == "toDetailVC2" {
             let destinationVC = segue.destination as! DetailViewController
             destinationVC.chosenPainting = selectedPainting
             destinationVC.chosenPaintingId = selectedPaintingId
@@ -91,10 +87,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         selectedPainting = nameArray[indexPath.row]
         selectedPaintingId = idArray[indexPath.row]
-        performSegue(withIdentifier: "toDetailVC", sender: nil)
+        performSegue(withIdentifier: "toDetailVC2", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -103,13 +98,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
-            
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
-            
             let idString = idArray[indexPath.row].uuidString
             
             fetchRequest.predicate = NSPredicate(format: "id = %@", idString)
-            
             fetchRequest.returnsObjectsAsFaults = false
             
             do {
@@ -130,7 +122,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                     try context.save()
                                     
                                 } catch {
-                                    print("hataaa")
+                                    print("error")
                                 }
                                 break
                             }
@@ -140,10 +132,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             } catch {
                 print("error")
             }
-            
         }
-        
     }
-    
 }
-

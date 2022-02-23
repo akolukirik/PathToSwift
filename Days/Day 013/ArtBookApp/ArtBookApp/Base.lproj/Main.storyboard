@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="2Di-Y5-zLf"/>
                     <connections>
                         <outlet property="tableView" destination="SXz-zR-jGJ" id="V81-0y-dDN"/>
-                        <segue destination="zl6-dG-nhN" kind="show" identifier="toDetailVC" id="Z4o-VX-78o"/>
+                        <segue destination="zl6-dG-nhN" kind="show" identifier="toDetailVC2" id="Z4o-VX-78o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -113,6 +113,7 @@
                         <outlet property="artistText" destination="pDg-TE-a0N" id="px7-fL-KAi"/>
                         <outlet property="imageView" destination="OZC-GE-QN3" id="ktQ-jG-UDU"/>
                         <outlet property="nameText" destination="Kd4-I4-B58" id="Rq3-RC-sEM"/>
+                        <outlet property="saveButton" destination="iAw-IG-KaX" id="WQJ-m4-eBC"/>
                         <outlet property="yearText" destination="uyg-WQ-ByF" id="bPP-EJ-xrS"/>
                     </connections>
                 </viewController>

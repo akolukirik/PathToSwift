@@ -15,24 +15,28 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var artistText: UITextField!
     @IBOutlet weak var yearText: UITextField!
     
+    @IBOutlet weak var saveButton: UIButton!
     var chosenPainting = ""
     var chosenPaintingId : UUID?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if chosenPainting != "" {
             
+            saveButton.isHidden = true
+            
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
             
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
             let idString = chosenPaintingId?.uuidString
+            
             fetchRequest.predicate = NSPredicate(format: "id = %@", idString!)
             fetchRequest.returnsObjectsAsFaults = false
             
-            do {
+            do{
+                
                 let results = try context.fetch(fetchRequest)
                 
                 if results.count > 0 {
@@ -55,14 +59,16 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
                             let image = UIImage(data: imageData)
                             imageView.image = image
                         }
+                        
                     }
                 }
                 
-            } catch{
-                print("error :(((((((")
+            } catch {
+                print("error")
             }
-            
         } else {
+            saveButton.isHidden = false
+            saveButton.isEnabled = false
             nameText.text = ""
             artistText.text = ""
             yearText.text = ""
@@ -103,9 +109,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             print("aglaaa")
         }
         
-        self.navigationController?.popViewController(animated: true)
-        
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newData"), object: nil)
+        self.navigationController?.popViewController(animated: true)
         
     }
     
@@ -119,7 +124,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         let picker = UIImagePickerController()
         picker.delegate = self
         //picker.sourceType = .camera
-        //picker.sourceType = .savedPhotosAlbum
+        picker.sourceType = .savedPhotosAlbum
         picker.sourceType = .photoLibrary
         picker.allowsEditing = true //fotoğrafa müdehale edebilmek için
         
@@ -129,6 +134,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage]  as? UIImage        //info içerisine bir çok farklı fonskiyon çıkıyor bunları incele
+        saveButton.isEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     
