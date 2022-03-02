@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
     }
     
     @IBAction func signInClicked(_ sender: Any) {
@@ -64,4 +62,3 @@ class ViewController: UIViewController {
         
     }
 }
-

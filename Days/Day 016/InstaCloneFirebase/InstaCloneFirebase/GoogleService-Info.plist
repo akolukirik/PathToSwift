@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>238807445225-07paufmm6jm93q8a5lutrr23o2b937b8.apps.googleusercontent.com</string>
+	<string>954594212246-usain6gcb5l3fbqqaotjqpp7b9uu5h86.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.238807445225-07paufmm6jm93q8a5lutrr23o2b937b8</string>
+	<string>com.googleusercontent.apps.954594212246-usain6gcb5l3fbqqaotjqpp7b9uu5h86</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB73t-uP3y8ysLWyupCWAZZnqANcPDtp00</string>
+	<string>AIzaSyAwa59-JYQpFVu5CkbfmXs_OwggyT82hpo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>238807445225</string>
+	<string>954594212246</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>ali.kolukirik.InstaCloneFirebase</string>
 	<key>PROJECT_ID</key>
-	<string>instaclonefirebase-22195</string>
+	<string>instaclone2-351ce</string>
 	<key>STORAGE_BUCKET</key>
-	<string>instaclonefirebase-22195.appspot.com</string>
+	<string>instaclone2-351ce.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:238807445225:ios:12434fcfa3c0a3599d0a78</string>
+	<string>1:954594212246:ios:2f42e4741bb52f7a54c5b7</string>
 </dict>
 </plist>

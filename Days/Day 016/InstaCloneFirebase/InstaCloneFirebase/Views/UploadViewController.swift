@@ -5,25 +5,74 @@
 //  Created by ali on 1.03.2022.
 //
 
+import Firebase
 import UIKit
 
-class UploadViewController: UIViewController {
+class UploadViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var descriptionLabel: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        imageView.isUserInteractionEnabled = true
+        let tapGestureRegognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
+        imageView.addGestureRecognizer(tapGestureRegognizer)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func selectImage() {
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
     }
-    */
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        imageView.image = info[.originalImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func uploadButtonClicked(_ sender: Any) {
+        
+        let storage = Storage.storage()
+        let storageReference = storage.reference()
+        
+        let mediaFolder = storageReference.child("Media") //child alt klasöre gitme işlemi için, otomatikte oluşturulabilir.
+        
+        if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
+            
+            let uuid = UUID().uuidString
+            
+            let imageReference = mediaFolder.child("\(uuid).jpg")
+            
+            imageReference.putData(data, metadata: nil) { (metadata, error) in
+                
+                if error != nil {
+                    self.makeAlert(title: "Hataa", message: error?.localizedDescription ?? "Hata :((")
+                } else {
+                    imageReference.downloadURL{(url,error) in
+                        if error != nil {
+                            let imageUrl = url?.absoluteString
+                            print(imageUrl!)
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    func makeAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "Oki Doki", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 
 }

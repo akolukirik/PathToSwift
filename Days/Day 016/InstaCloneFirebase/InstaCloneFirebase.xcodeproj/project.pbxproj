@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410C26CE27CFCC6A004D18D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 410C26CD27CFCC6A004D18D6 /* GoogleService-Info.plist */; };
 		4166CDF827CD724A00051C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4166CDF727CD724A00051C67 /* AppDelegate.swift */; };
 		4166CDFA27CD724A00051C67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4166CDF927CD724A00051C67 /* SceneDelegate.swift */; };
 		4166CDFC27CD724A00051C67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4166CDFB27CD724A00051C67 /* ViewController.swift */; };
 		4166CDFF27CD724A00051C67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4166CDFD27CD724A00051C67 /* Main.storyboard */; };
 		4166CE0127CD724B00051C67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4166CE0027CD724B00051C67 /* Assets.xcassets */; };
 		4166CE0427CD724B00051C67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4166CE0227CD724B00051C67 /* LaunchScreen.storyboard */; };
-		4166CE0C27CD728E00051C67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4166CE0B27CD728E00051C67 /* GoogleService-Info.plist */; };
 		4166CE0F27CD72F700051C67 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4166CE0E27CD72F700051C67 /* FirebaseAnalytics */; };
 		4166CE1127CD72F700051C67 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4166CE1027CD72F700051C67 /* FirebaseAnalyticsSwift-Beta */; };
 		4166CE1327CD72F700051C67 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 4166CE1227CD72F700051C67 /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -48,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410C26CD27CFCC6A004D18D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4166CDF427CD724A00051C67 /* InstaCloneFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaCloneFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4166CDF727CD724A00051C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4166CDF927CD724A00051C67 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		4166CE0027CD724B00051C67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4166CE0327CD724B00051C67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4166CE0527CD724B00051C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4166CE0B27CD728E00051C67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4166CE4727CD87C000051C67 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		4166CE4927CD87D700051C67 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		4166CE4B27CD87E500051C67 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 				4166CDFD27CD724A00051C67 /* Main.storyboard */,
 				4166CE0027CD724B00051C67 /* Assets.xcassets */,
 				4166CE0227CD724B00051C67 /* LaunchScreen.storyboard */,
+				410C26CD27CFCC6A004D18D6 /* GoogleService-Info.plist */,
 				4166CE0527CD724B00051C67 /* Info.plist */,
-				4166CE0B27CD728E00051C67 /* GoogleService-Info.plist */,
 			);
 			path = InstaCloneFirebase;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4166CE0427CD724B00051C67 /* LaunchScreen.storyboard in Resources */,
-				4166CE0C27CD728E00051C67 /* GoogleService-Info.plist in Resources */,
+				410C26CE27CFCC6A004D18D6 /* GoogleService-Info.plist in Resources */,
 				4166CE0127CD724B00051C67 /* Assets.xcassets in Resources */,
 				4166CDFF27CD724A00051C67 /* Main.storyboard in Resources */,
 			);
