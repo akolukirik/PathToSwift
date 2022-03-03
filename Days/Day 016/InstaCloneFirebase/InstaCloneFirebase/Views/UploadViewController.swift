@@ -9,7 +9,7 @@ import Firebase
 import UIKit
 
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var descriptionLabel: UITextField!
@@ -54,16 +54,28 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate & 
                 if error != nil {
                     self.makeAlert(title: "Hataa", message: error?.localizedDescription ?? "Hata :((")
                 } else {
-                    imageReference.downloadURL{(url,error) in
+                    imageReference.downloadURL {(url,error) in
                         if error != nil {
                             let imageUrl = url?.absoluteString
-                            print(imageUrl!)
+                            
+                            let firestoreDatabase = Firestore.firestore()
+                            
+                            let firestorePost = ["imageUrl" : imageUrl!, "postedBy" : Auth.auth().currentUser!.email!, "postComment" : self.descriptionLabel.text!,"date" : "data", "likes" : 0 ] as [String : Any]
+                            
+                            firestoreDatabase.collection("Posts").addDocument(data: firestorePost, completion: { (error) in
+                                if error != nil {
+                                    
+                                    self.makeAlert(title: "Error", message: error?.localizedDescription ?? "Error")
+                                    
+                                }
+                            })
                         }
                     }
                 }
+                
+               //Permission issues on firebase...
             }
         }
-        
     }
     
     func makeAlert(title: String, message: String) {
@@ -74,5 +86,5 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate & 
         self.present(alert, animated: true, completion: nil)
     }
     
-
+    
 }
