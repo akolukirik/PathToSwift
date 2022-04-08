@@ -4,14 +4,13 @@
 //
 //  Created by ali on 7.04.2022.
 //
-
 import Firebase
 import UIKit
 
 class UploadViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-    
+
     @IBOutlet weak var imageView: UIImageView!
-    
+
     @IBOutlet weak var descriptionLabel: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +32,6 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate & 
         let storage = Storage.storage()
         let storageReference = storage.reference()
         let mediaFolder = storageReference.child("media") //child alt klasöre gitme işlemi için, otomatikte oluşturulabilir.
-
         if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
             let uuid = UUID().uuidString
             let imageReference = mediaFolder.child("\(uuid).jpg")

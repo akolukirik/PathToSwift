@@ -48,12 +48,16 @@
                                 <rect key="frame" x="75" y="265" width="267" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="e7H-mS-5Q6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="ew4-SQ-vaC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pasword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbo-6k-k36">
                                 <rect key="frame" x="75" y="322" width="267" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="2MI-KY-CEc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -247,6 +251,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpy-oJ-PUS">
+                                                    <rect key="frame" x="340" y="17" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="vPs-Jm-mok" firstAttribute="top" secondItem="yU0-2R-Oqe" secondAttribute="bottom" constant="8" id="8T2-KD-bEn"/>
@@ -254,19 +264,23 @@
                                                 <constraint firstItem="57Y-ev-G52" firstAttribute="top" secondItem="Cs1-rw-grE" secondAttribute="bottom" constant="8" id="NQv-9H-Yfw"/>
                                                 <constraint firstItem="yU0-2R-Oqe" firstAttribute="leading" secondItem="h36-Df-lO3" secondAttribute="leadingMargin" id="PMv-4d-FVi"/>
                                                 <constraint firstItem="yU0-2R-Oqe" firstAttribute="trailing" secondItem="vPs-Jm-mok" secondAttribute="trailing" id="PTi-Ny-5af"/>
+                                                <constraint firstItem="mpy-oJ-PUS" firstAttribute="centerX" secondItem="UDt-vp-3Bi" secondAttribute="centerX" id="RR5-xr-GJa"/>
                                                 <constraint firstItem="Cs1-rw-grE" firstAttribute="top" secondItem="vPs-Jm-mok" secondAttribute="bottom" constant="8" id="TkO-8x-BHl"/>
                                                 <constraint firstItem="57Y-ev-G52" firstAttribute="top" secondItem="UDt-vp-3Bi" secondAttribute="top" id="UoA-hf-czL"/>
                                                 <constraint firstItem="yU0-2R-Oqe" firstAttribute="leading" secondItem="vPs-Jm-mok" secondAttribute="leading" id="fqT-ba-a1q"/>
                                                 <constraint firstItem="vPs-Jm-mok" firstAttribute="trailing" secondItem="Cs1-rw-grE" secondAttribute="trailing" id="hk6-eM-iLD"/>
                                                 <constraint firstItem="yU0-2R-Oqe" firstAttribute="top" secondItem="h36-Df-lO3" secondAttribute="topMargin" id="iwO-XL-fxg"/>
                                                 <constraint firstItem="vPs-Jm-mok" firstAttribute="leading" secondItem="Cs1-rw-grE" secondAttribute="leading" id="oY2-zK-59v"/>
+                                                <constraint firstItem="vPs-Jm-mok" firstAttribute="top" secondItem="mpy-oJ-PUS" secondAttribute="bottom" constant="15" id="pvS-kb-3HO"/>
                                                 <constraint firstItem="Cs1-rw-grE" firstAttribute="trailing" secondItem="UDt-vp-3Bi" secondAttribute="trailing" id="vJi-jw-arD"/>
                                                 <constraint firstItem="Cs1-rw-grE" firstAttribute="leading" secondItem="57Y-ev-G52" secondAttribute="leading" id="vLJ-oS-08g"/>
                                                 <constraint firstItem="57Y-ev-G52" firstAttribute="bottom" secondItem="UDt-vp-3Bi" secondAttribute="bottom" id="xQA-aw-roC"/>
+                                                <constraint firstItem="yU0-2R-Oqe" firstAttribute="centerY" secondItem="mpy-oJ-PUS" secondAttribute="centerY" id="z81-jB-wME"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="Cs1-rw-grE" id="kWt-Gf-B9r"/>
+                                            <outlet property="documentIdLabel" destination="mpy-oJ-PUS" id="GPU-sb-LWv"/>
                                             <outlet property="likeLabel" destination="UDt-vp-3Bi" id="Mpe-3b-pml"/>
                                             <outlet property="userEmailLabel" destination="yU0-2R-Oqe" id="J3G-df-FNG"/>
                                             <outlet property="userImageView" destination="vPs-Jm-mok" id="xQD-fm-kvb"/>

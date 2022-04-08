@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -26,13 +27,19 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     func getDataFromFireStore() {
         let fireStoreDatabase = Firestore.firestore()
-        fireStoreDatabase.collection("Posts").addSnapshotListener { (snapshot, error ) in
+        fireStoreDatabase.collection("Posts").order(by: "date", descending: true).addSnapshotListener { (snapshot, error ) in
             if error != nil {
                 print(error?.localizedDescription as Any)
             } else {
                 if snapshot?.isEmpty != true && snapshot != nil {
+                    self.userImageArray.removeAll()
+                    self.userEmailArray.removeAll()
+                    self.userCommentArray.removeAll()
+                    self.likeArray.removeAll()
+                    self.documentIdArray.removeAll()
                     for document in snapshot!.documents {
                         let documentID = document.documentID
+                        self.documentIdArray.append(documentID)
                         if let postedBy = document.get("postedBy") as? String {
                             self.userEmailArray.append(postedBy)
                         }
@@ -59,7 +66,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.userEmailLabel.text = userEmailArray[indexPath.row]
         cell.likeLabel.text = String(likeArray[indexPath.row])
         cell.descriptionLabel.text = userCommentArray[indexPath.row]
-        cell.userImageView.image = UIImage(named: "select.png")
+        cell.userImageView.sd_setImage(with: URL(string: self.userImageArray[indexPath.row]))
+        cell.documentIdLabel.text = documentIdArray[indexPath.row]
         return cell
     }
 }
