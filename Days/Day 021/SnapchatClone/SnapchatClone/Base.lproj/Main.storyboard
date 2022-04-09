@@ -79,8 +79,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailLabel" destination="glj-2A-ujY" id="ffM-Ed-3tj"/>
-                        <outlet property="emailText" destination="glj-2A-ujY" id="Rv8-zZ-2Co"/>
+                        <outlet property="emailText" destination="glj-2A-ujY" id="Srp-Vz-s7Z"/>
                         <outlet property="passwordText" destination="X5p-ox-8Px" id="hKp-ZT-mJ6"/>
                         <outlet property="userNameText" destination="YVQ-LP-HUn" id="aAj-CA-DL0"/>
                         <segue destination="dU1-F1-Dry" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="n8k-Pu-tCJ"/>
@@ -98,7 +97,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dVb-jK-wpv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="dVb-jK-wpv">
                                 <rect key="frame" x="20" y="98" width="374" height="406"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="406" id="z0s-31-iS9"/>
@@ -165,6 +164,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="s.circle" catalog="system" id="6XJ-6n-hB3"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignInVC" modalPresentationStyle="fullScreen" id="CE0-i4-xXh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWv-Oq-Vdp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -237,7 +239,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lbL-6D-HLA">
             <objects>
-                <tabBarController id="dU1-F1-Dry" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="dU1-F1-Dry" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Rv-qZ-6ka">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -255,6 +257,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="1920" height="1080"/>
         <image name="f.circle" catalog="system" width="128" height="121"/>
         <image name="s.circle" catalog="system" width="128" height="121"/>
         <image name="u.circle" catalog="system" width="128" height="121"/>
