@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		410B79EE2809B7C4002709BF /* AnimalsWidgedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79ED2809B7C4002709BF /* AnimalsWidgedApp.swift */; };
+		410B79F02809B7C4002709BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79EF2809B7C4002709BF /* ContentView.swift */; };
+		410B79F22809B7C5002709BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410B79F12809B7C5002709BF /* Assets.xcassets */; };
+		410B79F52809B7C5002709BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410B79F42809B7C5002709BF /* Preview Assets.xcassets */; };
+		410B79FC2809B81F002709BF /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79FB2809B81F002709BF /* Animals.swift */; };
+		410B79FE2809B839002709BF /* CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79FD2809B839002709BF /* CircularImage.swift */; };
+		410B7A002809B854002709BF /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79FF2809B854002709BF /* AnimalView.swift */; };
+		410B7A092809BA38002709BF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410B7A082809BA38002709BF /* WidgetKit.framework */; };
+		410B7A0B2809BA38002709BF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410B7A0A2809BA38002709BF /* SwiftUI.framework */; };
+		410B7A0E2809BA38002709BF /* WidgetAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B7A0D2809BA38002709BF /* WidgetAnimal.swift */; };
+		410B7A112809BA39002709BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410B7A102809BA39002709BF /* Assets.xcassets */; };
+		410B7A132809BA39002709BF /* WidgetAnimal.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 410B7A0F2809BA38002709BF /* WidgetAnimal.intentdefinition */; };
+		410B7A142809BA39002709BF /* WidgetAnimal.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 410B7A0F2809BA38002709BF /* WidgetAnimal.intentdefinition */; };
+		410B7A172809BA39002709BF /* WidgetAnimalExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 410B7A062809BA38002709BF /* WidgetAnimalExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		410B7A1C2809BAAA002709BF /* AnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79FF2809B854002709BF /* AnimalView.swift */; };
+		410B7A1D2809BABF002709BF /* CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79FD2809B839002709BF /* CircularImage.swift */; };
+		410B7A1E2809BAC6002709BF /* AnimalsWidgedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79ED2809B7C4002709BF /* AnimalsWidgedApp.swift */; };
+		410B7A1F2809BAC8002709BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79EF2809B7C4002709BF /* ContentView.swift */; };
+		410B7A202809BACA002709BF /* Animals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410B79FB2809B81F002709BF /* Animals.swift */; };
+		410B7A212809BACD002709BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 410B79F12809B7C5002709BF /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		410B7A152809BA39002709BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 410B79E22809B7C3002709BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 410B7A052809BA38002709BF;
+			remoteInfo = WidgetAnimalExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		410B7A1B2809BA39002709BF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				410B7A172809BA39002709BF /* WidgetAnimalExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		410B79EA2809B7C4002709BF /* AnimalsWidged.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalsWidged.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		410B79ED2809B7C4002709BF /* AnimalsWidgedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsWidgedApp.swift; sourceTree = "<group>"; };
+		410B79EF2809B7C4002709BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		410B79F12809B7C5002709BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		410B79F42809B7C5002709BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		410B79FB2809B81F002709BF /* Animals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animals.swift; sourceTree = "<group>"; };
+		410B79FD2809B839002709BF /* CircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImage.swift; sourceTree = "<group>"; };
+		410B79FF2809B854002709BF /* AnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalView.swift; sourceTree = "<group>"; };
+		410B7A012809B881002709BF /* AnimalsWidged.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnimalsWidged.entitlements; sourceTree = "<group>"; };
+		410B7A062809BA38002709BF /* WidgetAnimalExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetAnimalExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		410B7A082809BA38002709BF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		410B7A0A2809BA38002709BF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		410B7A0D2809BA38002709BF /* WidgetAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetAnimal.swift; sourceTree = "<group>"; };
+		410B7A0F2809BA38002709BF /* WidgetAnimal.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WidgetAnimal.intentdefinition; sourceTree = "<group>"; };
+		410B7A102809BA39002709BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		410B7A122809BA39002709BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		410B7A222809BC8A002709BF /* WidgetAnimalExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetAnimalExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		410B79E72809B7C4002709BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410B7A032809BA38002709BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410B7A0B2809BA38002709BF /* SwiftUI.framework in Frameworks */,
+				410B7A092809BA38002709BF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		410B79E12809B7C3002709BF = {
+			isa = PBXGroup;
+			children = (
+				410B7A222809BC8A002709BF /* WidgetAnimalExtension.entitlements */,
+				410B79EC2809B7C4002709BF /* AnimalsWidged */,
+				410B7A0C2809BA38002709BF /* WidgetAnimal */,
+				410B7A072809BA38002709BF /* Frameworks */,
+				410B79EB2809B7C4002709BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		410B79EB2809B7C4002709BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				410B79EA2809B7C4002709BF /* AnimalsWidged.app */,
+				410B7A062809BA38002709BF /* WidgetAnimalExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		410B79EC2809B7C4002709BF /* AnimalsWidged */ = {
+			isa = PBXGroup;
+			children = (
+				410B7A012809B881002709BF /* AnimalsWidged.entitlements */,
+				410B79ED2809B7C4002709BF /* AnimalsWidgedApp.swift */,
+				410B79FF2809B854002709BF /* AnimalView.swift */,
+				410B79EF2809B7C4002709BF /* ContentView.swift */,
+				410B79FD2809B839002709BF /* CircularImage.swift */,
+				410B79FB2809B81F002709BF /* Animals.swift */,
+				410B79F12809B7C5002709BF /* Assets.xcassets */,
+				410B79F32809B7C5002709BF /* Preview Content */,
+			);
+			path = AnimalsWidged;
+			sourceTree = "<group>";
+		};
+		410B79F32809B7C5002709BF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				410B79F42809B7C5002709BF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		410B7A072809BA38002709BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				410B7A082809BA38002709BF /* WidgetKit.framework */,
+				410B7A0A2809BA38002709BF /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		410B7A0C2809BA38002709BF /* WidgetAnimal */ = {
+			isa = PBXGroup;
+			children = (
+				410B7A0D2809BA38002709BF /* WidgetAnimal.swift */,
+				410B7A0F2809BA38002709BF /* WidgetAnimal.intentdefinition */,
+				410B7A102809BA39002709BF /* Assets.xcassets */,
+				410B7A122809BA39002709BF /* Info.plist */,
+			);
+			path = WidgetAnimal;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		410B79E92809B7C4002709BF /* AnimalsWidged */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410B79F82809B7C5002709BF /* Build configuration list for PBXNativeTarget "AnimalsWidged" */;
+			buildPhases = (
+				410B79E62809B7C4002709BF /* Sources */,
+				410B79E72809B7C4002709BF /* Frameworks */,
+				410B79E82809B7C4002709BF /* Resources */,
+				410B7A1B2809BA39002709BF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				410B7A162809BA39002709BF /* PBXTargetDependency */,
+			);
+			name = AnimalsWidged;
+			productName = AnimalsWidged;
+			productReference = 410B79EA2809B7C4002709BF /* AnimalsWidged.app */;
+			productType = "com.apple.product-type.application";
+		};
+		410B7A052809BA38002709BF /* WidgetAnimalExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 410B7A182809BA39002709BF /* Build configuration list for PBXNativeTarget "WidgetAnimalExtension" */;
+			buildPhases = (
+				410B7A022809BA38002709BF /* Sources */,
+				410B7A032809BA38002709BF /* Frameworks */,
+				410B7A042809BA38002709BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WidgetAnimalExtension;
+			productName = WidgetAnimalExtension;
+			productReference = 410B7A062809BA38002709BF /* WidgetAnimalExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		410B79E22809B7C3002709BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					410B79E92809B7C4002709BF = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					410B7A052809BA38002709BF = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = 410B79E52809B7C3002709BF /* Build configuration list for PBXProject "AnimalsWidged" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 410B79E12809B7C3002709BF;
+			productRefGroup = 410B79EB2809B7C4002709BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				410B79E92809B7C4002709BF /* AnimalsWidged */,
+				410B7A052809BA38002709BF /* WidgetAnimalExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		410B79E82809B7C4002709BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410B79F52809B7C5002709BF /* Preview Assets.xcassets in Resources */,
+				410B79F22809B7C5002709BF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410B7A042809BA38002709BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410B7A212809BACD002709BF /* Assets.xcassets in Resources */,
+				410B7A112809BA39002709BF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		410B79E62809B7C4002709BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410B7A002809B854002709BF /* AnimalView.swift in Sources */,
+				410B79F02809B7C4002709BF /* ContentView.swift in Sources */,
+				410B7A142809BA39002709BF /* WidgetAnimal.intentdefinition in Sources */,
+				410B79FC2809B81F002709BF /* Animals.swift in Sources */,
+				410B79FE2809B839002709BF /* CircularImage.swift in Sources */,
+				410B79EE2809B7C4002709BF /* AnimalsWidgedApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		410B7A022809BA38002709BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				410B7A1C2809BAAA002709BF /* AnimalView.swift in Sources */,
+				410B7A132809BA39002709BF /* WidgetAnimal.intentdefinition in Sources */,
+				410B7A1F2809BAC8002709BF /* ContentView.swift in Sources */,
+				410B7A1E2809BAC6002709BF /* AnimalsWidgedApp.swift in Sources */,
+				410B7A1D2809BABF002709BF /* CircularImage.swift in Sources */,
+				410B7A0E2809BA38002709BF /* WidgetAnimal.swift in Sources */,
+				410B7A202809BACA002709BF /* Animals.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		410B7A162809BA39002709BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 410B7A052809BA38002709BF /* WidgetAnimalExtension */;
+			targetProxy = 410B7A152809BA39002709BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		410B79F62809B7C5002709BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		410B79F72809B7C5002709BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		410B79F92809B7C5002709BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AnimalsWidged/AnimalsWidged.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AnimalsWidged/Preview Content\"";
+				DEVELOPMENT_TEAM = W634M6PWQV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ali.kolukirik.AnimalsWidged;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		410B79FA2809B7C5002709BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AnimalsWidged/AnimalsWidged.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AnimalsWidged/Preview Content\"";
+				DEVELOPMENT_TEAM = W634M6PWQV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ali.kolukirik.AnimalsWidged;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		410B7A192809BA39002709BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetAnimalExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W634M6PWQV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetAnimal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetAnimal;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ali.kolukirik.AnimalsWidged.WidgetAnimal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		410B7A1A2809BA39002709BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetAnimalExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W634M6PWQV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetAnimal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WidgetAnimal;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ali.kolukirik.AnimalsWidged.WidgetAnimal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		410B79E52809B7C3002709BF /* Build configuration list for PBXProject "AnimalsWidged" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410B79F62809B7C5002709BF /* Debug */,
+				410B79F72809B7C5002709BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		410B79F82809B7C5002709BF /* Build configuration list for PBXNativeTarget "AnimalsWidged" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410B79F92809B7C5002709BF /* Debug */,
+				410B79FA2809B7C5002709BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		410B7A182809BA39002709BF /* Build configuration list for PBXNativeTarget "WidgetAnimalExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				410B7A192809BA39002709BF /* Debug */,
+				410B7A1A2809BA39002709BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 410B79E22809B7C3002709BF /* Project object */;
+}
