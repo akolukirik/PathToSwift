@@ -108,7 +108,7 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 - [x] Part 24
 - [x] Part 25
 - [x] Part 26
-- [ ] Part 27
+- [x] Part 27
 - [ ] Part 28
 - [ ] Part 29
 - [ ] Part 30
