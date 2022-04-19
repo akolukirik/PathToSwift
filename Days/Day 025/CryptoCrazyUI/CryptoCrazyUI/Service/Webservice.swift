@@ -1,0 +1,52 @@
+//
+//  Webservice.swift
+//  CryptoCrazyUI
+//
+//  Created by ali on 19.04.2022.
+//
+
+import Foundation
+
+class Webservice {
+
+   /* func downloadCurrenciesAsync(url: URL) async throws -> [CryptoCurrency] {
+        let (data, response) = try await URLSession.shared.data(from: url)
+        let currencies = try? JSONDecoder().decode([CryptoCurrency].self, from: data)
+        return currencies ?? []
+    } */
+
+    func downloadCurrencies(url: URL, completion: @escaping (Result<[CryptoCurrency]?,DownloaderError>) -> Void) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(.failure(.badUrl))
+            }
+            guard let data = data, error == nil else {
+                return completion(.failure(.noData))
+            }
+            guard let currencies = try? JSONDecoder().decode([CryptoCurrency].self, from: data) else {
+                return completion(.failure(.dataParseError))
+            }
+            completion(.success(currencies))
+        }.resume()
+    }
+
+    func downloadCurrenciesContinuation(url : URL) async throws -> [CryptoCurrency] {
+        try await withCheckedThrowingContinuation { continuation in
+            downloadCurrencies(url: url) { result in
+                switch result {
+                case .success(let cryptos):
+                    continuation.resume(returning: cryptos ?? [])
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
+            }
+        }
+    }
+
+    enum DownloaderError: Error {
+        case badUrl
+        case noData
+        case dataParseError
+    }
+}
