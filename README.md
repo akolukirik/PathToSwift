@@ -113,9 +113,9 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 - [x] Part 29
 - [x] Part 30
 - [x] Part 31
-- [ ] Part 32
-- [ ] Part 33
-- [ ] Part 34
+- [x] Part 32
+- [x] Part 33
+- [x] Part 34
 
 ## Bana Ulaşın
 
