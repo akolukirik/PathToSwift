@@ -17,10 +17,10 @@ class DetailsTableViewCell: UITableViewCell {
 
      var earthquakes: Result! {
         didSet{
-            readableLocationLabel.text = earthquakes.humanReadableLocation
-            latitudeLabel.text = String(earthquakes.latitude!)
-            longitudeLabel.text = String(earthquakes.longitude!)
-            sizeLabel.text = String(earthquakes.size!)
+            readableLocationLabel.text = "Location: \(earthquakes.humanReadableLocation ?? "")"
+            latitudeLabel.text = "Latitude: \(String(earthquakes.latitude!))"
+            longitudeLabel.text = "Longitude: \(String(earthquakes.longitude!))"
+            sizeLabel.text = "Size: \(String(earthquakes.size!))"
         }
     }
 }
