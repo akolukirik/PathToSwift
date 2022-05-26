@@ -34,12 +34,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameInfoList.count
+        return 1
     }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+           return gameInfoList.count
+       }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "GameDetailsTableViewCell", for: indexPath) as? GameDetailsTableViewCell {
-           cell.gameInfo = self.gameInfoList[indexPath.row]
+            cell.gameInfo = self.gameInfoList[indexPath.section]
             return cell
         }
         return UITableViewCell()
@@ -47,16 +51,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ViewController {
+
     func getData() {
-        
+
         let url = "https://api.rawg.io/api/games?key=3a214e197fa048de96a0e8ddf1c49afb"
 
         AF.request(url, method: .get).responseDecodable(of: GameApi.self) { [weak self] response in
-                if let models = response.value {
-                    self?.gameInfoList = models.results ?? []
-                    self?.tableView.reloadData()
-                }
+            if let models = response.value {
+                self?.gameInfoList = models.results ?? []
+                self?.tableView.reloadData()
             }
+        }
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class GameDetailsTableViewCell: UITableViewCell {
 
@@ -20,7 +21,7 @@ class GameDetailsTableViewCell: UITableViewCell {
             gameImageView.setImage(imageURL: gameInfo.backgroundImage ?? "")
             gameNameLabel.text = gameInfo.name
             releaseDateLabel.text = gameInfo.released!
-            genresLabel.text = gameInfo.genres?.description
+            //genresLabel.text = "\(gameInfo.genres?.first)"
             playTimeLabel.text = String(gameInfo.playtime!)
         }
     }
