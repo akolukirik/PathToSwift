@@ -24,16 +24,6 @@ class ViewController: UIViewController {
         getData()
     }
 
-    func getData() {
-        let url = "https://my-json-server.typicode.com/akolukirik/demo2/drivers"
-
-        AF.request(url, method: .get).responseDecodable(of: Drivers.self) { [weak self] response in
-                if let models = response.value {
-                    self?.pilotsList = models.items ?? []
-                    self?.tableView.reloadData()
-                }
-            }
-    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -53,4 +43,35 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+}
+
+extension ViewController {
+
+    func getData() {
+        let url = "https://my-json-server.typicode.com/akolukirik/demo2/drivers"
+
+        AF.request(url, method: .get).responseDecodable(of: Drivers.self) { [weak self] response in
+                if let models = response.value {
+                    self?.pilotsList = models.items ?? []
+                    self?.tableView.reloadData()
+                }
+            }
+    }
+
+    /*func getCountryRequest(countryCode: String) {
+        let url = "https://wft-geo-db.p.rapidapi.com/v1/geo/countries/\(countryCode)"
+        let headers : HTTPHeaders = [
+            "x-rapidapi-host": "wft-geo-db.p.rapidapi.com",
+            "x-rapidapi-key": "ae4697e8a8mshd3f2b7a47c7813cp16c50cjsnb4cee5498147"
+        ]
+
+        AF.request(
+            url,
+            method: .get,
+            headers: headers).responseDecodable(of: CountryDetailResponseModel.self) { [weak self] response in
+                if let model = response.value?.data {
+                    self?.navigateToDetailView(countryDetail: model)
+                }
+            }
+    }*/
 }

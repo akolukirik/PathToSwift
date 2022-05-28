@@ -92,20 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				414EA4672829A8570098BE0A /* ViewController.swift */,
+				415ABD01283D6563002198F2 /* Cell */,
 				414EA4842829AD3B0098BE0A /* Detail Page */,
-				414EA4792829A88D0098BE0A /* Cell */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		414EA4792829A88D0098BE0A /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				414EA47A2829A8A90098BE0A /* DetailsTableViewCell.swift */,
-				414EA47B2829A8A90098BE0A /* DetailsTableViewCell.xib */,
-			);
-			name = Cell;
-			path = "Ceşş";
 			sourceTree = "<group>";
 		};
 		414EA4802829A8C00098BE0A /* Network */ = {
@@ -123,6 +113,15 @@
 				414EA4862829AD700098BE0A /* DetailPageViewController.xib */,
 			);
 			path = "Detail Page";
+			sourceTree = "<group>";
+		};
+		415ABD01283D6563002198F2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				414EA47B2829A8A90098BE0A /* DetailsTableViewCell.xib */,
+				414EA47A2829A8A90098BE0A /* DetailsTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
