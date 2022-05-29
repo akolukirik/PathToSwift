@@ -13,7 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet var navigationView: UINavigationBar!
     @IBOutlet var collectionView: UICollectionView!
 
-    var gameInfoList: [Result] = []
+    var gameInfoList: [Result]?
+
+    public var cellWidth = 358
+    public var cellHeight = 360
+
+    var counter = 0
+
+    var myImage = UIImage(named: "Button1")
 
     override func viewDidLoad() {
 
@@ -22,18 +29,18 @@ class ViewController: UIViewController {
         getData()
 
         navigationView.topItem?.title = "Games"
-
-        let myImage = UIImage(named: "Button1.png")
-
-        let rightButton = UIBarButtonItem(image: myImage, style: .plain, target: self, action: #selector(tab))
+        let rightButton = UIBarButtonItem(image: myImage, style: .plain, target: self, action: #selector(tab) )
+        rightButton.tintColor = .white
         navigationView.topItem?.rightBarButtonItem = rightButton
-
 
         collectionView.dataSource = self
         collectionView.delegate = self
 
         collectionView.register(BigCellCollectionViewCell.nib(),
                                 forCellWithReuseIdentifier: BigCellCollectionViewCell.identifier)
+
+        collectionView.register(SmallCollectionViewCell.nib(),
+                                forCellWithReuseIdentifier: SmallCollectionViewCell.identifier)
 
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 358, height: 360)
@@ -43,10 +50,14 @@ class ViewController: UIViewController {
 
     }
 
+// MARK: - Switch Case??
     @objc func tab() {
-        print("qweqwe")
+        if counter == 0 {
+            counter = 1
+        } else {
+            counter = 0
+        }
     }
-
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -57,25 +68,54 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return gameInfoList.count
+        return gameInfoList?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigCellCollectionViewCell.identifier, for: indexPath) as! BigCellCollectionViewCell
-        cell.gameInfo = self.gameInfoList[indexPath.row]
-        return cell
+
+        if counter == 1 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallCollectionViewCell.identifier, for: indexPath) as? SmallCollectionViewCell else { return UICollectionViewCell() }
+
+            guard let smallModel = gameInfoList?[indexPath.row] else { return UICollectionViewCell() }
+
+            cell.configureSmallCell(smallImage: smallModel.backgroundImage,
+                                    smallName: smallModel.name)
+
+            cellWidth = 171
+            cellHeight = 243
+            collectionView.reloadData()
+
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigCellCollectionViewCell.identifier, for: indexPath) as? BigCellCollectionViewCell else { return UICollectionViewCell() }
+
+            guard let model = gameInfoList?[indexPath.row] else { return UICollectionViewCell() }
+
+            cell.configure(image: model.backgroundImage,
+                           name: model.name,
+                           releaseDate: model.released,
+                           genres: model.genres,
+                           playTime: model.playtime,
+                           score: model.metacritic)
+
+            cellWidth = 358
+            cellHeight = 360
+            collectionView.reloadData()
+
+            return cell
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 358, height: 360)
+        return CGSize(width: cellWidth, height: cellHeight)
     }
-}
 
+}
 
 extension ViewController {
 
     func getData() {
-
+        
         let url = "https://api.rawg.io/api/games?key=3a214e197fa048de96a0e8ddf1c49afb"
 
         AF.request(url, method: .get).responseDecodable(of: GameApi.self) { [weak self] response in
