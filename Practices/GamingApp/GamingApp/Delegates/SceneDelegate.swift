@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  GamingApp
 //
-//  Created by ali on 26.05.2022.
+//  Created by ali on 28.05.2022.
 //
 
 import UIKit
