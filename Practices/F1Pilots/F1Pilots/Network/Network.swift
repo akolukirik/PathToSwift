@@ -7,21 +7,11 @@
 
 import Foundation
 
-struct DataBase: Codable {
-    var driverDetail: [DriverDetail]?
+struct PilotData: Codable {
+    var items: [Pilot]?
 }
 
-struct DriverDetail: Codable {
-    var id, age: Int?
-    var image: String?
-    var team: String?
-}
-
-struct Drivers: Codable {
-    var items: [PilotDetail]?
-}
-
-struct PilotDetail: Codable {
+struct Pilot: Codable {
     var id: Int?
     var name: String?
     var point: Int?

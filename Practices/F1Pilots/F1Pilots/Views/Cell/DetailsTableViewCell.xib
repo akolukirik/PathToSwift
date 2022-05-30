@@ -40,6 +40,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="containerView" destination="H2p-sc-9uM" id="GXA-Hy-0Gc"/>
                 <outlet property="nameLabel" destination="dTQ-Yn-AlJ" id="SkI-Rn-FMM"/>
                 <outlet property="pointLabel" destination="kjA-pJ-mXx" id="hOl-oc-epY"/>
             </connections>

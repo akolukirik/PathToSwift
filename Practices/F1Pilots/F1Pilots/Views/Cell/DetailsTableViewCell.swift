@@ -7,16 +7,31 @@
 
 import UIKit
 
+protocol PilotsTableViewCellDelegate {
+    func didTappedPilot(rowIndex: Int)
+}
+
 class DetailsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var pointLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
 
-    var pilots: PilotDetail! {
-        didSet{
-            nameLabel.text = pilots.name
-            pointLabel.text = "Point: \(String(pilots.point!))"
-        }
+    private var delegate: PilotsTableViewCellDelegate?
+
+    private var cellIndex: Int = 5
+
+    public func configure(name:String?, point: Int?, index: Int, delegate: PilotsTableViewCellDelegate?) {
+        nameLabel.text = "Name: \(name ?? "")"
+        pointLabel.text = "Point: \( Int(point ?? 0))"
+        self.delegate =  delegate
+        self.cellIndex = index
+        containerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(containerViewTapped)))
+    }
+
+    @objc func containerViewTapped() {
+        print("aaa")
+        delegate?.didTappedPilot(rowIndex: cellIndex)
     }
 
     override func awakeFromNib() {

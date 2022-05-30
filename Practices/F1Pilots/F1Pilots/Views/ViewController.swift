@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var pilotsList: [PilotDetail] = []
+    var pilotsList: [Pilot]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,18 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "DetailsTableViewCell",
                                  bundle: nil),
                            forCellReuseIdentifier: "DetailsTableViewCell")
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getData()
+    }
+
+    func navigateToDetailView(pilotDetail: PilotDetail) {
+        let detailVC = DetailPageViewController.init(nibName: "DetailPageViewController", bundle: nil)
+        detailVC.pilotDetailModel = pilotDetail
+        detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true, completion: nil)
     }
 
 }
@@ -33,15 +44,29 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pilotsList.count
+        return pilotsList?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsTableViewCell", for: indexPath) as? DetailsTableViewCell {
-            cell.pilots = self.pilotsList[indexPath.row]
-            return cell
-        }
-        return UITableViewCell()
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier:"DetailsTableViewCell") as? DetailsTableViewCell else { return UITableViewCell() }
+
+        guard let model = pilotsList?[indexPath.row] else { return UITableViewCell() }
+
+        cell.configure(name: model.name,
+                       point: model.point,
+                       index: indexPath.row,
+                       delegate: self)
+
+        return cell
+    }
+}
+
+extension ViewController: PilotsTableViewCellDelegate {
+
+    func didTappedPilot(rowIndex: Int) {
+        let pilotCode = pilotsList?[rowIndex].id
+        self.getPilotDetail(pilotID: "\(pilotCode ?? 1)")
     }
 }
 
@@ -50,28 +75,26 @@ extension ViewController {
     func getData() {
         let url = "https://my-json-server.typicode.com/akolukirik/demo2/drivers"
 
-        AF.request(url, method: .get).responseDecodable(of: Drivers.self) { [weak self] response in
-                if let models = response.value {
-                    self?.pilotsList = models.items ?? []
-                    self?.tableView.reloadData()
-                }
+        AF.request(url,
+                   method: .get).responseDecodable(of: PilotData.self) { [weak self] response in
+            if let model = response.value {
+                self?.pilotsList = model.items ?? []
+                self?.tableView.reloadData()
             }
+        }
     }
 
-    /*func getCountryRequest(countryCode: String) {
-        let url = "https://wft-geo-db.p.rapidapi.com/v1/geo/countries/\(countryCode)"
-        let headers : HTTPHeaders = [
-            "x-rapidapi-host": "wft-geo-db.p.rapidapi.com",
-            "x-rapidapi-key": "ae4697e8a8mshd3f2b7a47c7813cp16c50cjsnb4cee5498147"
-        ]
+    func getPilotDetail(pilotID: String) {
+
+        let url = "https://my-json-server.typicode.com/akolukirik/demo2/driverDetail/\(pilotID)"
 
         AF.request(
             url,
-            method: .get,
-            headers: headers).responseDecodable(of: CountryDetailResponseModel.self) { [weak self] response in
-                if let model = response.value?.data {
-                    self?.navigateToDetailView(countryDetail: model)
+            method: .get).responseDecodable(of: PilotDetail.self) { [weak self] response in
+                if let model2 = response.value {
+                    self?.tableView.reloadData()
+                    self?.navigateToDetailView(pilotDetail: model2)
                 }
             }
-    }*/
+    }
 }
