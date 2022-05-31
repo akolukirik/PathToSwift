@@ -35,11 +35,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=""/>
+                        <connections>
+                            <action selector="saveButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="R7C-kw-tVg"/>
+                        </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnCheck" destination="ZwE-vO-BDL" id="OzN-gu-wqR"/>
                 <outlet property="containerView" destination="H2p-sc-9uM" id="GXA-Hy-0Gc"/>
                 <outlet property="nameLabel" destination="dTQ-Yn-AlJ" id="SkI-Rn-FMM"/>
                 <outlet property="pointLabel" destination="kjA-pJ-mXx" id="hOl-oc-epY"/>

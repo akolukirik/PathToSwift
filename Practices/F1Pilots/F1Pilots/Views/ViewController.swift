@@ -53,9 +53,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
         guard let model = pilotsList?[indexPath.row] else { return UITableViewCell() }
 
+        let pilotIDCode = pilotsList?[indexPath.row].id ?? 1
+        let savedPilot = UserDefaults.standard.object(forKey: "savedPilot") as? [Int: Bool] ?? [:]
+
+        let isSaved = savedPilot[pilotIDCode] ?? false
+
         cell.configure(name: model.name,
                        point: model.point,
                        index: indexPath.row,
+                       isSaved: isSaved,
                        delegate: self)
 
         return cell
@@ -64,9 +70,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController: PilotsTableViewCellDelegate {
 
+ /*   func didTappedSave(rowIndex: Int, isSaved: Bool) {
+
+       let pilotIDCode = pilotsList?[rowIndex].name ?? ""
+        var savedCountries = UserDefaults.standard.object(forKey: "savedPilot") as? [String: Bool] ?? [:]
+        savedCountries[pilotIDCode] = isSaved
+        UserDefaults.standard.set(savedCountries, forKey: "savedPilot")
+
+    }
+*/
+
     func didTappedPilot(rowIndex: Int) {
-        let pilotCode = pilotsList?[rowIndex].id
-        self.getPilotDetail(pilotID: "\(pilotCode ?? 1)")
+        let pilotCode = pilotsList?[rowIndex].name
+        self.getPilotDetail(pilotID: pilotCode ?? "")
+        print("a")
     }
 }
 
