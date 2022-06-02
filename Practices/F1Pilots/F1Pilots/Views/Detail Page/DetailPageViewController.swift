@@ -24,8 +24,8 @@ class DetailPageViewController: UIViewController {
         let button = UIBarButtonItem(title: "Back", style: .done, target: self, action: #selector(goBack))
         navigationView.topItem?.leftBarButtonItem = button
 
-        ageLabel.text = String(pilotDetailModel?.age ?? 0)
-        teamLabel.text = pilotDetailModel?.team
+        ageLabel.text = String("Age: \(pilotDetailModel?.age ?? 0)")
+        teamLabel.text = "Team: \(pilotDetailModel?.team ?? "")"
         pilotImageView.setImage(imageURL: pilotDetailModel?.image ?? "")
     }
 

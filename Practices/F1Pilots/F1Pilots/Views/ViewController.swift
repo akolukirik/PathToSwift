@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         detailVC.pilotDetailModel = pilotDetail
         detailVC.modalPresentationStyle = .fullScreen
         self.present(detailVC, animated: true, completion: nil)
+        print("ben gittim")
     }
 
 }
@@ -53,37 +54,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
         guard let model = pilotsList?[indexPath.row] else { return UITableViewCell() }
 
-        let pilotIDCode = pilotsList?[indexPath.row].id ?? 1
-        let savedPilot = UserDefaults.standard.object(forKey: "savedPilot") as? [Int: Bool] ?? [:]
-
-        let isSaved = savedPilot[pilotIDCode] ?? false
-
-        cell.configure(name: model.name,
-                       point: model.point,
-                       index: indexPath.row,
-                       isSaved: isSaved,
-                       delegate: self)
+        cell.configure(name: model.name, point: model.point, index: indexPath.row, delegate: self)
 
         return cell
     }
 }
 
 extension ViewController: PilotsTableViewCellDelegate {
-
- /*   func didTappedSave(rowIndex: Int, isSaved: Bool) {
-
-       let pilotIDCode = pilotsList?[rowIndex].name ?? ""
-        var savedCountries = UserDefaults.standard.object(forKey: "savedPilot") as? [String: Bool] ?? [:]
-        savedCountries[pilotIDCode] = isSaved
-        UserDefaults.standard.set(savedCountries, forKey: "savedPilot")
-
-    }
-*/
-
     func didTappedPilot(rowIndex: Int) {
-        let pilotCode = pilotsList?[rowIndex].name
-        self.getPilotDetail(pilotID: pilotCode ?? "")
-        print("a")
+        let pilotCode = pilotsList?[rowIndex].id ?? 0
+        self.getPilotDetail(pilotID: pilotCode )
     }
 }
 
@@ -101,7 +81,7 @@ extension ViewController {
         }
     }
 
-    func getPilotDetail(pilotID: String) {
+    func getPilotDetail(pilotID: Int) {
 
         let url = "https://my-json-server.typicode.com/akolukirik/demo2/driverDetail/\(pilotID)"
 

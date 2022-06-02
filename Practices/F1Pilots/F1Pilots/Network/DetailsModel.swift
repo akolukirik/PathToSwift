@@ -7,8 +7,6 @@
 
 import Foundation
 
-//typealias PilotDetailList = [PilotDetail]
-
 struct PilotDetail: Codable {
     var id, age: Int?
     var image: String?
