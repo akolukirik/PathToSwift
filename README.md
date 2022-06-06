@@ -57,7 +57,7 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 ## Hacking With Swift
 
 - [x] Days 1-12: Introduction to Swift
-- [ ] Days 13-15: Consolidation I
+- [x] Days 13-15: Consolidation I
 - [ ] Days 16-22: Starting iOS
 - [ ] Day 23: Consolidation II
 - [ ] Days 24-31: Web views, user input, and Auto Layout
