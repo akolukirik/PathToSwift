@@ -33,7 +33,6 @@ class ViewController: UIViewController {
         detailVC.pilotDetailModel = pilotDetail
         detailVC.modalPresentationStyle = .fullScreen
         self.present(detailVC, animated: true, completion: nil)
-        print("ben gittim")
     }
 
 }
@@ -54,13 +53,42 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
         guard let model = pilotsList?[indexPath.row] else { return UITableViewCell() }
 
-        cell.configure(name: model.name, point: model.point, index: indexPath.row, delegate: self)
+        let pilotName = pilotsList?[indexPath.row].name ?? ""
+        let savedPilot = UserDefaults.standard.object(forKey: "savedPilots") as? [String: Bool] ?? [:]
+        let isSaved = savedPilot[pilotName] ?? false
+
+
+        cell.configure(name: model.name,
+                       point: model.point,
+                       index: indexPath.row,
+                       isSaved: isSaved,
+                       delegate: self)
+
+        cell.selectionStyle = .none
+        cell.saveButton.addTarget(self, action: #selector(checkMarkButtonClicked(sender:)), for: .touchUpInside)
 
         return cell
+    }
+
+    @objc func checkMarkButtonClicked (sender : UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+        }
+        else {
+            sender.isSelected = true
+        }
     }
 }
 
 extension ViewController: PilotsTableViewCellDelegate {
+    func didTappedSave(rowIndex: Int, isSaved: Bool) {
+
+        let pilotName = pilotsList?[rowIndex].name ?? ""
+        var savedPilot = UserDefaults.standard.object(forKey: "savedPilots") as? [String: Bool] ?? [:]
+        savedPilot[pilotName] = isSaved
+        UserDefaults.standard.set(savedPilot, forKey: "savedPilots")
+    }
+
     func didTappedPilot(rowIndex: Int) {
         let pilotCode = pilotsList?[rowIndex].id ?? 0
         self.getPilotDetail(pilotID: pilotCode )

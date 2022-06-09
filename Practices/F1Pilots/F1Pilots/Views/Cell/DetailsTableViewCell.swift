@@ -9,6 +9,7 @@ import UIKit
 
 protocol PilotsTableViewCellDelegate {
     func didTappedPilot(rowIndex: Int)
+    func didTappedSave(rowIndex: Int, isSaved: Bool)
 }
 
 class DetailsTableViewCell: UITableViewCell {
@@ -18,20 +19,35 @@ class DetailsTableViewCell: UITableViewCell {
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var containerView: UIView!
 
-    private var cellIndex: Int = 1
+    private var cellIndex: Int = 0
     private var delegate: PilotsTableViewCellDelegate?
+    private var isSaved: Bool = false
     
-    public func configure(name:String?, point: Int?, index: Int, delegate: PilotsTableViewCellDelegate) {
+    public func configure(name:String?, point: Int?, index: Int,isSaved: Bool,delegate: PilotsTableViewCellDelegate) {
         nameLabel.text = "Name: \(name ?? "")"
         pointLabel.text = "Point: \( Int(point ?? 0))"
         self.cellIndex = index
         self.delegate = delegate
+        self.isSaved = isSaved
 
+        setSaveButtonColor(isSaved: isSaved)
         containerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(containerViewTapped)))
     }
 
     @objc func containerViewTapped() {
         delegate?.didTappedPilot(rowIndex: cellIndex)
+    }
+
+    @IBAction func saveButtonTapped() {
+        saveButton.isSelected = false
+        isSaved.toggle()
+        setSaveButtonColor(isSaved: isSaved)
+        delegate?.didTappedSave(rowIndex: cellIndex, isSaved: isSaved)
+    }
+
+
+    func setSaveButtonColor(isSaved: Bool) {
+        saveButton.tintColor = isSaved ? .systemFill : .systemRed
     }
 
     override func awakeFromNib() {
