@@ -21,6 +21,8 @@
 		419FDC5528425A2F00DDEA6E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 419FDC5428425A2F00DDEA6E /* Kingfisher */; };
 		419FDC5828425A3C00DDEA6E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 419FDC5728425A3C00DDEA6E /* Alamofire */; };
 		419FDC5B28425A5E00DDEA6E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FDC5A28425A5E00DDEA6E /* UIImageViewExtension.swift */; };
+		41B8A40A2849237600A532F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8A4082849237600A532F8 /* DetailViewController.swift */; };
+		41B8A40B2849237600A532F8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B8A4092849237600A532F8 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		419FDC4D2842577300DDEA6E /* BigCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		419FDC5128425A0F00DDEA6E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		419FDC5A28425A5E00DDEA6E /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		41B8A4082849237600A532F8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		41B8A4092849237600A532F8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				419FDC39284244DF00DDEA6E /* ViewController.swift */,
+				41B8A4072849234A00A532F8 /* Detail Page */,
 				412EEF6A2843B10300A3E53C /* Cells */,
 			);
 			path = View;
@@ -143,6 +148,15 @@
 				419FDC5A28425A5E00DDEA6E /* UIImageViewExtension.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		41B8A4072849234A00A532F8 /* Detail Page */ = {
+			isa = PBXGroup;
+			children = (
+				41B8A4082849237600A532F8 /* DetailViewController.swift */,
+				41B8A4092849237600A532F8 /* DetailViewController.xib */,
+			);
+			path = "Detail Page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				419FDC42284244E000DDEA6E /* LaunchScreen.storyboard in Resources */,
+				41B8A40B2849237600A532F8 /* DetailViewController.xib in Resources */,
 				419FDC3F284244E000DDEA6E /* Assets.xcassets in Resources */,
 				419FDC3D284244DF00DDEA6E /* Main.storyboard in Resources */,
 				419FDC4F2842577300DDEA6E /* BigCellCollectionViewCell.xib in Resources */,
@@ -233,6 +248,7 @@
 				419FDC36284244DF00DDEA6E /* AppDelegate.swift in Sources */,
 				419FDC38284244DF00DDEA6E /* SceneDelegate.swift in Sources */,
 				419FDC4E2842577300DDEA6E /* BigCellCollectionViewCell.swift in Sources */,
+				41B8A40A2849237600A532F8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol GamesCollectionViewCellDelegate {
+    func didTappedBigCellGame(rowIndex: Int)
+}
+
 class BigCellCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var bigImageView: UIImageView!
@@ -15,15 +19,22 @@ class BigCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet var genresLabel: UILabel!
     @IBOutlet var playTimeLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var containerView: UIView!
+    @IBOutlet var bigCellSaveButton: UIButton!
 
     static let identifier = "BigCellCollectionViewCell"
+
+    private var cellIndex: Int = 1
+    private var delegate: GamesCollectionViewCellDelegate?
 
     public func configure(image: String?,
                           name: String?,
                           releaseDate: String?,
                           genres: [Genre]?,
                           playTime: Int?,
-                          score: Int?) {
+                          score: Int?,
+                          index: Int,
+                          delegate: GamesCollectionViewCellDelegate) {
 
         bigImageView.setImage(imageURL: image ?? "" )
         bigNameLabel.text = name
@@ -46,6 +57,15 @@ class BigCellCollectionViewCell: UICollectionViewCell {
             scoreLabel.textColor = UIColor.red
         }
 
+        self.cellIndex = index
+        self.delegate = delegate
+
+        containerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(containerViewTapped)))
+
+    }
+
+    @objc func containerViewTapped() {
+        delegate?.didTappedBigCellGame(rowIndex: cellIndex)
     }
 
     override func awakeFromNib() {

@@ -26,8 +26,6 @@ class ViewController: UIViewController {
 
         super.viewDidLoad()
 
-        getData()
-
         navigationView.topItem?.title = "Games"
         let rightButton = UIBarButtonItem(image: myImage, style: .plain, target: self, action: #selector(tab) )
         rightButton.tintColor = .white
@@ -50,7 +48,12 @@ class ViewController: UIViewController {
 
     }
 
-// MARK: - Switch Case??
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getData()
+    }
+
+    // MARK: - Switch Case??
     @objc func tab() {
         if counter == 0 {
             counter = 1
@@ -58,13 +61,20 @@ class ViewController: UIViewController {
             counter = 0
         }
     }
+
+    public func navigateToDetailView(gameDetail: Result) {
+        let detailVC = DetailViewController.init(nibName: "DetailViewController", bundle: nil)
+        detailVC.gameDetailModel = gameDetail
+        detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true, completion: nil)
+        print("ben gittim")
+    }
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("aaaaaaa")
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -96,7 +106,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                            releaseDate: model.released,
                            genres: model.genres,
                            playTime: model.playtime,
-                           score: model.metacritic)
+                           score: model.metacritic,
+                           index: indexPath.row,
+                           delegate: self)
 
             cellWidth = 358
             cellHeight = 360
@@ -104,12 +116,23 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
             return cell
         }
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: cellWidth, height: cellHeight)
     }
 
+}
+
+extension ViewController: GamesCollectionViewCellDelegate {
+
+    func didTappedBigCellGame(rowIndex: Int) {
+        let pilotCode = gameInfoList?[rowIndex].id ?? 0
+        self.getData2(getGameID: pilotCode)
+        print("baaasssssssss")
+
+    }
 }
 
 extension ViewController {
@@ -125,4 +148,17 @@ extension ViewController {
             }
         }
     }
+
+    func getData2(getGameID: Int) {
+
+        let url = "https://api.rawg.io/api/games/\(getGameID)?key=3a214e197fa048de96a0e8ddf1c49afb"
+
+        AF.request(url, method: .get).responseDecodable(of: Result.self) { [weak self] response in
+            if let model2 = response.value {
+                self?.navigateToDetailView(gameDetail: model2)
+            }
+        }
+    }
+
+
 }
