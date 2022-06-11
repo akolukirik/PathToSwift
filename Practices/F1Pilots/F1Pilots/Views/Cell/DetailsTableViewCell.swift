@@ -47,7 +47,13 @@ class DetailsTableViewCell: UITableViewCell {
 
 
     func setSaveButtonColor(isSaved: Bool) {
-        saveButton.tintColor = isSaved ? .systemFill : .systemRed
+
+        if isSaved == true {
+            saveButton.setImage(UIImage(named: "Button1"), for: .normal)
+
+        } else {
+            saveButton.setImage(UIImage(named: "Button2"), for: .normal)
+        }
     }
 
     override func awakeFromNib() {
