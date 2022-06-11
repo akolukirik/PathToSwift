@@ -60,8 +60,8 @@
 		412EEF692843B0F500A3E53C /* Small Cell */ = {
 			isa = PBXGroup;
 			children = (
-				412EEF6B2843B12D00A3E53C /* SmallCollectionViewCell.swift */,
 				412EEF6C2843B12D00A3E53C /* SmallCollectionViewCell.xib */,
+				412EEF6B2843B12D00A3E53C /* SmallCollectionViewCell.swift */,
 			);
 			path = "Small Cell";
 			sourceTree = "<group>";
@@ -128,8 +128,8 @@
 		419FDC4B2842575D00DDEA6E /* Big Cell */ = {
 			isa = PBXGroup;
 			children = (
-				419FDC4C2842577300DDEA6E /* BigCellCollectionViewCell.swift */,
 				419FDC4D2842577300DDEA6E /* BigCellCollectionViewCell.xib */,
+				419FDC4C2842577300DDEA6E /* BigCellCollectionViewCell.swift */,
 			);
 			path = "Big Cell";
 			sourceTree = "<group>";
@@ -153,8 +153,8 @@
 		41B8A4072849234A00A532F8 /* Detail Page */ = {
 			isa = PBXGroup;
 			children = (
-				41B8A4082849237600A532F8 /* DetailViewController.swift */,
 				41B8A4092849237600A532F8 /* DetailViewController.xib */,
+				41B8A4082849237600A532F8 /* DetailViewController.swift */,
 			);
 			path = "Detail Page";
 			sourceTree = "<group>";

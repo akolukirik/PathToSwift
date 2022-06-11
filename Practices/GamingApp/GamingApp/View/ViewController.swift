@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -20,14 +21,11 @@ class ViewController: UIViewController {
 
     var counter = 0
 
-    var myImage = UIImage(named: "Button1")
-
     override func viewDidLoad() {
-
         super.viewDidLoad()
 
         navigationView.topItem?.title = "Games"
-        let rightButton = UIBarButtonItem(image: myImage, style: .plain, target: self, action: #selector(tab) )
+        let rightButton = UIBarButtonItem(image: UIImage(named: "Button1"), style: .plain, target: self, action: #selector(tab))
         rightButton.tintColor = .white
         navigationView.topItem?.rightBarButtonItem = rightButton
 
@@ -55,10 +53,15 @@ class ViewController: UIViewController {
 
     // MARK: - Switch Case??
     @objc func tab() {
+        collectionView.reloadData()
         if counter == 0 {
             counter = 1
+            cellWidth = 171
+            cellHeight = 243
         } else {
             counter = 0
+            cellWidth = 358
+            cellHeight = 360
         }
     }
 
@@ -81,6 +84,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return gameInfoList?.count ?? 0
     }
 
+    @objc func loadTable() {
+        self.collectionView.reloadData()
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         if counter == 1 {
@@ -89,13 +96,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             guard let smallModel = gameInfoList?[indexPath.row] else { return UICollectionViewCell() }
 
             cell.configureSmallCell(smallImage: smallModel.backgroundImage,
-                                    smallName: smallModel.name)
-
-            cellWidth = 171
-            cellHeight = 243
-            collectionView.reloadData()
-
+                                    smallName: smallModel.name,
+                                    index2: indexPath.row,
+                                    delegate2: self)
             return cell
+
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigCellCollectionViewCell.identifier, for: indexPath) as? BigCellCollectionViewCell else { return UICollectionViewCell() }
 
@@ -110,13 +115,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                            index: indexPath.row,
                            delegate: self)
 
-            cellWidth = 358
-            cellHeight = 360
-            collectionView.reloadData()
-
             return cell
         }
-        
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -130,8 +130,15 @@ extension ViewController: GamesCollectionViewCellDelegate {
     func didTappedBigCellGame(rowIndex: Int) {
         let pilotCode = gameInfoList?[rowIndex].id ?? 0
         self.getData2(getGameID: pilotCode)
-        print("baaasssssssss")
+        print("bastım")
+    }
+}
 
+extension ViewController: GamesCollectionViewCellDelegate2 {
+    func didTappedBigCellGame2(rowIndex: Int) {
+        let pilotCode = gameInfoList?[rowIndex].id ?? 0
+        self.getData2(getGameID: pilotCode)
+        print("aaaaaaa")
     }
 }
 
@@ -159,6 +166,4 @@ extension ViewController {
             }
         }
     }
-
-
 }
