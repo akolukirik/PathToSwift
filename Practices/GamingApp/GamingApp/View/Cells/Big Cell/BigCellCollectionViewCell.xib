@@ -152,7 +152,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="saveButtonTapped" destination="gTV-IL-0wX" eventType="touchUpInside" id="44z-W7-rQ6"/>
+                                                    <action selector="saveButtonTapped" destination="gTV-IL-0wX" eventType="touchUpInside" id="Dmz-8s-oWk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -218,13 +218,14 @@
                 <constraint firstAttribute="trailing" secondItem="FHo-ks-Tjq" secondAttribute="trailing" id="avG-f8-TJH"/>
             </constraints>
             <connections>
-                <outlet property="bigCellSaveButton" destination="P4A-uB-rVa" id="8T9-oz-d0Z"/>
+                <outlet property="bigCellSaveButton" destination="P4A-uB-rVa" id="qKP-hk-EeX"/>
                 <outlet property="bigImageView" destination="Q1h-TD-ewz" id="gTi-a2-B6G"/>
                 <outlet property="bigNameLabel" destination="tUf-p9-MLa" id="Iou-Ai-5Gl"/>
                 <outlet property="containerView" destination="FHo-ks-Tjq" id="ZJT-Yq-Cnc"/>
                 <outlet property="genresLabel" destination="CcE-0D-kVZ" id="Cqq-Nr-KCr"/>
                 <outlet property="playTimeLabel" destination="GJw-1d-PTQ" id="tYP-hh-TmN"/>
                 <outlet property="releaseDateLabel" destination="qqr-fv-CaG" id="ZrF-lb-2SY"/>
+                <outlet property="saveButtonContainerView" destination="u8T-Fc-PBz" id="urW-5e-mjy"/>
                 <outlet property="scoreLabel" destination="Mlm-De-nLA" id="2Sn-uQ-fV4"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>

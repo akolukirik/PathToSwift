@@ -9,6 +9,7 @@ import UIKit
 
 protocol GamesCollectionViewCellDelegate {
     func didTappedBigCellGame(rowIndex: Int)
+    func didTappedBigCellSave(rowIndex: Int, isSaved: Bool)
 }
 
 class BigCellCollectionViewCell: UICollectionViewCell {
@@ -20,12 +21,15 @@ class BigCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet var playTimeLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var containerView: UIView!
+    @IBOutlet var saveButtonContainerView: UIView!
     @IBOutlet var bigCellSaveButton: UIButton!
+
 
     static let identifier = "BigCellCollectionViewCell"
 
     private var cellIndex: Int = 1
     private var delegate: GamesCollectionViewCellDelegate?
+    private var isSaved: Bool = false
 
     public func configure(image: String?,
                           name: String?,
@@ -34,6 +38,7 @@ class BigCellCollectionViewCell: UICollectionViewCell {
                           playTime: Int?,
                           score: Int?,
                           index: Int,
+                          isSaved: Bool,
                           delegate: GamesCollectionViewCellDelegate) {
 
         bigImageView.setImage(imageURL: image ?? "" )
@@ -59,13 +64,31 @@ class BigCellCollectionViewCell: UICollectionViewCell {
 
         self.cellIndex = index
         self.delegate = delegate
+        self.isSaved = isSaved
 
+        setSaveButtonColor(isSaved: isSaved)
         containerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(containerViewTapped)))
 
     }
 
     @objc func containerViewTapped() {
         delegate?.didTappedBigCellGame(rowIndex: cellIndex)
+    }
+
+    @IBAction func saveButtonTapped() {
+        bigCellSaveButton.isSelected = false
+        isSaved.toggle()
+        setSaveButtonColor(isSaved: isSaved)
+        delegate?.didTappedBigCellSave(rowIndex: cellIndex, isSaved: isSaved)
+    }
+
+
+    func setSaveButtonColor(isSaved: Bool) {
+        if isSaved == true {
+            saveButtonContainerView.backgroundColor = .green
+        } else {
+            saveButtonContainerView.backgroundColor = .gray
+        }
     }
 
     override func awakeFromNib() {

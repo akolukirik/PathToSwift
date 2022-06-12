@@ -15,7 +15,12 @@ class DetailViewController: UIViewController {
     @IBOutlet var gameDescriptionsLabel: UILabel!
     @IBOutlet var metacriticPointLabel: UILabel!
 
+    @IBOutlet var detailSaveButton: UIBarButtonItem!
+
     var gameDetailModel: Result?
+    var ali: GameApi?
+
+    private var isSavedGame: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +28,7 @@ class DetailViewController: UIViewController {
         navigationView.topItem?.title = "Game Detail"
         navigationView.tintColor = .white
 
-        let rightButton = UIBarButtonItem(image: UIImage(named: "Gift1"), style: .plain, target: self, action: #selector(tab))
+        let rightButton = UIBarButtonItem(image: UIImage(named: "Gift1"), style: .plain, target: self, action: #selector(detailPageSaveButtonTapped))
         rightButton.tintColor = .white
         navigationView.topItem?.rightBarButtonItem = rightButton
 
@@ -32,6 +37,7 @@ class DetailViewController: UIViewController {
         navigationView.topItem?.leftBarButtonItem = button
 
         gameNameLabel.text = gameDetailModel?.name
+        gameDescriptionsLabel.text = ali?.welcomeDescription
         detailImageView.setImage(imageURL: gameDetailModel?.backgroundImage ?? "")
         metacriticPointLabel.text = String(gameDetailModel?.metacritic ?? 0)
         
@@ -49,10 +55,30 @@ class DetailViewController: UIViewController {
             metacriticPointLabel.textColor = UIColor.red
         }
 
+        let savedGames = UserDefaults.standard.object(forKey: "savedGames") as? [String: Bool] ?? [:]
+        isSavedGame = savedGames[gameDetailModel?.name ?? ""] ?? false
+        setSaveButtonColor(isSaved: isSavedGame)
+
     }
 
-    @objc func tab() {
-        print("test")
+    @objc func detailPageSaveButtonTapped() {
+        isSavedGame.toggle()
+        setSaveButtonColor(isSaved: isSavedGame)
+
+        var savedCountries = UserDefaults.standard.object(forKey: "savedGames") as? [String: Bool] ?? [:]
+        savedCountries[gameDetailModel?.name ?? ""] = isSavedGame
+        UserDefaults.standard.set(savedCountries, forKey: "savedGames")
+    }
+
+    func setSaveButtonColor(isSaved: Bool) {
+        navigationView.topItem?.rightBarButtonItem?.tintColor = isSaved ? .green : .white
+    }
+
+
+    @IBAction func openRedditPage(_ sender: Any) {
+    }
+
+    @IBAction func openWebsitePage(_ sender: Any) {
     }
 
     @objc func goBack() {

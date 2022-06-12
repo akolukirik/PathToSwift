@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var navigationView: UINavigationBar!
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var rightButton: UIBarButtonItem!
 
     var gameInfoList: [Result]?
 
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         navigationView.topItem?.title = "Games"
-        let rightButton = UIBarButtonItem(image: UIImage(named: "Button1"), style: .plain, target: self, action: #selector(tab))
+        rightButton = UIBarButtonItem(image: UIImage(named: "Button1"), style: .plain, target: self, action: #selector(tab))
         rightButton.tintColor = .white
         navigationView.topItem?.rightBarButtonItem = rightButton
 
@@ -58,10 +59,13 @@ class ViewController: UIViewController {
             counter = 1
             cellWidth = 171
             cellHeight = 243
+            rightButton.image = UIImage(named: "Button2")
+            
         } else {
             counter = 0
             cellWidth = 358
             cellHeight = 360
+            rightButton.image = UIImage(named: "Button1")
         }
     }
 
@@ -95,16 +99,25 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
             guard let smallModel = gameInfoList?[indexPath.row] else { return UICollectionViewCell() }
 
+            let gameName = gameInfoList?[indexPath.row].name ?? ""
+            let savedGame = UserDefaults.standard.object(forKey: "savedGames") as? [String: Bool] ?? [:]
+            let isSaved2 = savedGame[gameName] ?? false
+
             cell.configureSmallCell(smallImage: smallModel.backgroundImage,
                                     smallName: smallModel.name,
-                                    index2: indexPath.row,
-                                    delegate2: self)
+                                    smallIndex: indexPath.row,
+                                    smallIsSaved: isSaved2,
+                                    smallDelegate: self)
             return cell
 
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigCellCollectionViewCell.identifier, for: indexPath) as? BigCellCollectionViewCell else { return UICollectionViewCell() }
 
             guard let model = gameInfoList?[indexPath.row] else { return UICollectionViewCell() }
+
+            let gameName = gameInfoList?[indexPath.row].name ?? ""
+            let savedGame = UserDefaults.standard.object(forKey: "savedGames") as? [String: Bool] ?? [:]
+            let isSaved = savedGame[gameName] ?? false
 
             cell.configure(image: model.backgroundImage,
                            name: model.name,
@@ -113,6 +126,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                            playTime: model.playtime,
                            score: model.metacritic,
                            index: indexPath.row,
+                           isSaved: isSaved,
                            delegate: self)
 
             return cell
@@ -127,17 +141,32 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
 extension ViewController: GamesCollectionViewCellDelegate {
 
+    func didTappedBigCellSave(rowIndex: Int, isSaved: Bool) {
+        let gameName = gameInfoList?[rowIndex].name ?? ""
+        var savedGame = UserDefaults.standard.object(forKey: "savedGames") as? [String: Bool] ?? [:]
+        savedGame[gameName] = isSaved
+        UserDefaults.standard.set(savedGame, forKey: "savedGames")
+    }
+
     func didTappedBigCellGame(rowIndex: Int) {
-        let pilotCode = gameInfoList?[rowIndex].id ?? 0
-        self.getData2(getGameID: pilotCode)
+        let gameID = gameInfoList?[rowIndex].id ?? 0
+        self.getData2(getGameID: gameID)
         print("bastım")
     }
 }
 
-extension ViewController: GamesCollectionViewCellDelegate2 {
-    func didTappedBigCellGame2(rowIndex: Int) {
-        let pilotCode = gameInfoList?[rowIndex].id ?? 0
-        self.getData2(getGameID: pilotCode)
+extension ViewController: GamesCollectionViewSmallCellDelegate {
+
+    func didTappedSmallCellSave(rowIndex: Int, isSaved: Bool) {
+        let gameName = gameInfoList?[rowIndex].name ?? ""
+        var savedGame = UserDefaults.standard.object(forKey: "savedGames") as? [String: Bool] ?? [:]
+        savedGame[gameName] = isSaved
+        UserDefaults.standard.set(savedGame, forKey: "savedGames")
+    }
+
+    func didTappedSmallCellGame(rowIndex: Int) {
+        let gameID = gameInfoList?[rowIndex].id ?? 0
+        self.getData2(getGameID: gameID)
         print("aaaaaaa")
     }
 }

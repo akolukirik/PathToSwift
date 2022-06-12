@@ -55,7 +55,16 @@
                                             <color key="textShadowColor" red="1" green="1" blue="1" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         </textAttributes>
                                         <items>
-                                            <navigationItem title="Games" id="4Eu-h7-F1N"/>
+                                            <navigationItem title="Games" id="4Eu-h7-F1N">
+                                                <barButtonItem key="rightBarButtonItem" style="plain" id="61Q-J6-crz">
+                                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IOc-lJ-aN6">
+                                                        <rect key="frame" x="288" y="5" width="86" height="34.333333333333336"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="a"/>
+                                                    </button>
+                                                </barButtonItem>
+                                            </navigationItem>
                                         </items>
                                     </navigationBar>
                                 </subviews>
@@ -128,6 +137,7 @@
                     <connections>
                         <outlet property="collectionView" destination="Cqh-wR-LSm" id="pGM-ob-vba"/>
                         <outlet property="navigationView" destination="HCU-24-JqD" id="ICS-wM-PNT"/>
+                        <outlet property="rightButton" destination="61Q-J6-crz" id="Quv-5o-KyR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lF8-Tk-imS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="GamingApp" customModuleProvider="target">
             <connections>
                 <outlet property="detailImageView" destination="FBI-yP-sfc" id="FLq-7M-Yfj"/>
+                <outlet property="detailSaveButton" destination="fce-dU-vxz" id="aP7-8s-ClM"/>
                 <outlet property="gameDescriptionsLabel" destination="mVN-LH-T66" id="xkJ-DL-YGH"/>
                 <outlet property="gameNameLabel" destination="GQk-dG-La0" id="79V-E8-2zX"/>
                 <outlet property="metacriticPointLabel" destination="MtZ-5o-rbJ" id="Tdc-bg-hsG"/>
@@ -36,7 +37,16 @@
                                 <color key="textShadowColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                             </textAttributes>
                             <items>
-                                <navigationItem title="Title" id="WKL-KU-AIy"/>
+                                <navigationItem title="Title" id="WKL-KU-AIy">
+                                    <barButtonItem key="rightBarButtonItem" style="plain" id="fce-dU-vxz">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="64g-7v-Y0N">
+                                            <rect key="frame" x="275" y="3" width="99" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="Gift1"/>
+                                        </button>
+                                    </barButtonItem>
+                                </navigationItem>
                             </items>
                         </navigationBar>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FBI-yP-sfc">
@@ -99,6 +109,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="chevron.forward" catalog="system"/>
+                                    <connections>
+                                        <action selector="openRedditPage:" destination="-1" eventType="touchUpInside" id="dsC-Vq-boA"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,7 +123,7 @@
                                 <constraint firstItem="10e-gj-7rk" firstAttribute="top" secondItem="jNE-x1-Q22" secondAttribute="top" id="jXj-iG-G9G"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5W-me-75R" userLabel="Reddit">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5W-me-75R" userLabel="Website">
                             <rect key="frame" x="16" y="518" width="358" height="36"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Visit Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3j-ZG-rt5">
@@ -124,6 +137,9 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
+                                    <connections>
+                                        <action selector="openWebsitePage:" destination="-1" eventType="touchUpInside" id="wOQ-cA-bWq"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -182,6 +198,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Gift1" width="24" height="24"/>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
     </resources>

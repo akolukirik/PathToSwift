@@ -75,6 +75,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		413B4908285601B400C55BDA /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
 		419FDC29284244DF00DDEA6E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +101,7 @@
 		419FDC34284244DF00DDEA6E /* GamingApp */ = {
 			isa = PBXGroup;
 			children = (
+				419FDC5928425A5600DDEA6E /* Helper */,
 				419FDC49284244E700DDEA6E /* Delegates */,
 				419FDC50284259F900DDEA6E /* Network */,
 				419FDC4A2842575500DDEA6E /* View */,
@@ -101,7 +109,6 @@
 				419FDC3E284244E000DDEA6E /* Assets.xcassets */,
 				419FDC40284244E000DDEA6E /* LaunchScreen.storyboard */,
 				419FDC43284244E000DDEA6E /* Info.plist */,
-				419FDC5928425A5600DDEA6E /* Helper */,
 			);
 			path = GamingApp;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				419FDC39284244DF00DDEA6E /* ViewController.swift */,
+				413B4908285601B400C55BDA /* Wishlist */,
 				41B8A4072849234A00A532F8 /* Detail Page */,
 				412EEF6A2843B10300A3E53C /* Cells */,
 			);

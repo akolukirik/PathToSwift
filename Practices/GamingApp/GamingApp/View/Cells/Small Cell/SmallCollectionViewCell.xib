@@ -26,8 +26,34 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-PM-PpX">
                                         <rect key="frame" x="-67" y="0.0" width="304" height="171"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwY-R8-UV9">
+                                        <rect key="frame" x="123" y="12" width="36" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSE-91-Ct3">
+                                                <rect key="frame" x="9" y="9" width="18" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="18" id="Q7m-j5-NVi"/>
+                                                    <constraint firstAttribute="width" constant="18" id="iKF-WY-egy"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Gift1"/>
+                                                <connections>
+                                                    <action selector="saveButtonTapped" destination="gTV-IL-0wX" eventType="touchUpInside" id="YQm-wA-kR4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="BSE-91-Ct3" firstAttribute="leading" secondItem="ZwY-R8-UV9" secondAttribute="leading" constant="9" id="U6k-mN-ofd"/>
+                                            <constraint firstAttribute="trailing" secondItem="BSE-91-Ct3" secondAttribute="trailing" constant="9" id="cRL-On-RNK"/>
+                                            <constraint firstItem="BSE-91-Ct3" firstAttribute="top" secondItem="ZwY-R8-UV9" secondAttribute="top" constant="9" id="dKd-fU-wKn"/>
+                                            <constraint firstAttribute="width" constant="36" id="hwN-UU-Hq2"/>
+                                            <constraint firstAttribute="bottom" secondItem="BSE-91-Ct3" secondAttribute="bottom" constant="9" id="r96-tc-cG9"/>
+                                            <constraint firstAttribute="height" constant="36" id="xl1-YQ-9pN"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os5-IQ-Ome">
-                                        <rect key="frame" x="0.0" y="179" width="171" height="48"/>
+                                        <rect key="frame" x="12" y="183" width="147" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="3Mp-ok-Nfv"/>
                                         </constraints>
@@ -39,12 +65,16 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Rhr-PM-PpX" firstAttribute="centerX" secondItem="7gY-14-G2n" secondAttribute="centerX" id="4q4-lb-Tey"/>
-                                    <constraint firstAttribute="bottom" secondItem="os5-IQ-Ome" secondAttribute="bottom" constant="16" id="6md-nD-Gs8"/>
-                                    <constraint firstItem="os5-IQ-Ome" firstAttribute="top" secondItem="Rhr-PM-PpX" secondAttribute="bottom" constant="8" id="LQB-89-UnL"/>
+                                    <constraint firstAttribute="bottom" secondItem="os5-IQ-Ome" secondAttribute="bottom" constant="12" id="6md-nD-Gs8"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZwY-R8-UV9" secondAttribute="trailing" constant="12" id="8eK-Tq-KgP"/>
+                                    <constraint firstItem="os5-IQ-Ome" firstAttribute="top" secondItem="ZwY-R8-UV9" secondAttribute="bottom" constant="135" id="BPb-vC-ghM"/>
+                                    <constraint firstItem="ZwY-R8-UV9" firstAttribute="top" secondItem="7gY-14-G2n" secondAttribute="top" constant="12" id="Krx-kM-PEK"/>
+                                    <constraint firstItem="os5-IQ-Ome" firstAttribute="top" secondItem="Rhr-PM-PpX" secondAttribute="bottom" constant="12" id="LQB-89-UnL"/>
                                     <constraint firstItem="Rhr-PM-PpX" firstAttribute="centerX" secondItem="os5-IQ-Ome" secondAttribute="centerX" constant="-0.5" id="NRa-Dm-QGR"/>
                                     <constraint firstItem="Rhr-PM-PpX" firstAttribute="top" secondItem="7gY-14-G2n" secondAttribute="top" id="PmC-Yo-AJJ"/>
+                                    <constraint firstItem="ZwY-R8-UV9" firstAttribute="leading" secondItem="7gY-14-G2n" secondAttribute="leading" constant="123" id="v4x-Hz-jLd"/>
                                     <constraint firstItem="Rhr-PM-PpX" firstAttribute="leading" secondItem="7gY-14-G2n" secondAttribute="leading" constant="-67" id="vVm-6p-ScR"/>
-                                    <constraint firstItem="os5-IQ-Ome" firstAttribute="leading" secondItem="7gY-14-G2n" secondAttribute="leading" id="y5a-st-SqW"/>
+                                    <constraint firstItem="os5-IQ-Ome" firstAttribute="leading" secondItem="7gY-14-G2n" secondAttribute="leading" constant="12" id="y5a-st-SqW"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -66,7 +96,9 @@
                 <constraint firstItem="xcQ-K2-WhZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bhx-IS-u6k"/>
             </constraints>
             <connections>
+                <outlet property="saveButtonSmallCellContainerView" destination="ZwY-R8-UV9" id="pgw-7g-46n"/>
                 <outlet property="smallCellContainerView" destination="7gY-14-G2n" id="ioK-82-MIm"/>
+                <outlet property="smallCellSaveButton" destination="BSE-91-Ct3" id="8zu-c1-qNk"/>
                 <outlet property="smallImageView" destination="Rhr-PM-PpX" id="RJz-IP-nN9"/>
                 <outlet property="smallNameLabel" destination="os5-IQ-Ome" id="3ou-eD-Mzo"/>
             </connections>
@@ -74,6 +106,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="Gift1" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
