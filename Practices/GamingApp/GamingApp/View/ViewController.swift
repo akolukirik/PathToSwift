@@ -88,10 +88,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return gameInfoList?.count ?? 0
     }
 
-    @objc func loadTable() {
-        self.collectionView.reloadData()
-    }
-
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         if counter == 1 {

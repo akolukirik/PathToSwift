@@ -11,18 +11,70 @@
         <!--Wishlist-->
         <scene sceneID="Oct-rt-1yx">
             <objects>
-                <viewController id="rn3-eF-wsj" sceneMemberID="viewController">
+                <viewController id="rn3-eF-wsj" customClass="WishlistViewController" customModule="GamingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LS1-AT-3a9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbL-3p-6BX">
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="8IV-HB-0Cj"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lN7-XV-knB">
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TuU-zA-wz5">
+                                <rect key="frame" x="16" y="146" width="358" height="551"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7bm-8l-Xst">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yET-Gl-0JO">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9sn-lD-aSy">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Z5b-7C-aMr"/>
                         <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="leading" secondItem="Z5b-7C-aMr" secondAttribute="leading" id="5Js-bs-Z83"/>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="top" secondItem="pbL-3p-6BX" secondAttribute="bottom" id="67k-14-36N"/>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="top" secondItem="pbL-3p-6BX" secondAttribute="bottom" id="9be-JE-g1b"/>
+                            <constraint firstItem="pbL-3p-6BX" firstAttribute="top" secondItem="Z5b-7C-aMr" secondAttribute="top" id="UWT-Ef-4Wr"/>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="trailing" secondItem="Z5b-7C-aMr" secondAttribute="trailing" id="fhG-Aq-YrQ"/>
+                            <constraint firstItem="pbL-3p-6BX" firstAttribute="leading" secondItem="Z5b-7C-aMr" secondAttribute="leading" id="igH-ol-lbo"/>
+                            <constraint firstItem="pbL-3p-6BX" firstAttribute="trailing" secondItem="Z5b-7C-aMr" secondAttribute="trailing" id="l3h-4Y-W5Y"/>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="bottom" secondItem="Z5b-7C-aMr" secondAttribute="bottom" id="xne-8C-BuB"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wishlist" image="gift" catalog="system" id="4bz-SC-jN1"/>
+                    <connections>
+                        <outlet property="wishlistCollectionView" destination="TuU-zA-wz5" id="7fF-aB-V3E"/>
+                        <outlet property="wishlistNavigationBar" destination="pbL-3p-6BX" id="aCA-A3-mbc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBa-vJ-zCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1691" y="508"/>
+            <point key="canvasLocation" x="1690.7692307692307" y="507.58293838862556"/>
         </scene>
         <!--Games-->
         <scene sceneID="nIt-Gz-rgL">
