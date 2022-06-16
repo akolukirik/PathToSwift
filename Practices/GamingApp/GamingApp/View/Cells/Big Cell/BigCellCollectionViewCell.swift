@@ -25,6 +25,9 @@ class BigCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet var bigCellSaveButton: UIButton!
 
 
+
+
+
     static let identifier = "BigCellCollectionViewCell"
 
     private var cellIndex: Int = 1
@@ -39,13 +42,20 @@ class BigCellCollectionViewCell: UICollectionViewCell {
                           score: Int?,
                           index: Int,
                           isSaved: Bool,
+                          aaaa: [PlatformElement]?,
                           delegate: GamesCollectionViewCellDelegate) {
 
+
+
+        print( aaaa?.map( {($0.platform?.name ?? "")}).joined(separator: ",") as Any)
+        print(aaaa?.count ?? 0)
+
         bigImageView.setImage(imageURL: image ?? "" )
+
         bigNameLabel.text = name
+
         releaseDateLabel.text = releaseDate
-        //genresLabel.text = genres.map( {($0.name ?? "")}).joined(separator: ",")
-        genresLabel.text = "Working on.."
+        genresLabel.text = genres?.map( {($0.name ?? "")}).joined(separator: ",")
         playTimeLabel.text = String(playTime!)
         scoreLabel.text = String(score!)
         if score ?? 0 >= 75 {

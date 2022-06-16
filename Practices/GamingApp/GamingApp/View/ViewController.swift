@@ -123,6 +123,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                            score: model.metacritic,
                            index: indexPath.row,
                            isSaved: isSaved,
+                           aaaa: model.platforms,
                            delegate: self)
 
             return cell

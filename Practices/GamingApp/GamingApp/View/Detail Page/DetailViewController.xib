@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="GamingApp" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionsView" destination="wwM-ej-lf3" id="Z66-kQ-Cmz"/>
                 <outlet property="detailImageView" destination="FBI-yP-sfc" id="FLq-7M-Yfj"/>
                 <outlet property="detailSaveButton" destination="fce-dU-vxz" id="aP7-8s-ClM"/>
                 <outlet property="gameDescriptionsLabel" destination="mVN-LH-T66" id="xkJ-DL-YGH"/>

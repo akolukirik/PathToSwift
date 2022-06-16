@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var gameNameLabel: UILabel!
     @IBOutlet var gameDescriptionsLabel: UILabel!
     @IBOutlet var metacriticPointLabel: UILabel!
+    @IBOutlet var descriptionsView: UIView!
 
     @IBOutlet var detailSaveButton: UIBarButtonItem!
 
@@ -24,6 +25,8 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        descriptionsView.layer.cornerRadius = 10
 
         navigationView.topItem?.title = "Game Detail"
         navigationView.tintColor = .white
