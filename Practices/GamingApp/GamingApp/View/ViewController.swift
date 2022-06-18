@@ -104,6 +104,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                                     smallIndex: indexPath.row,
                                     smallIsSaved: isSaved2,
                                     smallDelegate: self)
+
+            cell.layer.cornerRadius = 10
+            
             return cell
 
         } else {
@@ -125,6 +128,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                            isSaved: isSaved,
                            aaaa: model.platforms,
                            delegate: self)
+
+            cell.layer.cornerRadius = 10
 
             return cell
         }

@@ -71,6 +71,9 @@ extension WishlistViewController: UICollectionViewDelegate, UICollectionViewData
                                 smallDelegate: self)
 
         cell.smallCellSaveButton.addTarget(self, action: #selector(checkMarkButtonClicked(sender:)), for: .touchUpInside)
+
+        cell.layer.cornerRadius = 10
+        
         return cell
     }
 

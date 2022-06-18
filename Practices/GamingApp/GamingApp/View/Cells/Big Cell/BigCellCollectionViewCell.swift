@@ -24,10 +24,6 @@ class BigCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet var saveButtonContainerView: UIView!
     @IBOutlet var bigCellSaveButton: UIButton!
 
-
-
-
-
     static let identifier = "BigCellCollectionViewCell"
 
     private var cellIndex: Int = 1

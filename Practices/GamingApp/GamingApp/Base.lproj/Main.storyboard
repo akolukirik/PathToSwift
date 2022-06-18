@@ -29,12 +29,11 @@
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lN7-XV-knB">
                                 <rect key="frame" x="0.0" y="88" width="390" height="673"/>
-                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TuU-zA-wz5">
-                                <rect key="frame" x="16" y="146" width="358" height="551"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TuU-zA-wz5">
+                                <rect key="frame" x="16" y="88" width="358" height="673"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7bm-8l-Xst">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -54,16 +53,19 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z5b-7C-aMr"/>
-                        <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lN7-XV-knB" firstAttribute="leading" secondItem="Z5b-7C-aMr" secondAttribute="leading" id="5Js-bs-Z83"/>
-                            <constraint firstItem="lN7-XV-knB" firstAttribute="top" secondItem="pbL-3p-6BX" secondAttribute="bottom" id="67k-14-36N"/>
-                            <constraint firstItem="lN7-XV-knB" firstAttribute="top" secondItem="pbL-3p-6BX" secondAttribute="bottom" id="9be-JE-g1b"/>
-                            <constraint firstItem="pbL-3p-6BX" firstAttribute="top" secondItem="Z5b-7C-aMr" secondAttribute="top" id="UWT-Ef-4Wr"/>
-                            <constraint firstItem="lN7-XV-knB" firstAttribute="trailing" secondItem="Z5b-7C-aMr" secondAttribute="trailing" id="fhG-Aq-YrQ"/>
-                            <constraint firstItem="pbL-3p-6BX" firstAttribute="leading" secondItem="Z5b-7C-aMr" secondAttribute="leading" id="igH-ol-lbo"/>
-                            <constraint firstItem="pbL-3p-6BX" firstAttribute="trailing" secondItem="Z5b-7C-aMr" secondAttribute="trailing" id="l3h-4Y-W5Y"/>
-                            <constraint firstItem="lN7-XV-knB" firstAttribute="bottom" secondItem="Z5b-7C-aMr" secondAttribute="bottom" id="xne-8C-BuB"/>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="top" secondItem="TuU-zA-wz5" secondAttribute="top" id="7B1-h6-Flb"/>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="bottom" secondItem="TuU-zA-wz5" secondAttribute="bottom" id="DMn-hz-eM8"/>
+                            <constraint firstItem="pbL-3p-6BX" firstAttribute="leading" secondItem="lN7-XV-knB" secondAttribute="leading" id="HBd-yW-tRS"/>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="bottom" secondItem="Z5b-7C-aMr" secondAttribute="bottom" id="Hb9-rm-Jo9"/>
+                            <constraint firstItem="TuU-zA-wz5" firstAttribute="leading" secondItem="LS1-AT-3a9" secondAttribute="leadingMargin" id="Hop-W7-Ime"/>
+                            <constraint firstItem="TuU-zA-wz5" firstAttribute="trailing" secondItem="LS1-AT-3a9" secondAttribute="trailingMargin" id="MUh-ER-xhv"/>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="centerX" secondItem="TuU-zA-wz5" secondAttribute="centerX" id="MoH-EK-1xf"/>
+                            <constraint firstItem="pbL-3p-6BX" firstAttribute="leading" secondItem="Z5b-7C-aMr" secondAttribute="leading" id="Srq-VM-1MU"/>
+                            <constraint firstItem="lN7-XV-knB" firstAttribute="top" secondItem="pbL-3p-6BX" secondAttribute="bottom" id="TdG-cO-Zlb"/>
+                            <constraint firstItem="pbL-3p-6BX" firstAttribute="trailing" secondItem="lN7-XV-knB" secondAttribute="trailing" id="wEv-qO-Ssf"/>
+                            <constraint firstItem="pbL-3p-6BX" firstAttribute="top" secondItem="Z5b-7C-aMr" secondAttribute="top" id="wLo-lV-tw2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wishlist" image="gift" catalog="system" id="4bz-SC-jN1"/>
@@ -86,7 +88,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpL-GH-iwr">
                                 <rect key="frame" x="0.0" y="44" width="390" height="717"/>
-                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1D-xd-OBQ" userLabel="Navbar">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="142"/>
@@ -101,7 +103,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="0TN-KT-7gH"/>
                                         </constraints>
-                                        <color key="barTintColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textAttributes key="titleTextAttributes">
                                             <color key="textColor" red="1" green="1" blue="1" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <color key="textShadowColor" red="1" green="1" blue="1" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -120,8 +122,8 @@
                                         </items>
                                     </navigationBar>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="HCU-24-JqD" firstAttribute="leading" secondItem="U1D-xd-OBQ" secondAttribute="leading" id="927-p1-yOK"/>
                                     <constraint firstItem="Gyy-MT-cNp" firstAttribute="top" secondItem="HCU-24-JqD" secondAttribute="bottom" id="AK8-t5-uir"/>
@@ -137,7 +139,8 @@
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cqh-wR-LSm">
                                         <rect key="frame" x="0.0" y="0.0" width="358" height="551"/>
-                                        <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9v0-pg-PIV">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -166,7 +169,8 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kb2-uy-iQn"/>
-                        <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="U1D-xd-OBQ" firstAttribute="trailing" secondItem="fpL-GH-iwr" secondAttribute="trailing" id="1fs-ku-blf"/>
                             <constraint firstItem="7f9-S3-wD5" firstAttribute="leading" secondItem="Kb2-uy-iQn" secondAttribute="leading" constant="16" id="2Ik-bj-UtR"/>
@@ -185,7 +189,9 @@
                             <constraint firstItem="U1D-xd-OBQ" firstAttribute="leading" secondItem="fpL-GH-iwr" secondAttribute="leading" id="zx9-Sv-HhV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Games" image="gamecontroller" catalog="system" id="0Fw-Xe-gsq"/>
+                    <tabBarItem key="tabBarItem" title="Games" image="gamecontroller" catalog="system" id="0Fw-Xe-gsq">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="Cqh-wR-LSm" id="pGM-ob-vba"/>
                         <outlet property="navigationView" destination="HCU-24-JqD" id="ICS-wM-PNT"/>

@@ -18,12 +18,12 @@
 		419FDC4E2842577300DDEA6E /* BigCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FDC4C2842577300DDEA6E /* BigCellCollectionViewCell.swift */; };
 		419FDC4F2842577300DDEA6E /* BigCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419FDC4D2842577300DDEA6E /* BigCellCollectionViewCell.xib */; };
 		419FDC5228425A0F00DDEA6E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FDC5128425A0F00DDEA6E /* Network.swift */; };
-		419FDC5528425A2F00DDEA6E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 419FDC5428425A2F00DDEA6E /* Kingfisher */; };
-		419FDC5828425A3C00DDEA6E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 419FDC5728425A3C00DDEA6E /* Alamofire */; };
 		419FDC5B28425A5E00DDEA6E /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FDC5A28425A5E00DDEA6E /* UIImageViewExtension.swift */; };
 		41AAA013285613630015A006 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AAA012285613630015A006 /* WishlistViewController.swift */; };
 		41B8A40A2849237600A532F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8A4082849237600A532F8 /* DetailViewController.swift */; };
 		41B8A40B2849237600A532F8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B8A4092849237600A532F8 /* DetailViewController.xib */; };
+		41CDC928285DEBCB006A6876 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 41CDC927285DEBCB006A6876 /* Kingfisher */; };
+		41CDC92B285DEC1A006A6876 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 41CDC92A285DEC1A006A6876 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				419FDC5528425A2F00DDEA6E /* Kingfisher in Frameworks */,
-				419FDC5828425A3C00DDEA6E /* Alamofire in Frameworks */,
+				41CDC928285DEBCB006A6876 /* Kingfisher in Frameworks */,
+				41CDC92B285DEC1A006A6876 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,8 +187,8 @@
 			);
 			name = GamingApp;
 			packageProductDependencies = (
-				419FDC5428425A2F00DDEA6E /* Kingfisher */,
-				419FDC5728425A3C00DDEA6E /* Alamofire */,
+				41CDC927285DEBCB006A6876 /* Kingfisher */,
+				41CDC92A285DEC1A006A6876 /* Alamofire */,
 			);
 			productName = GamingApp;
 			productReference = 419FDC32284244DF00DDEA6E /* GamingApp.app */;
@@ -221,6 +221,8 @@
 			packageReferences = (
 				419FDC5328425A2F00DDEA6E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				419FDC5628425A3C00DDEA6E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				41CDC926285DEBCB006A6876 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				41CDC929285DEC1A006A6876 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 419FDC33284244DF00DDEA6E /* Products */;
 			projectDirPath = "";
@@ -496,15 +498,31 @@
 				kind = branch;
 			};
 		};
+		41CDC926285DEBCB006A6876 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		41CDC929285DEC1A006A6876 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		419FDC5428425A2F00DDEA6E /* Kingfisher */ = {
+		41CDC927285DEBCB006A6876 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 419FDC5328425A2F00DDEA6E /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		419FDC5728425A3C00DDEA6E /* Alamofire */ = {
+		41CDC92A285DEC1A006A6876 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 419FDC5628425A3C00DDEA6E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
