@@ -22,6 +22,9 @@
 		41AAA013285613630015A006 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AAA012285613630015A006 /* WishlistViewController.swift */; };
 		41B8A40A2849237600A532F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8A4082849237600A532F8 /* DetailViewController.swift */; };
 		41B8A40B2849237600A532F8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B8A4092849237600A532F8 /* DetailViewController.xib */; };
+		41C5CD49285F2CF900F4C0E9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5CD48285F2CF900F4C0E9 /* UIViewExtension.swift */; };
+		41C5CD4B285F2D3B00F4C0E9 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5CD4A285F2D3B00F4C0E9 /* CustomView.swift */; };
+		41C5CD4D285F2D4F00F4C0E9 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C5CD4C285F2D4F00F4C0E9 /* CustomView.xib */; };
 		41CDC928285DEBCB006A6876 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 41CDC927285DEBCB006A6876 /* Kingfisher */; };
 		41CDC92B285DEC1A006A6876 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 41CDC92A285DEC1A006A6876 /* Alamofire */; };
 /* End PBXBuildFile section */
@@ -44,6 +47,9 @@
 		41AAA012285613630015A006 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		41B8A4082849237600A532F8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		41B8A4092849237600A532F8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		41C5CD48285F2CF900F4C0E9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		41C5CD4A285F2D3B00F4C0E9 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		41C5CD4C285F2D4F00F4C0E9 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 				419FDC3E284244E000DDEA6E /* Assets.xcassets */,
 				419FDC40284244E000DDEA6E /* LaunchScreen.storyboard */,
 				419FDC43284244E000DDEA6E /* Info.plist */,
+				41C5CD4E285F2D5200F4C0E9 /* CustomView */,
 			);
 			path = GamingApp;
 			sourceTree = "<group>";
@@ -168,6 +175,16 @@
 				41B8A4082849237600A532F8 /* DetailViewController.swift */,
 			);
 			path = "Detail Page";
+			sourceTree = "<group>";
+		};
+		41C5CD4E285F2D5200F4C0E9 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				41C5CD4C285F2D4F00F4C0E9 /* CustomView.xib */,
+				41C5CD4A285F2D3B00F4C0E9 /* CustomView.swift */,
+				41C5CD48285F2CF900F4C0E9 /* UIViewExtension.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +261,7 @@
 				419FDC3D284244DF00DDEA6E /* Main.storyboard in Resources */,
 				419FDC4F2842577300DDEA6E /* BigCellCollectionViewCell.xib in Resources */,
 				412EEF6E2843B12D00A3E53C /* SmallCollectionViewCell.xib in Resources */,
+				41C5CD4D285F2D4F00F4C0E9 /* CustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,11 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C5CD49285F2CF900F4C0E9 /* UIViewExtension.swift in Sources */,
 				412EEF6D2843B12D00A3E53C /* SmallCollectionViewCell.swift in Sources */,
 				419FDC5228425A0F00DDEA6E /* Network.swift in Sources */,
 				419FDC3A284244DF00DDEA6E /* ViewController.swift in Sources */,
 				419FDC5B28425A5E00DDEA6E /* UIImageViewExtension.swift in Sources */,
 				41AAA013285613630015A006 /* WishlistViewController.swift in Sources */,
+				41C5CD4B285F2D3B00F4C0E9 /* CustomView.swift in Sources */,
 				419FDC36284244DF00DDEA6E /* AppDelegate.swift in Sources */,
 				419FDC38284244DF00DDEA6E /* SceneDelegate.swift in Sources */,
 				419FDC4E2842577300DDEA6E /* BigCellCollectionViewCell.swift in Sources */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cM3-JU-mYl">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -68,7 +68,7 @@
                             <constraint firstItem="pbL-3p-6BX" firstAttribute="top" secondItem="Z5b-7C-aMr" secondAttribute="top" id="wLo-lV-tw2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wishlist" image="gift" catalog="system" id="4bz-SC-jN1"/>
+                    <tabBarItem key="tabBarItem" title="Wishlist" image="gift" id="4bz-SC-jN1"/>
                     <connections>
                         <outlet property="wishlistCollectionView" destination="TuU-zA-wz5" id="7fF-aB-V3E"/>
                         <outlet property="wishlistNavigationBar" destination="pbL-3p-6BX" id="aCA-A3-mbc"/>
@@ -95,18 +95,24 @@
                                 <subviews>
                                     <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Gyy-MT-cNp">
                                         <rect key="frame" x="0.0" y="98" width="390" height="44"/>
-                                        <color key="barTintColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCU-24-JqD">
                                         <rect key="frame" x="0.0" y="54" width="390" height="44"/>
+                                        <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="0TN-KT-7gH"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textAttributes key="titleTextAttributes">
                                             <color key="textColor" red="1" green="1" blue="1" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <color key="textShadowColor" red="1" green="1" blue="1" alpha="0.93999999999999995" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </textAttributes>
+                                        <textAttributes key="largeTitleTextAttributes">
+                                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </textAttributes>
                                         <items>
                                             <navigationItem title="Games" id="4Eu-h7-F1N">
@@ -123,7 +129,7 @@
                                     </navigationBar>
                                 </subviews>
                                 <color key="backgroundColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="HCU-24-JqD" firstAttribute="leading" secondItem="U1D-xd-OBQ" secondAttribute="leading" id="927-p1-yOK"/>
                                     <constraint firstItem="Gyy-MT-cNp" firstAttribute="top" secondItem="HCU-24-JqD" secondAttribute="bottom" id="AK8-t5-uir"/>
@@ -189,8 +195,8 @@
                             <constraint firstItem="U1D-xd-OBQ" firstAttribute="leading" secondItem="fpL-GH-iwr" secondAttribute="leading" id="zx9-Sv-HhV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Games" image="gamecontroller" catalog="system" id="0Fw-Xe-gsq">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <tabBarItem key="tabBarItem" title="Games" image="console" id="0Fw-Xe-gsq">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="Cqh-wR-LSm" id="pGM-ob-vba"/>
@@ -222,7 +228,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gamecontroller" catalog="system" width="128" height="80"/>
-        <image name="gift" catalog="system" width="128" height="124"/>
+        <image name="console" width="36" height="23"/>
+        <image name="gift" width="25" height="25"/>
     </resources>
 </document>

@@ -14,6 +14,8 @@ protocol GamesCollectionViewCellDelegate {
 
 class BigCellCollectionViewCell: UICollectionViewCell {
 
+    var platformList : [String]?
+
     @IBOutlet var bigImageView: UIImageView!
     @IBOutlet var bigNameLabel: UILabel!
     @IBOutlet var releaseDateLabel: UILabel!
@@ -23,6 +25,11 @@ class BigCellCollectionViewCell: UICollectionViewCell {
     @IBOutlet var containerView: UIView!
     @IBOutlet var saveButtonContainerView: UIView!
     @IBOutlet var bigCellSaveButton: UIButton!
+
+    @IBOutlet var firstCustomView: CustomView!
+    @IBOutlet var secondCustomView: CustomView!
+    @IBOutlet var thirdCustomView: CustomView!
+    @IBOutlet var fourthCustomView: CustomView!
 
     static let identifier = "BigCellCollectionViewCell"
 
@@ -38,18 +45,34 @@ class BigCellCollectionViewCell: UICollectionViewCell {
                           score: Int?,
                           index: Int,
                           isSaved: Bool,
-                          aaaa: [PlatformElement]?,
+                          platforms: [PlatformElement]?,
                           delegate: GamesCollectionViewCellDelegate) {
 
 
 
-        print( aaaa?.map( {($0.platform?.name ?? "")}).joined(separator: ",") as Any)
-        print(aaaa?.count ?? 0)
+        print(platforms?.map( {($0.platform?.name ?? "")}).joined(separator: ",") ?? [])
+        print(platforms?.count ?? 0)
+        //aaaa?.map( {($0.platform?.name ?? "")}).joined(separator: ",") as Any)
+
+
+        firstCustomView.configureView(title: "Test")
+        secondCustomView.configureView(title: "Denemeee")
+        thirdCustomView.configureView(title: "Yeterliii")
+
+        //secondCustomView.configureView(title: "\(platformList?[1] ?? "" )")
+        //thirdCustomView.configureView(title: "\(platformList?[2] ?? "" )")
+
+        if (platforms?.count ?? 0) > 4 {
+            fourthCustomView.configureView(title: "+\((platforms?.count ?? 0) - 3)")
+        } 
+
+        firstCustomView.layer.cornerRadius = 100
+        secondCustomView.layer.cornerRadius = 10
+        thirdCustomView.layer.cornerRadius = 10
+        fourthCustomView.layer.cornerRadius = 10
 
         bigImageView.setImage(imageURL: image ?? "" )
-
         bigNameLabel.text = name
-
         releaseDateLabel.text = releaseDate
         genresLabel.text = genres?.map( {($0.name ?? "")}).joined(separator: ",")
         playTimeLabel.text = String(playTime!)

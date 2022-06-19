@@ -126,7 +126,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                            score: model.metacritic,
                            index: indexPath.row,
                            isSaved: isSaved,
-                           aaaa: model.platforms,
+                           platforms: model.platforms,
                            delegate: self)
 
             cell.layer.cornerRadius = 10
