@@ -164,43 +164,14 @@
                                             <constraint firstItem="P4A-uB-rVa" firstAttribute="top" secondItem="u8T-Fc-PBz" secondAttribute="top" constant="9" id="ye7-lP-5Vt"/>
                                         </constraints>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Jyt-sT-c6h">
-                                        <rect key="frame" x="16" y="218" width="206" height="18"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4jJ-h8-Oai" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="18"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jIq-SK-dOU" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
-                                                <rect key="frame" x="52" y="0.0" width="50" height="18"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQq-53-epB" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
-                                                <rect key="frame" x="104" y="0.0" width="50" height="18"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Acg-eu-O0W" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
-                                                <rect key="frame" x="156" y="0.0" width="50" height="18"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="18" id="W84-1c-wTx"/>
-                                            <constraint firstAttribute="width" constant="206" id="ftl-5C-ulS"/>
-                                        </constraints>
-                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Jyt-sT-c6h" firstAttribute="top" secondItem="Q1h-TD-ewz" secondAttribute="bottom" constant="16" id="28h-uc-YQg"/>
                                     <constraint firstItem="Q1h-TD-ewz" firstAttribute="top" secondItem="u3M-98-XWH" secondAttribute="top" id="4Zj-hQ-hs7"/>
                                     <constraint firstItem="jHH-SV-QIj" firstAttribute="leading" secondItem="u3M-98-XWH" secondAttribute="leading" constant="16" id="6Kf-sv-siF"/>
-                                    <constraint firstItem="Jyt-sT-c6h" firstAttribute="leading" secondItem="u3M-98-XWH" secondAttribute="leading" constant="16" id="84E-m6-lve"/>
                                     <constraint firstItem="Mlm-De-nLA" firstAttribute="leading" secondItem="u3M-98-XWH" secondAttribute="leading" constant="317" id="85l-fC-ZLu"/>
                                     <constraint firstAttribute="trailing" secondItem="Mlm-De-nLA" secondAttribute="trailing" constant="16" id="8EX-Fb-7HT"/>
                                     <constraint firstAttribute="trailing" secondItem="tUf-p9-MLa" secondAttribute="trailing" constant="16" id="B15-Aw-UkM"/>
-                                    <constraint firstItem="Jyt-sT-c6h" firstAttribute="leading" secondItem="u3M-98-XWH" secondAttribute="leading" constant="16" id="B1x-SC-Ks2"/>
                                     <constraint firstItem="fqJ-rL-5pn" firstAttribute="top" secondItem="jHH-SV-QIj" secondAttribute="bottom" constant="12" id="BSB-Q4-RvE"/>
                                     <constraint firstItem="tUf-p9-MLa" firstAttribute="top" secondItem="Mlm-De-nLA" secondAttribute="bottom" constant="14" id="ENc-Il-IPa"/>
                                     <constraint firstItem="fqJ-rL-5pn" firstAttribute="top" secondItem="u3M-98-XWH" secondAttribute="top" constant="308" id="I6g-Cf-9Oo"/>
@@ -211,9 +182,7 @@
                                     <constraint firstAttribute="trailing" secondItem="fqJ-rL-5pn" secondAttribute="trailing" constant="16" id="RfI-Jv-Dqv"/>
                                     <constraint firstItem="Mlm-De-nLA" firstAttribute="top" secondItem="Q1h-TD-ewz" secondAttribute="bottom" constant="16" id="Rud-Wn-pcM"/>
                                     <constraint firstAttribute="bottom" secondItem="tLd-FC-DfC" secondAttribute="bottom" constant="16" id="ShO-o3-2F0"/>
-                                    <constraint firstItem="tUf-p9-MLa" firstAttribute="top" secondItem="Jyt-sT-c6h" secondAttribute="bottom" constant="14" id="U1v-rC-2O7"/>
                                     <constraint firstItem="tLd-FC-DfC" firstAttribute="top" secondItem="fqJ-rL-5pn" secondAttribute="bottom" constant="12" id="VR1-gE-UlW"/>
-                                    <constraint firstItem="tUf-p9-MLa" firstAttribute="top" secondItem="Jyt-sT-c6h" secondAttribute="bottom" constant="14" id="WCb-uP-GXv"/>
                                     <constraint firstItem="Mlm-De-nLA" firstAttribute="top" secondItem="Q1h-TD-ewz" secondAttribute="bottom" constant="16" id="WDu-d2-3ab"/>
                                     <constraint firstItem="jHH-SV-QIj" firstAttribute="top" secondItem="tUf-p9-MLa" secondAttribute="bottom" constant="10" id="XB0-lN-0cg"/>
                                     <constraint firstItem="Mlm-De-nLA" firstAttribute="top" secondItem="u8T-Fc-PBz" secondAttribute="bottom" constant="170" id="agu-ag-riB"/>
@@ -224,7 +193,6 @@
                                     <constraint firstItem="jHH-SV-QIj" firstAttribute="top" secondItem="tUf-p9-MLa" secondAttribute="bottom" constant="10" id="lx2-JK-h3d"/>
                                     <constraint firstAttribute="trailing" secondItem="jHH-SV-QIj" secondAttribute="trailing" constant="16" id="mHG-0O-eMA"/>
                                     <constraint firstItem="tLd-FC-DfC" firstAttribute="leading" secondItem="u3M-98-XWH" secondAttribute="leading" constant="16" id="nZf-Jx-eAW"/>
-                                    <constraint firstItem="Jyt-sT-c6h" firstAttribute="top" secondItem="Q1h-TD-ewz" secondAttribute="bottom" constant="16" id="p5M-ni-zwC"/>
                                     <constraint firstItem="u8T-Fc-PBz" firstAttribute="top" secondItem="u3M-98-XWH" secondAttribute="top" constant="12" id="r7g-T5-aTp"/>
                                     <constraint firstItem="Q1h-TD-ewz" firstAttribute="leading" secondItem="u3M-98-XWH" secondAttribute="leading" id="vFF-Yz-xb3"/>
                                     <constraint firstItem="u8T-Fc-PBz" firstAttribute="leading" secondItem="u3M-98-XWH" secondAttribute="leading" constant="310" id="xL6-06-nvj"/>
@@ -254,15 +222,11 @@
                 <outlet property="bigImageView" destination="Q1h-TD-ewz" id="gTi-a2-B6G"/>
                 <outlet property="bigNameLabel" destination="tUf-p9-MLa" id="Iou-Ai-5Gl"/>
                 <outlet property="containerView" destination="FHo-ks-Tjq" id="ZJT-Yq-Cnc"/>
-                <outlet property="firstCustomView" destination="4jJ-h8-Oai" id="du5-MY-Fc5"/>
-                <outlet property="fourthCustomView" destination="Acg-eu-O0W" id="WAG-1h-esI"/>
                 <outlet property="genresLabel" destination="CcE-0D-kVZ" id="Cqq-Nr-KCr"/>
                 <outlet property="playTimeLabel" destination="GJw-1d-PTQ" id="tYP-hh-TmN"/>
                 <outlet property="releaseDateLabel" destination="qqr-fv-CaG" id="ZrF-lb-2SY"/>
                 <outlet property="saveButtonContainerView" destination="u8T-Fc-PBz" id="urW-5e-mjy"/>
                 <outlet property="scoreLabel" destination="Mlm-De-nLA" id="2Sn-uQ-fV4"/>
-                <outlet property="secondCustomView" destination="jIq-SK-dOU" id="9kc-Pk-h1F"/>
-                <outlet property="thirdCustomView" destination="VQq-53-epB" id="4Wa-yH-wFN"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </collectionViewCell>

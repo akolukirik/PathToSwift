@@ -15,6 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var rightButton: UIBarButtonItem!
 
+
+    @IBOutlet var pcCollectionView: CustomView!
+    @IBOutlet var psCollectionView: CustomView!
+    @IBOutlet var xboxCollectionView: CustomView!
+    @IBOutlet var iOSCollectionView: CustomView!
+    @IBOutlet var androidCollectionView: CustomView!
+    @IBOutlet var nintendoCollectionView: CustomView!
     var gameInfoList: [Result]?
 
     public var cellWidth = 358
@@ -24,6 +31,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        pcCollectionView.configureView(title: "PC")
+        psCollectionView.configureView(title: "PlayStation")
+        xboxCollectionView.configureView(title: "Xbox")
+        iOSCollectionView.configureView(title: "iOS")
+        androidCollectionView.configureView(title: "Android")
+        nintendoCollectionView.configureView(title: "Nintendo")
 
         navigationView.topItem?.title = "Games"
         rightButton = UIBarButtonItem(image: UIImage(named: "Button1"), style: .plain, target: self, action: #selector(tab))

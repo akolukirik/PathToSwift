@@ -110,7 +110,6 @@
 				419FDC3E284244E000DDEA6E /* Assets.xcassets */,
 				419FDC40284244E000DDEA6E /* LaunchScreen.storyboard */,
 				419FDC43284244E000DDEA6E /* Info.plist */,
-				41C5CD4E285F2D5200F4C0E9 /* CustomView */,
 			);
 			path = GamingApp;
 			sourceTree = "<group>";
@@ -131,6 +130,7 @@
 				41AAA011285613510015A006 /* Wishlist */,
 				41B8A4072849234A00A532F8 /* Detail Page */,
 				412EEF6A2843B10300A3E53C /* Cells */,
+				41C5CD4E285F2D5200F4C0E9 /* CustomView */,
 			);
 			path = View;
 			sourceTree = "<group>";
