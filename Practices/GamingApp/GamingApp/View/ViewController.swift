@@ -27,18 +27,18 @@ class ViewController: UIViewController {
     public var cellWidth = 358
     public var cellHeight = 360
 
-    var counter = 0
+    var counter: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pcCollectionView.configureView(title: "PC")
-        psCollectionView.configureView(title: "PlayStation")
-        xboxCollectionView.configureView(title: "Xbox")
-        iOSCollectionView.configureView(title: "iOS")
-        androidCollectionView.configureView(title: "Android")
-        nintendoCollectionView.configureView(title: "Nintendo")
-
+        /*pcCollectionView.configureView(title: "PC")
+         psCollectionView.configureView(title: "PlayStation")
+         xboxCollectionView.configureView(title: "Xbox")
+         iOSCollectionView.configureView(title: "iOS")
+         androidCollectionView.configureView(title: "Android")
+         nintendoCollectionView.configureView(title: "Nintendo")
+         */
         navigationView.topItem?.title = "Games"
         rightButton = UIBarButtonItem(image: UIImage(named: "Button1"), style: .plain, target: self, action: #selector(tab))
         rightButton.tintColor = .white
@@ -69,14 +69,14 @@ class ViewController: UIViewController {
     // MARK: - Switch Case??
     @objc func tab() {
         collectionView.reloadData()
-        if counter == 0 {
-            counter = 1
+        if counter == true {
+            counter.toggle()
             cellWidth = 171
             cellHeight = 243
             rightButton.image = UIImage(named: "Button2")
             
         } else {
-            counter = 0
+            counter.toggle()
             cellWidth = 358
             cellHeight = 360
             rightButton.image = UIImage(named: "Button1")
@@ -104,7 +104,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        if counter == 1 {
+        if counter == false {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SmallCollectionViewCell.identifier, for: indexPath) as? SmallCollectionViewCell else { return UICollectionViewCell() }
 
             guard let smallModel = gameInfoList?[indexPath.row] else { return UICollectionViewCell() }
@@ -166,7 +166,7 @@ extension ViewController: GamesCollectionViewCellDelegate {
 
     func didTappedBigCellGame(rowIndex: Int) {
         let gameID = gameInfoList?[rowIndex].id ?? 0
-        self.getData2(getGameID: gameID)
+        self.getDetail(getGameID: gameID)
         print("bastım")
     }
 }
@@ -182,7 +182,7 @@ extension ViewController: GamesCollectionViewSmallCellDelegate {
 
     func didTappedSmallCellGame(rowIndex: Int) {
         let gameID = gameInfoList?[rowIndex].id ?? 0
-        self.getData2(getGameID: gameID)
+        self.getDetail(getGameID: gameID)
         print("aaaaaaa")
     }
 }
@@ -201,7 +201,7 @@ extension ViewController {
         }
     }
 
-    func getData2(getGameID: Int) {
+    func getDetail(getGameID: Int) {
 
         let url = "https://api.rawg.io/api/games/\(getGameID)?key=3a214e197fa048de96a0e8ddf1c49afb"
 
