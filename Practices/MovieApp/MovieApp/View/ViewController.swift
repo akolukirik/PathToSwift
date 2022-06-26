@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
 
     var upcomingMovieList: [UpcomingMovieModelResults]?
+    var nowPlayingMovieList: [NowPlayingMovieResults]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +28,16 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getData()
+        getNowPlayData()
+    }
+
+    func navigateToDetailView() {
+        let detailVC = MovideDetailPageViewController.init(nibName: "MovideDetailPageViewController", bundle: nil)
+        detailVC.modalPresentationStyle = .fullScreen
+        self.present(detailVC, animated: true, completion: nil)
     }
 
 }
-
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
@@ -51,8 +58,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(name: model.title,
                        description: model.overview,
                        date: model.releaseDate,
-                       image: model.posterPath)
+                       image: model.posterPath,
+                       index: indexPath.row,
+                       delegate: self)
         return cell
+    }
+}
+
+extension ViewController: MoviesTableViewCellDelegate {
+
+    func didTappedMovie(rowIndex: Int) {
+       // let pilotCode = pilotsList?[rowIndex].id ?? 0
+      //  self.getPilotDetail(pilotID: pilotCode )
     }
 }
 
@@ -68,5 +85,21 @@ extension ViewController {
                 self?.tableView.reloadData()
             }
         }
+    }
+
+    func getNowPlayData(movieID: Int) {
+
+        let nowPlayUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=fa15e2389e4b88860c9e9d706eb452f3"
+
+        AF.request(nowPlayUrl,
+                   method: .get).responseDecodable(of: NowPlayingMovieModel.self) { [weak self] response in
+            if let npModel = response.value {
+                self?.nowPlayingMovieList = npModel.results ?? []
+                self?.tableView.reloadData()
+            }
+        }
+
+
+
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41A86DB82868AFE3001369AC /* MovideDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A86DB62868AFE3001369AC /* MovideDetailPageViewController.swift */; };
+		41A86DB92868AFE3001369AC /* MovideDetailPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A86DB72868AFE3001369AC /* MovideDetailPageViewController.xib */; };
+		41A86DBB2868C15F001369AC /* NowPlayingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A86DBA2868C15F001369AC /* NowPlayingMovieModel.swift */; };
 		41DBD4282863499D00BDA5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBD4272863499D00BDA5A8 /* AppDelegate.swift */; };
 		41DBD42A2863499D00BDA5A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBD4292863499D00BDA5A8 /* SceneDelegate.swift */; };
 		41DBD42C2863499D00BDA5A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBD42B2863499D00BDA5A8 /* ViewController.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41A86DB62868AFE3001369AC /* MovideDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovideDetailPageViewController.swift; sourceTree = "<group>"; };
+		41A86DB72868AFE3001369AC /* MovideDetailPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovideDetailPageViewController.xib; sourceTree = "<group>"; };
+		41A86DBA2868C15F001369AC /* NowPlayingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingMovieModel.swift; sourceTree = "<group>"; };
 		41DBD4242863499D00BDA5A8 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DBD4272863499D00BDA5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DBD4292863499D00BDA5A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 		41DBD43E28634A0900BDA5A8 /* Detail Page */ = {
 			isa = PBXGroup;
 			children = (
+				41A86DB62868AFE3001369AC /* MovideDetailPageViewController.swift */,
+				41A86DB72868AFE3001369AC /* MovideDetailPageViewController.xib */,
 			);
 			path = "Detail Page";
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				41DBD44028634B4B00BDA5A8 /* UpcomingMovieModel.swift */,
+				41A86DBA2868C15F001369AC /* NowPlayingMovieModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 				41DBD44528634CC700BDA5A8 /* UpcomingMovieTableViewCell.xib in Resources */,
 				41DBD4342863499E00BDA5A8 /* LaunchScreen.storyboard in Resources */,
 				41DBD4312863499E00BDA5A8 /* Assets.xcassets in Resources */,
+				41A86DB92868AFE3001369AC /* MovideDetailPageViewController.xib in Resources */,
 				41DBD42F2863499D00BDA5A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,8 +280,10 @@
 				41DBD42C2863499D00BDA5A8 /* ViewController.swift in Sources */,
 				41DBD44128634B4B00BDA5A8 /* UpcomingMovieModel.swift in Sources */,
 				41DBD4482863616600BDA5A8 /* UIImageViewExtension.swift in Sources */,
+				41A86DB82868AFE3001369AC /* MovideDetailPageViewController.swift in Sources */,
 				41DBD4282863499D00BDA5A8 /* AppDelegate.swift in Sources */,
 				41DBD44428634CC700BDA5A8 /* UpcomingMovieTableViewCell.swift in Sources */,
+				41A86DBB2868C15F001369AC /* NowPlayingMovieModel.swift in Sources */,
 				41DBD42A2863499D00BDA5A8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
