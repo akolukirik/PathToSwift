@@ -15,15 +15,17 @@ class UpcomingMovieTableViewCell: UITableViewCell {
     @IBOutlet var upcomingMovieDescriptionLabel: UILabel!
     @IBOutlet var upcomingMovieDateLabel: UILabel!
 
-    let baseURL = "https://image.tmdb.org/t/p/w1280"
+    let baseURL = "https://image.tmdb.org/t/p/w1280/"
 
     public func configure(name:String?,
                           description: String?,
                           date: String?,
-                          movieImage: String?) {
+                          image: String? ) {
         upcomingMovieNameLabel.text = name
         upcomingMovieDescriptionLabel.text = description
         upcomingMovieDateLabel.text = date
+        upcomingMovieImageView.setImage(imageURL: baseURL + (image ?? ""))
+
     }
 
     override func awakeFromNib() {

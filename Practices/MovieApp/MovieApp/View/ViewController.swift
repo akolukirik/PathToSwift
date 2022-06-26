@@ -51,7 +51,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(name: model.title,
                        description: model.overview,
                        date: model.releaseDate,
-                       movieImage: model.posterPath)
+                       image: model.posterPath)
         return cell
     }
 }
