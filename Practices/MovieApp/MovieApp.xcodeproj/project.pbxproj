@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41A25FFE2869D8F1005C986E /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A25FFD2869D8F1005C986E /* MovieDetailModel.swift */; };
+		41A33CC8286A453100CB1170 /* NowPlayingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A33CC7286A453100CB1170 /* NowPlayingMovieModel.swift */; };
 		41A86DB82868AFE3001369AC /* MovideDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A86DB62868AFE3001369AC /* MovideDetailPageViewController.swift */; };
 		41A86DB92868AFE3001369AC /* MovideDetailPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A86DB72868AFE3001369AC /* MovideDetailPageViewController.xib */; };
 		41DBD4282863499D00BDA5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBD4272863499D00BDA5A8 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		41A25FFD2869D8F1005C986E /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
+		41A33CC7286A453100CB1170 /* NowPlayingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingMovieModel.swift; sourceTree = "<group>"; };
 		41A86DB62868AFE3001369AC /* MovideDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovideDetailPageViewController.swift; sourceTree = "<group>"; };
 		41A86DB72868AFE3001369AC /* MovideDetailPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovideDetailPageViewController.xib; sourceTree = "<group>"; };
 		41DBD4242863499D00BDA5A8 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 			children = (
 				41DBD44028634B4B00BDA5A8 /* UpcomingMovieModel.swift */,
 				41A25FFD2869D8F1005C986E /* MovieDetailModel.swift */,
+				41A33CC7286A453100CB1170 /* NowPlayingMovieModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				41DBD42C2863499D00BDA5A8 /* ViewController.swift in Sources */,
 				41DBD44128634B4B00BDA5A8 /* UpcomingMovieModel.swift in Sources */,
 				41DBD4482863616600BDA5A8 /* UIImageViewExtension.swift in Sources */,
+				41A33CC8286A453100CB1170 /* NowPlayingMovieModel.swift in Sources */,
 				41A86DB82868AFE3001369AC /* MovideDetailPageViewController.swift in Sources */,
 				41DBD4282863499D00BDA5A8 /* AppDelegate.swift in Sources */,
 				41A25FFE2869D8F1005C986E /* MovieDetailModel.swift in Sources */,

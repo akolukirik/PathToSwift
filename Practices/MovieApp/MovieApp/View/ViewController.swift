@@ -7,12 +7,14 @@
 
 import UIKit
 import Alamofire
+import ImageSlideshow
 
 class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
 
     var upcomingMovieList: [UpcomingMovieResult]?
+    var nowPlayingMovieList: [NowPlayingMovieModelResult]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getData()
+        getNowPlayingData()
     }
 
     func navigateToDetailView(movieDetail: MovieDetailModel) {
@@ -35,7 +38,6 @@ class ViewController: UIViewController {
         detailVC.modalPresentationStyle = .fullScreen
         self.present(detailVC, animated: true, completion: nil)
     }
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -92,9 +94,21 @@ extension ViewController {
 
         AF.request(nowPlayURL,
                    method: .get).responseDecodable(of: MovieDetailModel.self) { [weak self] response in
-            if let npModel = response.value {
-                self?.navigateToDetailView(movieDetail: npModel)
+            if let mdModel = response.value {
+                self?.navigateToDetailView(movieDetail: mdModel)
             }
         }
     }
+
+    func getNowPlayingData() {
+        let url = "https://api.themoviedb.org/3/movie/now_playing?api_key=62e3f1018136eaf84ab9ef75fafaf678&language=en-US&page=1"
+
+        AF.request(url,
+                   method: .get).responseDecodable(of: NowPlayingMovieModel.self) { [weak self] response in
+            if let npModel = response.value {
+                self?.nowPlayingMovieList = npModel.results ?? []
+            }
+        }
+    }
+
 }
