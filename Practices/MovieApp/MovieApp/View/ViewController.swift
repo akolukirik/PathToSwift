@@ -12,8 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
 
-    var upcomingMovieList: [UpcomingMovieModelResults]?
-    var nowPlayingMovieList: [NowPlayingMovieResults]?
+    var upcomingMovieList: [UpcomingMovieResult]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +27,11 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getData()
-        getNowPlayData()
     }
 
-    func navigateToDetailView() {
+    func navigateToDetailView(movieDetail: MovieDetailModel) {
         let detailVC = MovideDetailPageViewController.init(nibName: "MovideDetailPageViewController", bundle: nil)
+        detailVC.movieDetail = movieDetail
         detailVC.modalPresentationStyle = .fullScreen
         self.present(detailVC, animated: true, completion: nil)
     }
@@ -46,7 +45,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return upcomingMovieList?.count ?? 0
+        return upcomingMovieList?.count ?? 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,15 +67,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: MoviesTableViewCellDelegate {
 
     func didTappedMovie(rowIndex: Int) {
-       // let pilotCode = pilotsList?[rowIndex].id ?? 0
-      //  self.getPilotDetail(pilotID: pilotCode )
+        let movieCode = upcomingMovieList?[rowIndex].id ?? 0
+        self.getMovieDetail(movieID: movieCode)
     }
 }
 
 extension ViewController {
 
     func getData() {
-        let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=fa15e2389e4b88860c9e9d706eb452f3"
+        let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=62e3f1018136eaf84ab9ef75fafaf678&language=en-US&page=1"
 
         AF.request(url,
                    method: .get).responseDecodable(of: UpcomingMovieModel.self) { [weak self] response in
@@ -87,19 +86,15 @@ extension ViewController {
         }
     }
 
-    func getNowPlayData(movieID: Int) {
+    func getMovieDetail(movieID: Int) {
 
-        let nowPlayUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=fa15e2389e4b88860c9e9d706eb452f3"
+        let nowPlayURL = "https://api.themoviedb.org/3/movie/\(movieID)?api_key=fa15e2389e4b88860c9e9d706eb452f3"
 
-        AF.request(nowPlayUrl,
-                   method: .get).responseDecodable(of: NowPlayingMovieModel.self) { [weak self] response in
+        AF.request(nowPlayURL,
+                   method: .get).responseDecodable(of: MovieDetailModel.self) { [weak self] response in
             if let npModel = response.value {
-                self?.nowPlayingMovieList = npModel.results ?? []
-                self?.tableView.reloadData()
+                self?.navigateToDetailView(movieDetail: npModel)
             }
         }
-
-
-
     }
 }

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41A25FFE2869D8F1005C986E /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A25FFD2869D8F1005C986E /* MovieDetailModel.swift */; };
 		41A86DB82868AFE3001369AC /* MovideDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A86DB62868AFE3001369AC /* MovideDetailPageViewController.swift */; };
 		41A86DB92868AFE3001369AC /* MovideDetailPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A86DB72868AFE3001369AC /* MovideDetailPageViewController.xib */; };
-		41A86DBB2868C15F001369AC /* NowPlayingMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A86DBA2868C15F001369AC /* NowPlayingMovieModel.swift */; };
 		41DBD4282863499D00BDA5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBD4272863499D00BDA5A8 /* AppDelegate.swift */; };
 		41DBD42A2863499D00BDA5A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBD4292863499D00BDA5A8 /* SceneDelegate.swift */; };
 		41DBD42C2863499D00BDA5A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DBD42B2863499D00BDA5A8 /* ViewController.swift */; };
@@ -24,9 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41A25FFD2869D8F1005C986E /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		41A86DB62868AFE3001369AC /* MovideDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovideDetailPageViewController.swift; sourceTree = "<group>"; };
 		41A86DB72868AFE3001369AC /* MovideDetailPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovideDetailPageViewController.xib; sourceTree = "<group>"; };
-		41A86DBA2868C15F001369AC /* NowPlayingMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingMovieModel.swift; sourceTree = "<group>"; };
 		41DBD4242863499D00BDA5A8 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DBD4272863499D00BDA5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DBD4292863499D00BDA5A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				41DBD44028634B4B00BDA5A8 /* UpcomingMovieModel.swift */,
-				41A86DBA2868C15F001369AC /* NowPlayingMovieModel.swift */,
+				41A25FFD2869D8F1005C986E /* MovieDetailModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -178,6 +178,8 @@
 			dependencies = (
 			);
 			name = MovieApp;
+			packageProductDependencies = (
+			);
 			productName = MovieApp;
 			productReference = 41DBD4242863499D00BDA5A8 /* MovieApp.app */;
 			productType = "com.apple.product-type.application";
@@ -206,6 +208,8 @@
 				Base,
 			);
 			mainGroup = 41DBD41B2863499D00BDA5A8;
+			packageReferences = (
+			);
 			productRefGroup = 41DBD4252863499D00BDA5A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,8 +286,8 @@
 				41DBD4482863616600BDA5A8 /* UIImageViewExtension.swift in Sources */,
 				41A86DB82868AFE3001369AC /* MovideDetailPageViewController.swift in Sources */,
 				41DBD4282863499D00BDA5A8 /* AppDelegate.swift in Sources */,
+				41A25FFE2869D8F1005C986E /* MovieDetailModel.swift in Sources */,
 				41DBD44428634CC700BDA5A8 /* UpcomingMovieTableViewCell.swift in Sources */,
-				41A86DBB2868C15F001369AC /* NowPlayingMovieModel.swift in Sources */,
 				41DBD42A2863499D00BDA5A8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +439,7 @@
 				DEVELOPMENT_TEAM = W634M6PWQV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Movie;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -464,6 +469,7 @@
 				DEVELOPMENT_TEAM = W634M6PWQV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Movie;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

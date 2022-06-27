@@ -7,34 +7,30 @@
 
 import Foundation
 
+// MARK: - Welcome
 struct UpcomingMovieModel: Codable {
-    var dates: Dates?
     var page: Int?
-    var results: [UpcomingMovieModelResults]?
+    var results: [UpcomingMovieResult]?
     var totalPages, totalResults: Int?
 
     enum CodingKeys: String, CodingKey {
-        case dates, page, results
-        case totalPages
-        case totalResults
+        case page, results
+        case totalPages = "total_pages"
+        case totalResults = "total_results"
     }
 }
 
-// MARK: - Dates
-struct Dates: Codable {
-    var maximum, minimum: String?
-}
 
 // MARK: - Result
-struct UpcomingMovieModelResults: Codable {
+struct UpcomingMovieResult: Codable {
     var adult: Bool?
     var backdropPath: String?
     var genreIDS: [Int]?
     var id: Int?
-    var originalLanguage: OriginalLanguage?
-    var originalTitle, overview: String?
+    var originalLanguage, originalTitle, overview: String?
     var popularity: Double?
-    var posterPath, releaseDate, title: String?
+    var posterPath: String?
+    var releaseDate, title: String?
     var video: Bool?
     var voteAverage: Double?
     var voteCount: Int?
@@ -53,10 +49,4 @@ struct UpcomingMovieModelResults: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
-}
-
-enum OriginalLanguage: String, Codable {
-    case en = "en"
-    case ja = "ja"
-    case zh = "zh"
 }
