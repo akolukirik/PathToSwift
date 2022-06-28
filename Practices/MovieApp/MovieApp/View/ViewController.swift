@@ -11,8 +11,9 @@ import ImageSlideshow
 
 class ViewController: UIViewController {
 
+    @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
-
+    
     var upcomingMovieList: [UpcomingMovieResult]?
     var nowPlayingMovieList: [NowPlayingMovieModelResult]?
 
@@ -24,6 +25,13 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "UpcomingMovieTableViewCell",
                                  bundle: nil),
                            forCellReuseIdentifier: "UpcomingMovieTableViewCell")
+
+        collectionView.dataSource = self
+        collectionView.delegate = self
+
+        collectionView.register(NowPlayingCollectionViewCell.nib(),
+                                forCellWithReuseIdentifier: NowPlayingCollectionViewCell.identifier)
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -72,6 +80,32 @@ extension ViewController: MoviesTableViewCellDelegate {
         let movieCode = upcomingMovieList?[rowIndex].id ?? 0
         self.getMovieDetail(movieID: movieCode)
     }
+}
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.identifier, for: indexPath) as? NowPlayingCollectionViewCell
+
+        let collectionViewModel = nowPlayingMovieList?[indexPath.row]
+
+        cell2?.configure2(image: collectionViewModel?.posterPath,
+                         name: collectionViewModel?.title,
+                         description: collectionViewModel?.overview)
+
+        return cell2!
+    }
+
+
+    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 414, height: 256)
+    }*/
+
 }
 
 extension ViewController {
