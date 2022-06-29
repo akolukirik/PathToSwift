@@ -11,7 +11,7 @@ class NowPlayingCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var nowPlayingImageView: UIImageView!
     @IBOutlet var nowPlayingMovieName: UILabel!
-    @IBOutlet var nowPlayingMovieDescription: UITextView!
+    @IBOutlet var nowPlayingMovieDescription: UILabel!
 
     static let identifier = "NowPlayingCollectionViewCell"
 

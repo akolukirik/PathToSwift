@@ -7,15 +7,15 @@
 
 import UIKit
 import Alamofire
-import ImageSlideshow
 
 class ViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var tableView: UITableView!
-    
-    var upcomingMovieList: [UpcomingMovieResult]?
-    var nowPlayingMovieList: [NowPlayingMovieModelResult]?
+    @IBOutlet var pageView: UIPageControl!
+
+    public var upcomingMovieList: [UpcomingMovieResult]?
+    public var nowPlayingMovieList: [NowPlayingMovieModelResult]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +28,20 @@ class ViewController: UIViewController {
 
         collectionView.dataSource = self
         collectionView.delegate = self
-
         collectionView.register(NowPlayingCollectionViewCell.nib(),
                                 forCellWithReuseIdentifier: NowPlayingCollectionViewCell.identifier)
-        
+
+        pageView.hidesForSinglePage = true
+        pageView.numberOfPages = nowPlayingMovieList?.count ?? 1
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getData()
         getNowPlayingData()
+        pageView.numberOfPages = nowPlayingMovieList?.count ?? 1
+
     }
 
     func navigateToDetailView(movieDetail: MovieDetailModel) {
@@ -45,6 +49,7 @@ class ViewController: UIViewController {
         detailVC.movieDetail = movieDetail
         detailVC.modalPresentationStyle = .fullScreen
         self.present(detailVC, animated: true, completion: nil)
+        print(nowPlayingMovieList?.count ?? 1)
     }
 }
 
@@ -55,7 +60,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return upcomingMovieList?.count ?? 10
+        return upcomingMovieList?.count ?? 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -85,7 +90,7 @@ extension ViewController: MoviesTableViewCellDelegate {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return nowPlayingMovieList?.count ?? 5
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -95,32 +100,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let collectionViewModel = nowPlayingMovieList?[indexPath.row]
 
         cell2?.configure2(image: collectionViewModel?.posterPath,
-                         name: collectionViewModel?.title,
-                         description: collectionViewModel?.overview)
+                          name: collectionViewModel?.title,
+                          description: collectionViewModel?.overview)
 
         return cell2!
     }
 
-
-    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 414, height: 256)
-    }*/
-
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        self.pageView.currentPage = indexPath.row
+    }
 }
 
 extension ViewController {
-
-    func getData() {
-        let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=62e3f1018136eaf84ab9ef75fafaf678&language=en-US&page=1"
-
-        AF.request(url,
-                   method: .get).responseDecodable(of: UpcomingMovieModel.self) { [weak self] response in
-            if let model = response.value {
-                self?.upcomingMovieList = model.results ?? []
-                self?.tableView.reloadData()
-            }
-        }
-    }
 
     func getMovieDetail(movieID: Int) {
 
@@ -133,16 +124,4 @@ extension ViewController {
             }
         }
     }
-
-    func getNowPlayingData() {
-        let url = "https://api.themoviedb.org/3/movie/now_playing?api_key=62e3f1018136eaf84ab9ef75fafaf678&language=en-US&page=1"
-
-        AF.request(url,
-                   method: .get).responseDecodable(of: NowPlayingMovieModel.self) { [weak self] response in
-            if let npModel = response.value {
-                self?.nowPlayingMovieList = npModel.results ?? []
-            }
-        }
-    }
-
 }

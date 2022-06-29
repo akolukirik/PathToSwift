@@ -26,29 +26,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJq-kt-uAz">
                                 <rect key="frame" x="8" y="139" width="398" height="109"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPq-QR-UkM">
+                                        <rect key="frame" x="8" y="37" width="382" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vk-In-ULy">
                                         <rect key="frame" x="8" y="8" width="382" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="test" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ff6-oW-uMY">
-                                        <rect key="frame" x="8" y="37" width="382" height="64"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="1Vk-In-ULy" firstAttribute="trailing" secondItem="yJq-kt-uAz" secondAttribute="trailingMargin" id="BkN-ir-bLj"/>
                                     <constraint firstItem="1Vk-In-ULy" firstAttribute="top" secondItem="yJq-kt-uAz" secondAttribute="topMargin" id="JCE-1m-wAV"/>
-                                    <constraint firstItem="1Vk-In-ULy" firstAttribute="leading" secondItem="ff6-oW-uMY" secondAttribute="leading" id="MP3-XK-wPt"/>
-                                    <constraint firstItem="ff6-oW-uMY" firstAttribute="top" secondItem="1Vk-In-ULy" secondAttribute="bottom" constant="8" symbolic="YES" id="Qe1-A1-6EQ"/>
-                                    <constraint firstItem="1Vk-In-ULy" firstAttribute="trailing" secondItem="ff6-oW-uMY" secondAttribute="trailing" id="cRv-Cl-R2r"/>
                                     <constraint firstItem="1Vk-In-ULy" firstAttribute="leading" secondItem="yJq-kt-uAz" secondAttribute="leadingMargin" id="eeE-qt-ZH1"/>
-                                    <constraint firstItem="ff6-oW-uMY" firstAttribute="bottom" secondItem="yJq-kt-uAz" secondAttribute="bottomMargin" id="g12-oY-Gmt"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -78,7 +74,7 @@
             <size key="customSize" width="528" height="345"/>
             <connections>
                 <outlet property="nowPlayingImageView" destination="0A5-RF-Mcx" id="po3-zo-rEf"/>
-                <outlet property="nowPlayingMovieDescription" destination="ff6-oW-uMY" id="H9B-im-gUE"/>
+                <outlet property="nowPlayingMovieDescription" destination="NPq-QR-UkM" id="FP5-PM-c4Y"/>
                 <outlet property="nowPlayingMovieName" destination="1Vk-In-ULy" id="9jO-pU-mrH"/>
             </connections>
             <point key="canvasLocation" x="494.20289855072468" y="166.07142857142856"/>

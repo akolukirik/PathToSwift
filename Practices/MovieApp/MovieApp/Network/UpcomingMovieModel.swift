@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 // MARK: - Welcome
 struct UpcomingMovieModel: Codable {
@@ -48,5 +49,21 @@ struct UpcomingMovieResult: Codable {
         case title, video
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
+    }
+}
+
+
+extension ViewController  {
+    
+    func getData() {
+        let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=62e3f1018136eaf84ab9ef75fafaf678&language=en-US&page=1"
+
+        AF.request(url,
+                   method: .get).responseDecodable(of: UpcomingMovieModel.self) { [weak self] response in
+            if let model = response.value {
+                self?.upcomingMovieList = model.results ?? []
+                self?.tableView.reloadData()
+            }
+        }
     }
 }
