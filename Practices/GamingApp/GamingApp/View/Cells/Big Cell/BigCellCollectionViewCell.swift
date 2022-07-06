@@ -48,14 +48,11 @@ class BigCellCollectionViewCell: UICollectionViewCell {
                           platforms: [PlatformElement]?,
                           delegate: GamesCollectionViewCellDelegate) {
 
-
-
         print(platforms?.map( {($0.platform?.name ?? "")}).joined(separator: ",") ?? [])
         print(platforms?.count ?? 0)
         //aaaa?.map( {($0.platform?.name ?? "")}).joined(separator: ",") as Any)
 
-
-       /* firstCustomView.configureView(title: "Test")
+        firstCustomView.configureView(title: "Test")
         secondCustomView.configureView(title: "Denemeee")
         thirdCustomView.configureView(title: "Yeterliii")
 
@@ -69,7 +66,7 @@ class BigCellCollectionViewCell: UICollectionViewCell {
         firstCustomView.layer.cornerRadius = 100
         secondCustomView.layer.cornerRadius = 10
         thirdCustomView.layer.cornerRadius = 10
-        fourthCustomView.layer.cornerRadius = 10*/
+        fourthCustomView.layer.cornerRadius = 10
 
         bigImageView.setImage(imageURL: image ?? "" )
         bigNameLabel.text = name
