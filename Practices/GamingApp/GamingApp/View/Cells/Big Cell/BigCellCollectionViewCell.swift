@@ -37,6 +37,7 @@ class BigCellCollectionViewCell: UICollectionViewCell {
     private var delegate: GamesCollectionViewCellDelegate?
     private var isSaved: Bool = false
 
+
     public func configure(image: String?,
                           name: String?,
                           releaseDate: String?,
@@ -48,22 +49,20 @@ class BigCellCollectionViewCell: UICollectionViewCell {
                           platforms: [PlatformElement]?,
                           delegate: GamesCollectionViewCellDelegate) {
 
-        print(platforms?.map( {($0.platform?.name ?? "")}).joined(separator: ",") ?? [])
-        print(platforms?.count ?? 0)
-        //aaaa?.map( {($0.platform?.name ?? "")}).joined(separator: ",") as Any)
+        //print(platforms?.map( {($0.platform?.name ?? "")}).joined(separator: ",") ?? [])
+        //print(platforms?.count ?? 0)
 
-        firstCustomView.configureView(title: "Test")
-        secondCustomView.configureView(title: "Denemeee")
-        thirdCustomView.configureView(title: "Yeterliii")
+        platformList = platforms?.map({($0.platform?.name ?? "")})
 
-        //secondCustomView.configureView(title: "\(platformList?[1] ?? "" )")
-        //thirdCustomView.configureView(title: "\(platformList?[2] ?? "" )")
+        firstCustomView.configureView(title: "\(platformList?[0] ?? "")")
+        secondCustomView.configureView(title: "\(platformList?[1] ?? "")")
+        thirdCustomView.configureView(title: "\(platformList?[2] ?? "")")
 
         if (platforms?.count ?? 0) > 4 {
             fourthCustomView.configureView(title: "+\((platforms?.count ?? 0) - 3)")
-        } 
+        }
 
-        firstCustomView.layer.cornerRadius = 100
+        firstCustomView.layer.cornerRadius = 10
         secondCustomView.layer.cornerRadius = 10
         thirdCustomView.layer.cornerRadius = 10
         fourthCustomView.layer.cornerRadius = 10

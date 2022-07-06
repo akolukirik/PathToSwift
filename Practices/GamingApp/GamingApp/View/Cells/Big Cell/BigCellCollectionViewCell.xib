@@ -187,6 +187,7 @@
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                 </subviews>
+                                                <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="18" id="03O-ce-E0u"/>
                                                     <constraint firstAttribute="width" constant="160" id="jtm-JL-ZFY"/>
