@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cM3-JU-mYl">
-    <device id="retina6_0" orientation="portrait" appearance="dark"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,7 +89,59 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpL-GH-iwr">
                                 <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pK9-DN-JuE">
+                                        <rect key="frame" x="8" y="105" width="374" height="36"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ewv-yY-vdi">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiD-Fr-q4y" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="36"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2M4-jv-Prc" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
+                                                        <rect key="frame" x="64" y="0.0" width="57" height="36"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tte-o6-uFR" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
+                                                        <rect key="frame" x="129" y="0.0" width="56.333333333333343" height="36"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZq-QF-2Mq" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
+                                                        <rect key="frame" x="193.33333333333334" y="0.0" width="56" height="36"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ScB-5B-EQi" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
+                                                        <rect key="frame" x="257.33333333333331" y="0.0" width="56.333333333333314" height="36"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEP-DQ-qFh" customClass="CustomView" customModule="GamingApp" customModuleProvider="target">
+                                                        <rect key="frame" x="321.66666666666669" y="0.0" width="52.333333333333314" height="36"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.086274509799999996" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="YTW-Fa-HWD"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1137254902" green="0.1137254902" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="ewv-yY-vdi" secondAttribute="bottom" id="BOj-8i-y2M"/>
+                                            <constraint firstItem="ewv-yY-vdi" firstAttribute="leading" secondItem="pK9-DN-JuE" secondAttribute="leading" id="Omg-pg-eoQ"/>
+                                            <constraint firstItem="ewv-yY-vdi" firstAttribute="top" secondItem="pK9-DN-JuE" secondAttribute="top" id="hqk-6f-smg"/>
+                                            <constraint firstAttribute="trailing" secondItem="ewv-yY-vdi" secondAttribute="trailing" id="tBd-Fw-Pck"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pK9-DN-JuE" firstAttribute="trailing" secondItem="fpL-GH-iwr" secondAttribute="trailingMargin" id="Ccj-P4-D7V"/>
+                                    <constraint firstItem="pK9-DN-JuE" firstAttribute="top" secondItem="fpL-GH-iwr" secondAttribute="top" constant="105" id="cnC-Ex-neJ"/>
+                                    <constraint firstItem="pK9-DN-JuE" firstAttribute="leading" secondItem="fpL-GH-iwr" secondAttribute="leadingMargin" id="gYL-Mf-WUf"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1D-xd-OBQ" userLabel="Navbar">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="142"/>
@@ -198,9 +251,15 @@
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="androidCollectionView" destination="ScB-5B-EQi" id="bsb-yZ-Ned"/>
                         <outlet property="collectionView" destination="Cqh-wR-LSm" id="pGM-ob-vba"/>
+                        <outlet property="iOSCollectionView" destination="fZq-QF-2Mq" id="8he-t5-NNV"/>
                         <outlet property="navigationView" destination="HCU-24-JqD" id="ICS-wM-PNT"/>
+                        <outlet property="nintendoCollectionView" destination="HEP-DQ-qFh" id="uws-a2-ZCt"/>
+                        <outlet property="pcCollectionView" destination="PiD-Fr-q4y" id="MBG-kc-1H2"/>
+                        <outlet property="psCollectionView" destination="2M4-jv-Prc" id="vD1-ez-5Do"/>
                         <outlet property="rightButton" destination="61Q-J6-crz" id="Quv-5o-KyR"/>
+                        <outlet property="xboxCollectionView" destination="Tte-o6-uFR" id="uIw-SO-R2j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lF8-Tk-imS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -229,5 +288,8 @@
     <resources>
         <image name="console" width="36" height="23"/>
         <image name="gift" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

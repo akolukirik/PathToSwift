@@ -32,6 +32,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        pcCollectionView.configureView(title: " PC ")
+        psCollectionView.configureView(title: " PlayStation ")
+        xboxCollectionView.configureView(title: " Xbox ")
+        iOSCollectionView.configureView(title: " iOS ")
+        androidCollectionView.configureView(title: " Android ")
+        nintendoCollectionView.configureView(title: " Nintendo ")
+
         navigationView.topItem?.title = "Games"
         rightButton = UIBarButtonItem(image: UIImage(named: "Button1"), style: .plain, target: self, action: #selector(tab))
         rightButton.tintColor = .white
