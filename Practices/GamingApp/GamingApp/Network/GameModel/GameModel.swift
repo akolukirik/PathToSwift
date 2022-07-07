@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct GameApi: Codable {
+struct GameModel: Codable {
     var count: Int?
     var next: String?
     var previous: JSONNull?
-    var results: [Result]?
+    var results: [GameModelResult]?
     var seoTitle, seoDescription, seoKeywords, seoH1: String?
     var noindex, nofollow: Bool?
     var welcomeDescription: String?
@@ -53,7 +53,7 @@ struct YearYear: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct GameModelResult: Codable {
     var id: Int?
     var slug, name, released: String?
     var tba: Bool?

@@ -18,8 +18,13 @@ class DetailViewController: UIViewController {
     @IBOutlet var detailSaveButton: UIBarButtonItem!
     @IBOutlet var redditView: UIView!
     @IBOutlet var websiteView: UIView!
+    @IBOutlet var informationsView: UIView!
+    @IBOutlet var releaseDateLabel: UILabel!
+    @IBOutlet var genresLabel: UILabel!
+    @IBOutlet var playTimeLabel: UILabel!
+    @IBOutlet var publishersLabel: UILabel!
 
-    var gameDetailModel: Result?
+    var gameDetailModel: GameDetailModel?
 
     private var isSavedGame: Bool = false
 
@@ -29,6 +34,7 @@ class DetailViewController: UIViewController {
         descriptionsView.layer.cornerRadius = 10
         redditView.layer.cornerRadius = 10
         websiteView.layer.cornerRadius = 10
+        informationsView.layer.cornerRadius = 10
 
         navigationView.topItem?.title = "Game Detail"
         navigationView.tintColor = .white
@@ -42,8 +48,14 @@ class DetailViewController: UIViewController {
         navigationView.topItem?.leftBarButtonItem = button
 
         gameNameLabel.text = gameDetailModel?.name
+        gameDescriptionsTextView.text = gameDetailModel?.descriptionRaw
         detailImageView.setImage(imageURL: gameDetailModel?.backgroundImage ?? "")
         metacriticPointLabel.text = String(gameDetailModel?.metacritic ?? 0)
+
+        releaseDateLabel.text = gameDetailModel?.released
+        genresLabel.text = gameDetailModel?.genres?.map( {($0.name ?? "")}).joined(separator: ",")
+        playTimeLabel.text = "\(gameDetailModel?.playtime ?? 0) hours"
+        publishersLabel.text = gameDetailModel?.publishers?.map( {($0.name ?? "")}).joined(separator: ",")
         
         if gameDetailModel?.metacritic ?? 0 >= 75 {
             metacriticPointLabel.layer.borderColor = UIColor.green.cgColor
@@ -79,9 +91,17 @@ class DetailViewController: UIViewController {
     }
 
     @IBAction func openRedditPage(_ sender: Any) {
+        if let url = URL(string: "\(gameDetailModel?.redditURL ?? "")"),
+                UIApplication.shared.canOpenURL(url) {
+                 UIApplication.shared.open(url)
+             }
     }
 
     @IBAction func openWebsitePage(_ sender: Any) {
+        if let url = URL(string: "\(gameDetailModel?.website ?? "")"),
+                UIApplication.shared.canOpenURL(url) {
+                 UIApplication.shared.open(url)
+             }
     }
 
     @objc func goBack() {

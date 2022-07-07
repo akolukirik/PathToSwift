@@ -13,7 +13,7 @@ class WishlistViewController: UIViewController {
     @IBOutlet var wishlistNavigationBar: UINavigationBar!
     @IBOutlet var wishlistCollectionView: UICollectionView!
 
-    var gameInfoList: [Result]?
+    var gameInfoList: [GameModelResult]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class WishlistViewController: UIViewController {
         getData()
     }
 
-    public func navigateToDetailView(gameDetail: Result) {
+    public func navigateToDetailView(gameDetail: GameDetailModel) {
         let detailVC = DetailViewController.init(nibName: "DetailViewController", bundle: nil)
         detailVC.gameDetailModel = gameDetail
         detailVC.modalPresentationStyle = .fullScreen
@@ -118,7 +118,7 @@ extension WishlistViewController {
 
         let url = "https://api.rawg.io/api/games?key=3a214e197fa048de96a0e8ddf1c49afb"
 
-        AF.request(url, method: .get).responseDecodable(of: GameApi.self) { [weak self] response in
+        AF.request(url, method: .get).responseDecodable(of: GameModel.self) { [weak self] response in
             self?.gameInfoList = []
             if let models = response.value?.results {
                 for item in models {
@@ -138,9 +138,11 @@ extension WishlistViewController {
 
         let url = "https://api.rawg.io/api/games/\(getGameID)?key=3a214e197fa048de96a0e8ddf1c49afb"
 
-        AF.request(url, method: .get).responseDecodable(of: Result.self) { [weak self] response in
-            if let model2 = response.value {
-                self?.navigateToDetailView(gameDetail: model2)
+        AF.request(
+            url,
+            method: .get).responseDecodable(of: GameDetailModel.self) { [weak self] response in
+            if let gameDetailModel = response.value {
+                self?.navigateToDetailView(gameDetail: gameDetailModel)
             }
         }
     }

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet var androidCollectionView: CustomView!
     @IBOutlet var nintendoCollectionView: CustomView!
 
-    var gameInfoList: [Result]?
+    var gameInfoList: [GameModelResult]?
 
     public var cellWidth = 358
     public var cellHeight = 360
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         }
     }
 
-    public func navigateToDetailView(gameDetail: Result) {
+    public func navigateToDetailView(gameDetail: GameDetailModel) {
         let detailVC = DetailViewController.init(nibName: "DetailViewController", bundle: nil)
         detailVC.gameDetailModel = gameDetail
         detailVC.modalPresentationStyle = .fullScreen
@@ -190,7 +190,7 @@ extension ViewController {
         
         let url = "https://api.rawg.io/api/games?key=3a214e197fa048de96a0e8ddf1c49afb"
 
-        AF.request(url, method: .get).responseDecodable(of: GameApi.self) { [weak self] response in
+        AF.request(url, method: .get).responseDecodable(of: GameModel.self) { [weak self] response in
             if let models = response.value {
                 self?.gameInfoList = models.results ?? []
                 self?.collectionView.reloadData()
@@ -202,21 +202,10 @@ extension ViewController {
 
         let url = "https://api.rawg.io/api/games/\(getGameID)?key=3a214e197fa048de96a0e8ddf1c49afb"
 
-        AF.request(url, method: .get).responseDecodable(of: Result.self) { [weak self] response in
-            if let model2 = response.value {
-                self?.navigateToDetailView(gameDetail: model2)
+        AF.request(url, method: .get).responseDecodable(of: GameDetailModel.self) { [weak self] response in
+            if let gameDetailModel = response.value {
+                self?.navigateToDetailView(gameDetail: gameDetailModel)
             }
         }
     }
-
-   /* func getDetail(getGameID: Int) {
-
-        let url = "https://api.rawg.io/api/games/\(getGameID)?key=3a214e197fa048de96a0e8ddf1c49afb"
-
-        AF.request(url, method: .get).responseDecodable(of: Result.self) { [weak self] response in
-            if let model2 = response.value {
-                self?.navigateToDetailView(gameDetail: model2, test: <#GameApi#>)
-            }
-        }
-    }*/
 }
