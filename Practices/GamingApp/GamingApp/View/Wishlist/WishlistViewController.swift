@@ -86,7 +86,6 @@ extension WishlistViewController: UICollectionViewDelegate, UICollectionViewData
         }
     }
 
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 171, height: 243)
     }
@@ -108,7 +107,6 @@ extension WishlistViewController: GamesCollectionViewSmallCellDelegate {
     func didTappedSmallCellGame(rowIndex: Int) {
         let gameID = gameInfoList?[rowIndex].id ?? 0
         self.getData2(getGameID: gameID)
-        print("aaaaaaa")
     }
 }
 

@@ -12,14 +12,14 @@ class DetailViewController: UIViewController {
     @IBOutlet var detailImageView: UIImageView!
     @IBOutlet var navigationView: UINavigationBar!
     @IBOutlet var gameNameLabel: UILabel!
-    @IBOutlet var gameDescriptionsLabel: UILabel!
     @IBOutlet var metacriticPointLabel: UILabel!
     @IBOutlet var descriptionsView: UIView!
-
+    @IBOutlet var gameDescriptionsTextView: UITextView!
     @IBOutlet var detailSaveButton: UIBarButtonItem!
+    @IBOutlet var redditView: UIView!
+    @IBOutlet var websiteView: UIView!
 
     var gameDetailModel: Result?
-    var ali: GameApi?
 
     private var isSavedGame: Bool = false
 
@@ -27,6 +27,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         descriptionsView.layer.cornerRadius = 10
+        redditView.layer.cornerRadius = 10
+        websiteView.layer.cornerRadius = 10
 
         navigationView.topItem?.title = "Game Detail"
         navigationView.tintColor = .white
@@ -40,7 +42,6 @@ class DetailViewController: UIViewController {
         navigationView.topItem?.leftBarButtonItem = button
 
         gameNameLabel.text = gameDetailModel?.name
-        gameDescriptionsLabel.text = ali?.welcomeDescription
         detailImageView.setImage(imageURL: gameDetailModel?.backgroundImage ?? "")
         metacriticPointLabel.text = String(gameDetailModel?.metacritic ?? 0)
         
@@ -76,7 +77,6 @@ class DetailViewController: UIViewController {
     func setSaveButtonColor(isSaved: Bool) {
         navigationView.topItem?.rightBarButtonItem?.tintColor = isSaved ? .green : .white
     }
-
 
     @IBAction func openRedditPage(_ sender: Any) {
     }

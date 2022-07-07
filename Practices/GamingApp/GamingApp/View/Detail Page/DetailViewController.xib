@@ -12,11 +12,13 @@
                 <outlet property="descriptionsView" destination="wwM-ej-lf3" id="Z66-kQ-Cmz"/>
                 <outlet property="detailImageView" destination="FBI-yP-sfc" id="FLq-7M-Yfj"/>
                 <outlet property="detailSaveButton" destination="fce-dU-vxz" id="aP7-8s-ClM"/>
-                <outlet property="gameDescriptionsLabel" destination="mVN-LH-T66" id="xkJ-DL-YGH"/>
+                <outlet property="gameDescriptionsTextView" destination="lSp-zk-vW9" id="f7s-x0-g0W"/>
                 <outlet property="gameNameLabel" destination="GQk-dG-La0" id="79V-E8-2zX"/>
                 <outlet property="metacriticPointLabel" destination="MtZ-5o-rbJ" id="Tdc-bg-hsG"/>
                 <outlet property="navigationView" destination="GwZ-xC-H0N" id="aV4-G0-32y"/>
+                <outlet property="redditView" destination="jNE-x1-Q22" id="gim-c2-cdD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="websiteView" destination="t5W-me-75R" id="cZv-bU-Bzg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -69,22 +71,23 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVN-LH-T66">
-                                    <rect key="frame" x="12" y="43" width="334" height="58"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu," textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="lSp-zk-vW9">
+                                    <rect key="frame" x="12" y="43" width="338" height="58"/>
+                                    <color key="backgroundColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
                             </subviews>
                             <viewLayoutGuide key="safeArea" id="6Ss-78-TMK"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="mok-PR-Fia" firstAttribute="leading" secondItem="mVN-LH-T66" secondAttribute="leading" id="07K-kX-EMg"/>
-                                <constraint firstItem="6Ss-78-TMK" firstAttribute="bottom" secondItem="mVN-LH-T66" secondAttribute="bottom" constant="12" id="G9F-iy-wlP"/>
+                                <constraint firstItem="6Ss-78-TMK" firstAttribute="bottom" secondItem="lSp-zk-vW9" secondAttribute="bottom" constant="12" id="8Q4-Wv-nA7"/>
+                                <constraint firstItem="lSp-zk-vW9" firstAttribute="top" secondItem="mok-PR-Fia" secondAttribute="bottom" constant="12" id="N5Y-46-3o2"/>
                                 <constraint firstItem="mok-PR-Fia" firstAttribute="leading" secondItem="6Ss-78-TMK" secondAttribute="leading" constant="12" id="Qoy-75-V7k"/>
                                 <constraint firstItem="6Ss-78-TMK" firstAttribute="trailing" secondItem="mok-PR-Fia" secondAttribute="trailing" constant="246" id="dcN-qc-fPA"/>
-                                <constraint firstItem="mVN-LH-T66" firstAttribute="top" secondItem="mok-PR-Fia" secondAttribute="bottom" constant="12" id="mDm-RS-fpu"/>
-                                <constraint firstItem="mVN-LH-T66" firstAttribute="centerX" secondItem="wwM-ej-lf3" secondAttribute="centerX" id="uZk-BI-uT4"/>
+                                <constraint firstItem="lSp-zk-vW9" firstAttribute="leading" secondItem="mok-PR-Fia" secondAttribute="leading" id="enE-ZB-bgv"/>
+                                <constraint firstItem="lSp-zk-vW9" firstAttribute="trailing" secondItem="wwM-ej-lf3" secondAttribute="trailingMargin" id="tLy-70-p54"/>
                                 <constraint firstItem="mok-PR-Fia" firstAttribute="top" secondItem="6Ss-78-TMK" secondAttribute="top" constant="12" id="vUj-8P-z6C"/>
                             </constraints>
                         </view>

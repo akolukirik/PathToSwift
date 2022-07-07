@@ -88,7 +88,6 @@ class ViewController: UIViewController {
         detailVC.gameDetailModel = gameDetail
         detailVC.modalPresentationStyle = .fullScreen
         self.present(detailVC, animated: true, completion: nil)
-        print("ben gittim")
     }
 }
 
@@ -209,4 +208,15 @@ extension ViewController {
             }
         }
     }
+
+   /* func getDetail(getGameID: Int) {
+
+        let url = "https://api.rawg.io/api/games/\(getGameID)?key=3a214e197fa048de96a0e8ddf1c49afb"
+
+        AF.request(url, method: .get).responseDecodable(of: Result.self) { [weak self] response in
+            if let model2 = response.value {
+                self?.navigateToDetailView(gameDetail: model2, test: <#GameApi#>)
+            }
+        }
+    }*/
 }
