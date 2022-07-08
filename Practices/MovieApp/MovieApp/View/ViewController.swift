@@ -38,7 +38,7 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getData()
+        getData2()
         getNowPlayingData()
         pageView.numberOfPages = nowPlayingMovieList?.count ?? 1
 
@@ -77,6 +77,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                        delegate: self)
         return cell
     }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        var counter = 1
+        if indexPath.row == (upcomingMovieList?.count ?? 0) - 2 {
+            counter += 2
+            print(counter)
+            getData(pageNumber: counter)
+            tableView.reloadData()
+        }
+    }
 }
 
 extension ViewController: MoviesTableViewCellDelegate {
@@ -112,6 +123,31 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 }
 
 extension ViewController {
+
+    func getData(pageNumber: Int) {
+        let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=62e3f1018136eaf84ab9ef75fafaf678&language=en-US&page=\(pageNumber)"
+
+        AF.request(url,
+                   method: .get).responseDecodable(of: UpcomingMovieModel.self) { [weak self] response in
+            if let model = response.value {
+
+                print(self!.upcomingMovieList!)
+
+            }
+        }
+    }
+
+    func getData2() {
+        let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=62e3f1018136eaf84ab9ef75fafaf678&language=en-US&page=1"
+
+        AF.request(url,
+                   method: .get).responseDecodable(of: UpcomingMovieModel.self) { [weak self] response in
+            if let model = response.value {
+                self?.upcomingMovieList = model.results ?? []
+                self?.tableView.reloadData()
+            }
+        }
+    }
 
     func getMovieDetail(movieID: Int) {
 
