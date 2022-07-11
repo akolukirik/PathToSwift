@@ -14,11 +14,23 @@ protocol IRickAndMortyViewModel {
 
     var rickAndMortyCharacters: [Result] { get set }
     var rickAndMortyService: IRickAndMortyService { get }
+
+    var rickAndMortyOutPut: RickAndMortyOutPut? { get }
+
+    func setDelegate(output: RickAndMortyOutPut)
 }
 
 class RickAndMortyViewModel: IRickAndMortyViewModel {
 
+    var rickAndMortyOutPut: RickAndMortyOutPut?
+
+    func setDelegate(output: RickAndMortyOutPut) {
+        rickAndMortyOutPut = output
+    }
+
     var rickAndMortyCharacters: [Result] = []
+
+    private var isLoading = false
 
     let rickAndMortyService: IRickAndMortyService
 
@@ -31,11 +43,13 @@ class RickAndMortyViewModel: IRickAndMortyViewModel {
         rickAndMortyService.fetchAllDatas { [weak self] (response) in
             self?.changeLoading()
             self?.rickAndMortyCharacters = response ?? []
+            self?.rickAndMortyOutPut?.saveDatas(values: self?.rickAndMortyCharacters ?? [] )
         }
     }
 
     func changeLoading() {
-
+        isLoading = !isLoading
+        rickAndMortyOutPut?.changeLoading(isLoad: isLoading)
     }
 
 }
