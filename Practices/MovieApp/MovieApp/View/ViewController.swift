@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         getData2()
         getNowPlayingData()
         pageView.numberOfPages = nowPlayingMovieList?.count ?? 1
+        tableView.reloadData()
+        collectionView.reloadData()
 
     }
 
@@ -132,7 +134,6 @@ extension ViewController {
             if let model = response.value {
 
                 print(self!.upcomingMovieList!)
-
             }
         }
     }
