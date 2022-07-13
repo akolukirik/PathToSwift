@@ -32,12 +32,12 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 - [x] Week 6
    - [x] Lesson 1
    - [x] Lesson 2
-- [ ] Week 7
-   - [ ] Lesson 1
-   - [ ] Lesson 2
-- [ ] Week 8
-   - [ ] Lesson 1
-   - [ ] Lesson 2
+- [x] Week 7
+   - [x] Lesson 1
+   - [x] Lesson 2
+- [x] Week 8
+   - [x] Lesson 1
+   - [x] Lesson 2
 - [ ] Week 9
    - [ ] Lesson 1
    - [ ] Lesson 2
