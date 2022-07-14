@@ -12,6 +12,6 @@ Listing the data coming from the API and accessing the detail page. The scrollin
 | Framework | Description |
 | ------------------------------- | --------------------------------------------------------------------- |
 | [Alamofire](https://github.com/WenchaoD/FSCalendar) |  Networking Library. |
-| [Kingfisher](https://github.com/onevcat/Kingfisher) |  Downloading Images ibrary. |
+| [Kingfisher](https://github.com/onevcat/Kingfisher) |  Downloading Images Library. |
 
 
