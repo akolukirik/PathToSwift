@@ -19,6 +19,7 @@
 		419C34EA288759DD00906F93 /* EarthquakeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C34E9288759DD00906F93 /* EarthquakeRouter.swift */; };
 		419C34EE28875A3000906F93 /* EarthquakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C34EC28875A3000906F93 /* EarthquakeTableViewCell.swift */; };
 		419C34EF28875A3000906F93 /* EarthquakeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419C34ED28875A3000906F93 /* EarthquakeTableViewCell.xib */; };
+		41DE29B628876B7D007A9E4F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 41DE29B528876B7D007A9E4F /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41DE29B628876B7D007A9E4F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +128,7 @@
 			);
 			name = EarthquakeViper;
 			packageProductDependencies = (
+				41DE29B528876B7D007A9E4F /* Alamofire */,
 			);
 			productName = EarthquakeViper;
 			productReference = 419C34B62887576F00906F93 /* EarthquakeViper.app */;
@@ -156,6 +159,7 @@
 			);
 			mainGroup = 419C34AD2887576F00906F93;
 			packageReferences = (
+				41DE29B428876B7D007A9E4F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 419C34B72887576F00906F93 /* Products */;
 			projectDirPath = "";
@@ -400,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41DE29B428876B7D007A9E4F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41DE29B528876B7D007A9E4F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41DE29B428876B7D007A9E4F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 419C34AE2887576F00906F93 /* Project object */;
 }

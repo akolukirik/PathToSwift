@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 // Presenter
 // verilerin indirileceği kısım
@@ -25,18 +26,25 @@ class EarthquakeInteractor: AnyInteractor {
         else { return }
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+
             guard let data = data, error == nil else {
                 self?.presenter?.interactorDidDownloadEarthquake(result: .failure(NetworkError.NetworkFailed))
                 return
             }
-
             do {
-                let earthquakes = try JSONDecoder().decode([EarthquakeResult].self,from: data)
-                self?.presenter?.interactorDidDownloadEarthquake(result: .success(earthquakes))
-            } catch {
+                let test = try JSONDecoder().decode([EarthquakeResult].self,from: data)
+                self?.presenter?.interactorDidDownloadEarthquake(result: .success(test))
+            }catch {
                 self?.presenter?.interactorDidDownloadEarthquake(result: .failure(NetworkError.ParsingFailed))
             }
         }
         task.resume()
     }
 }
+
+/**
+ if let models = response.value {
+ self?.earthquakeList = models.results ?? []
+ self?.tableView.reloadData()
+ }
+ */
