@@ -19,7 +19,7 @@ class EarthquakeViewController: UIViewController, AnyView {
 
     var presenter: AnyPresenter?
 
-    var earthquakeList: [EarthquakeResult]?
+    public var earthquakeList: [EarthquakeResult]?
 
     @IBOutlet var tableView: UITableView!
 
@@ -30,7 +30,6 @@ class EarthquakeViewController: UIViewController, AnyView {
         tableView.register(UINib(nibName: "EarthquakeTableViewCell",
                                  bundle: nil),
                            forCellReuseIdentifier: "EarthquakeTableViewCell")
-        view.backgroundColor = .purple
     }
 
     func update(with earthquakes: [EarthquakeResult]) {
@@ -48,18 +47,22 @@ extension EarthquakeViewController: UITableViewDelegate, UITableViewDataSource {
         return earthquakeList?.count ?? 2
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier:"EarthquakeTableViewCell") as? EarthquakeTableViewCell else { return UITableViewCell() }
 
         guard let model = earthquakeList?[indexPath.row] else { return UITableViewCell() }
 
-
-        cell.configure(test1: model.humanReadableLocation,
-                       test2: model.humanReadableLocation)
-
+        cell.configure(locaiton: model.humanReadableLocation,
+                       latitude: model.latitude,
+                       longitude: model.longitude,
+                       size: model.size)
         return cell
+    }
+
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 101
     }
 
 }

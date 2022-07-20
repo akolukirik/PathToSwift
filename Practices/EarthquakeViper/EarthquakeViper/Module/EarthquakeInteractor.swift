@@ -22,29 +22,13 @@ class EarthquakeInteractor: AnyInteractor {
     var presenter: AnyPresenter?
 
     func DownloadEarthquakes() {
-        guard let url = URL(string: "https://apis.is/earthquake/is")
-        else { return }
 
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+        let url = "https://apis.is/earthquake/is"
 
-            guard let data = data, error == nil else {
-                self?.presenter?.interactorDidDownloadEarthquake(result: .failure(NetworkError.NetworkFailed))
-                return
-            }
-            do {
-                let test = try JSONDecoder().decode([EarthquakeResult].self,from: data)
-                self?.presenter?.interactorDidDownloadEarthquake(result: .success(test))
-            }catch {
-                self?.presenter?.interactorDidDownloadEarthquake(result: .failure(NetworkError.ParsingFailed))
+        AF.request(url, method: .get).responseDecodable(of: EarthquakeModel.self) { [weak self] response in
+            if let model = response.value {
+                self?.presenter?.interactorDidDownloadEarthquake(result: .success(model.results ?? []))
             }
         }
-        task.resume()
     }
 }
-
-/**
- if let models = response.value {
- self?.earthquakeList = models.results ?? []
- self?.tableView.reloadData()
- }
- */

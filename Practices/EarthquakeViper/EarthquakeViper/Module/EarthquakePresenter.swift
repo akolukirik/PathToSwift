@@ -9,11 +9,6 @@ import Foundation
 
 // interactor, view, router
 
-enum NetworkError: Error {
-    case NetworkFailed
-    case ParsingFailed
-}
-
 protocol AnyPresenter {
     var interactor: AnyInteractor? { get set}
     var view: AnyView? { get set }

@@ -9,13 +9,20 @@ import UIKit
 
 class EarthquakeTableViewCell: UITableViewCell {
 
-    @IBOutlet var testLabel1: UILabel!
-    @IBOutlet var testLabel2: UILabel!
+    @IBOutlet weak var readableLocationLabel: UILabel!
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var sizeLabel: UILabel!
 
-    public func configure(test1:String?,
-                          test2: String?) {
-        testLabel1.text = "Name: \(test1 ?? "")"
-        testLabel2.text = "Name: \(test2 ?? "")"
+
+    public func configure(locaiton:String?,
+                          latitude: Double?,
+                          longitude: Double?,
+                          size: Double?) {
+        readableLocationLabel.text = "Location: \(locaiton ?? "")"
+        latitudeLabel.text = "Latitude: \(String(latitude ?? 0.0))"
+        longitudeLabel.text = "Longitude: \(String(longitude ?? 0.0))"
+        sizeLabel.text = "Size: \(String(size ?? 0.0))"
     }
     
 }
