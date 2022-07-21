@@ -44,9 +44,9 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 - [x] Week 10
    - [x] Lesson 1
    - [x] Lesson 2
-- [ ] Week 11
-   - [ ] Lesson 1
-   - [ ] Lesson 2
+- [x] Week 11
+   - [x] Lesson 1
+   - [x] Lesson 2
 - [ ] Week 12
    - [ ] Lesson 1
    - [ ] Lesson 2
