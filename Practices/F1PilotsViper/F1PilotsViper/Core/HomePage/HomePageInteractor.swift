@@ -26,5 +26,4 @@ class PilotsInteractor: AnyInteractor {
             }
         }
     }
-    
 }

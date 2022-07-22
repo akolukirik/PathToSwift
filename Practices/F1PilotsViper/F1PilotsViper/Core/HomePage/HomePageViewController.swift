@@ -49,15 +49,42 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
 
         guard let model = pilotsList?[indexPath.row] else { return UITableViewCell() }
 
+        let pilotName = pilotsList?[indexPath.row].name ?? ""
+        let savedPilot = UserDefaults.standard.object(forKey: "savedPilots") as? [String: Bool] ?? [:]
+        let isSaved = savedPilot[pilotName] ?? false
+
+
         cell.cellConfigure(name: model.name,
-                           point: model.point)
+                       point: model.point,
+                       index: indexPath.row,
+                       isSaved: isSaved,
+                       delegate: self)
+
+        cell.selectionStyle = .none
+        cell.saveButton.addTarget(self, action: #selector(checkMarkButtonClicked(sender:)), for: .touchUpInside)
 
         return cell
+    }
+
+    @objc func checkMarkButtonClicked (sender : UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+        }
+        else {
+            sender.isSelected = true
+        }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-
 }
 
+extension HomePageViewController: PilotsTableViewCellDelegate {
+    func didTappedSave(rowIndex: Int, isSaved: Bool) {
+        let pilotName = pilotsList?[rowIndex].name ?? ""
+        var savedPilot = UserDefaults.standard.object(forKey: "savedPilots") as? [String: Bool] ?? [:]
+        savedPilot[pilotName] = isSaved
+        UserDefaults.standard.set(savedPilot, forKey: "savedPilots")
+    }
+}
