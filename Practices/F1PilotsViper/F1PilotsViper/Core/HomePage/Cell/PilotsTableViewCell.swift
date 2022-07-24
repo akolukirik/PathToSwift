@@ -9,6 +9,7 @@ import UIKit
 
 protocol PilotsTableViewCellDelegate {
     func didTappedSave(rowIndex: Int, isSaved: Bool)
+    func didTappedPilot(rowIndex: Int)
 }
 
 class PilotsTableViewCell: UITableViewCell {
@@ -16,6 +17,7 @@ class PilotsTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var pointLabel: UILabel!
     @IBOutlet var saveButton: UIButton!
+    @IBOutlet var containerView: UIView!
 
     private var cellIndex: Int = 0
     private var delegate: PilotsTableViewCellDelegate?
@@ -32,6 +34,11 @@ class PilotsTableViewCell: UITableViewCell {
         self.isSaved = isSaved
 
         setSaveButtonColor(isSaved: isSaved)
+        containerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(containerViewTapped)))
+    }
+
+    @objc func containerViewTapped() {
+        delegate?.didTappedPilot(rowIndex: cellIndex)
     }
 
     @IBAction func saveButtonTapped() {
@@ -44,7 +51,6 @@ class PilotsTableViewCell: UITableViewCell {
     func setSaveButtonColor(isSaved: Bool) {
         if isSaved == true {
             saveButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-
         } else {
             saveButton.setImage(UIImage(systemName: "heart"), for: .normal)
         }
@@ -52,11 +58,9 @@ class PilotsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 }

@@ -55,10 +55,10 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
 
 
         cell.cellConfigure(name: model.name,
-                       point: model.point,
-                       index: indexPath.row,
-                       isSaved: isSaved,
-                       delegate: self)
+                           point: model.point,
+                           index: indexPath.row,
+                           isSaved: isSaved,
+                           delegate: self)
 
         cell.selectionStyle = .none
         cell.saveButton.addTarget(self, action: #selector(checkMarkButtonClicked(sender:)), for: .touchUpInside)
@@ -87,4 +87,10 @@ extension HomePageViewController: PilotsTableViewCellDelegate {
         savedPilot[pilotName] = isSaved
         UserDefaults.standard.set(savedPilot, forKey: "savedPilots")
     }
+
+    func didTappedPilot(rowIndex: Int) {
+        let pilotCode = pilotsList?[rowIndex].id ?? 0
+        //self.getPilotDetail(pilotID: pilotCode )
+    }
+
 }

@@ -20,6 +20,12 @@
 		419A6DDA288B11390013840D /* PilotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A6DD8288B11390013840D /* PilotsTableViewCell.swift */; };
 		419A6DDB288B11390013840D /* PilotsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 419A6DD9288B11390013840D /* PilotsTableViewCell.xib */; };
 		419FE43A288B19F0004B5257 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 419FE439288B19F0004B5257 /* Alamofire */; };
+		41A7B5FA288C2620001A248A /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7B5F8288C2620001A248A /* DetailPageViewController.swift */; };
+		41A7B5FB288C2620001A248A /* DetailPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A7B5F9288C2620001A248A /* DetailPageViewController.xib */; };
+		41C23DDF288DE5EC004E02AF /* DetailPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C23DDE288DE5EC004E02AF /* DetailPageInteractor.swift */; };
+		41C23DE1288DE5F8004E02AF /* DetailPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C23DE0288DE5F8004E02AF /* DetailPagePresenter.swift */; };
+		41C23DE5288DE61A004E02AF /* DetailPageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C23DE4288DE61A004E02AF /* DetailPageEntity.swift */; };
+		41C23DE7288DE625004E02AF /* DetailPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C23DE6288DE625004E02AF /* DetailPageRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +43,12 @@
 		419A6DD6288B11140013840D /* HomePageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageEntity.swift; sourceTree = "<group>"; };
 		419A6DD8288B11390013840D /* PilotsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilotsTableViewCell.swift; sourceTree = "<group>"; };
 		419A6DD9288B11390013840D /* PilotsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PilotsTableViewCell.xib; sourceTree = "<group>"; };
+		41A7B5F8288C2620001A248A /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		41A7B5F9288C2620001A248A /* DetailPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPageViewController.xib; sourceTree = "<group>"; };
+		41C23DDE288DE5EC004E02AF /* DetailPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageInteractor.swift; sourceTree = "<group>"; };
+		41C23DE0288DE5F8004E02AF /* DetailPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPagePresenter.swift; sourceTree = "<group>"; };
+		41C23DE4288DE61A004E02AF /* DetailPageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageEntity.swift; sourceTree = "<group>"; };
+		41C23DE6288DE625004E02AF /* DetailPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +126,12 @@
 		419A6DC3288B0D910013840D /* DetailPage */ = {
 			isa = PBXGroup;
 			children = (
+				41A7B5F9288C2620001A248A /* DetailPageViewController.xib */,
+				41A7B5F8288C2620001A248A /* DetailPageViewController.swift */,
+				41C23DDE288DE5EC004E02AF /* DetailPageInteractor.swift */,
+				41C23DE0288DE5F8004E02AF /* DetailPagePresenter.swift */,
+				41C23DE4288DE61A004E02AF /* DetailPageEntity.swift */,
+				41C23DE6288DE625004E02AF /* DetailPageRouter.swift */,
 			);
 			path = DetailPage;
 			sourceTree = "<group>";
@@ -195,6 +213,7 @@
 				419A6DD5288B10DF0013840D /* HomePageViewController.xib in Resources */,
 				419A6DDB288B11390013840D /* PilotsTableViewCell.xib in Resources */,
 				419A6DB6288B0CAF0013840D /* Assets.xcassets in Resources */,
+				41A7B5FB288C2620001A248A /* DetailPageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,13 +224,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C23DDF288DE5EC004E02AF /* DetailPageInteractor.swift in Sources */,
+				41C23DE7288DE625004E02AF /* DetailPageRouter.swift in Sources */,
 				419A6DCD288B106D0013840D /* HomePagePresenter.swift in Sources */,
 				419A6DAD288B0CA90013840D /* AppDelegate.swift in Sources */,
 				419A6DDA288B11390013840D /* PilotsTableViewCell.swift in Sources */,
 				419A6DD7288B11140013840D /* HomePageEntity.swift in Sources */,
 				419A6DD4288B10DF0013840D /* HomePageViewController.swift in Sources */,
 				419A6DCE288B106D0013840D /* HomePageRouter.swift in Sources */,
+				41C23DE1288DE5F8004E02AF /* DetailPagePresenter.swift in Sources */,
+				41A7B5FA288C2620001A248A /* DetailPageViewController.swift in Sources */,
 				419A6DAF288B0CA90013840D /* SceneDelegate.swift in Sources */,
+				41C23DE5288DE61A004E02AF /* DetailPageEntity.swift in Sources */,
 				419A6DD0288B106D0013840D /* HomePageInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
