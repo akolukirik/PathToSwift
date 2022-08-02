@@ -10,19 +10,22 @@ import Foundation
 import Alamofire
 
 protocol AnyInteractor {
-    var presenter: AnyPresenter? { get set }
     func downloadPilotsRequest()
 }
 
+protocol IPilotsInteractorToPresenter: AnyObject {
+    func interactorDidDownloadPilots(result: Result<PilotModel, Error>)
+}
+
 class PilotsInteractor: AnyInteractor {
-    var presenter: AnyPresenter?
+    weak var output: IPilotsInteractorToPresenter?
 
     func downloadPilotsRequest() {
         let url = "https://my-json-server.typicode.com/akolukirik/demo2/drivers"
 
         AF.request(url, method: .get).responseDecodable(of: PilotModel.self) { [weak self] response in
             if let model = response.value {
-                self?.presenter?.interactorDidDownloadPilots(result: .success(model.items ?? []))
+                self?.output?.interactorDidDownloadPilots(result: .success(model))
             }
         }
     }

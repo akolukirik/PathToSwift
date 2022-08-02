@@ -9,9 +9,11 @@ import UIKit
 
 protocol IDetailView {
     var detailPresenter: IDetailPresenter? { get set }
-    //func update(with pilots: [PilotResult])
+    func detailUpdate(with pilotsDetail: [PilotDetail])
 }
 class DetailPageViewController: UIViewController, IDetailView {
+
+
 
     var detailPresenter: IDetailPresenter?
 
@@ -25,6 +27,10 @@ class DetailPageViewController: UIViewController, IDetailView {
 
     @objc func goBack() {
         self.dismiss(animated: true, completion: nil)
+    }
+
+    func detailUpdate(with pilotsDetail: [PilotDetail]) {
+        print(pilotsDetail.count ?? 0)
     }
 
 }

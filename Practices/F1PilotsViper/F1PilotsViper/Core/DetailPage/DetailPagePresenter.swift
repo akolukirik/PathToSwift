@@ -17,12 +17,21 @@ protocol IDetailPresenter {
 
 class PilotsDetailPresenter: IDetailPresenter {
 
-    var detailInteractor: IDetailInteractor?
+    var detailInteractor: IDetailInteractor? {
+        didSet {
+            detailInteractor?.downloadPilotsDetailRequest(pilotID: 1)
+        }
+    }
     var detailView: IDetailView?
     var detailRouter: IDetailRouter?
 
     func interactorDidDownloadPilotsDetail(result: Result<[PilotDetail], Error>) {
-        print("test")
+        switch result {
+        case .success(let pilots):
+            detailView?.detailUpdate(with: pilots)
+        case .failure(let error):
+            print("\(error)")
+        }
     }
 
 }

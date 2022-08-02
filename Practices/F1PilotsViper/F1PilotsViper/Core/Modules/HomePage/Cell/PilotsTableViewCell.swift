@@ -5,6 +5,11 @@
 //  Created by ali on 22.07.2022.
 //
 
+
+/// Cell'e özel olacak şekilde presenter yap.
+/// Fonksiyonlar buradan tetiklenecek.
+/// 
+
 import UIKit
 
 protocol PilotsTableViewCellDelegate {

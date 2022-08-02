@@ -7,21 +7,20 @@
 
 import UIKit
 
-protocol AnyView {
-    var presenter: AnyPresenter? { get set }
-    func update(with pilots: [PilotResult])
+protocol AnyView: AnyObject {
+    func update()
 }
 
 class HomePageViewController: UIViewController, AnyView {
 
-    var presenter: AnyPresenter?
-
-    var pilotsList: [PilotResult]?
+    var presenter: IPilotsPresenter!
 
     @IBOutlet var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewDidLoad()
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "PilotsTableViewCell",
@@ -29,9 +28,8 @@ class HomePageViewController: UIViewController, AnyView {
                            forCellReuseIdentifier: "PilotsTableViewCell")
     }
 
-    func update(with pilots: [PilotResult]) {
+    func update() {
         DispatchQueue.main.async {
-            self.pilotsList = pilots
             self.tableView.reloadData()
         }
     }
@@ -40,16 +38,16 @@ class HomePageViewController: UIViewController, AnyView {
 extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pilotsList?.count ?? 2
+        return presenter.itemsCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier:"PilotsTableViewCell") as? PilotsTableViewCell else { return UITableViewCell() }
 
-        guard let model = pilotsList?[indexPath.row] else { return UITableViewCell() }
+        let model = presenter.getItem(index: indexPath.row)
 
-        let pilotName = pilotsList?[indexPath.row].name ?? ""
+        let pilotName = model.name ?? ""
         let savedPilot = UserDefaults.standard.object(forKey: "savedPilots") as? [String: Bool] ?? [:]
         let isSaved = savedPilot[pilotName] ?? false
 
@@ -82,15 +80,14 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomePageViewController: PilotsTableViewCellDelegate {
     func didTappedSave(rowIndex: Int, isSaved: Bool) {
-        let pilotName = pilotsList?[rowIndex].name ?? ""
-        var savedPilot = UserDefaults.standard.object(forKey: "savedPilots") as? [String: Bool] ?? [:]
-        savedPilot[pilotName] = isSaved
-        UserDefaults.standard.set(savedPilot, forKey: "savedPilots")
+//        let pilotName = pilotsList?[rowIndex].name ?? ""
+//        var savedPilot = UserDefaults.standard.object(forKey: "savedPilots") as? [String: Bool] ?? [:]
+//        savedPilot[pilotName] = isSaved
+//        UserDefaults.standard.set(savedPilot, forKey: "savedPilots")
     }
 
     func didTappedPilot(rowIndex: Int) {
-        let pilotCode = pilotsList?[rowIndex].id ?? 0
-        //self.getPilotDetail(pilotID: pilotCode )
+        presenter.didTappedPilot(index: rowIndex)
     }
-
 }
+    
