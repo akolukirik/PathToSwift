@@ -47,12 +47,12 @@ Kendimi iş hayatına hazırlamak adına daha önce almış olduğum eğitim ile
 - [x] Week 11
    - [x] Lesson 1
    - [x] Lesson 2
-- [ ] Week 12
-   - [ ] Lesson 1
-   - [ ] Lesson 2
-- [ ] Week 13
-   - [ ] Lesson 1
-   - [ ] Lesson 2
+- [x] Week 12
+   - [x] Lesson 1
+   - [x] Lesson 2
+- [x] Week 13
+   - [x] Lesson 1
+   - [x] Lesson 2
  
 ## Hacking With Swift
 
