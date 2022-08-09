@@ -13,6 +13,7 @@
 		4151305F289948950070EA83 /* DetailPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151305A289948950070EA83 /* DetailPageRouter.swift */; };
 		41513060289948950070EA83 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151305B289948950070EA83 /* DetailPageViewController.swift */; };
 		41513061289948950070EA83 /* DetailPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151305C289948950070EA83 /* DetailPageInteractor.swift */; };
+		41580D3C289EF8D30004FF3A /* DetailPageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41580D3B289EF8D30004FF3A /* DetailPageEntity.swift */; };
 		415A670028994A9F00431EC0 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A66FF28994A9F00431EC0 /* UIStoryboard.swift */; };
 		415A670228994AB500431EC0 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A670128994AB500431EC0 /* StoryboardLoadable.swift */; };
 		415A670828994AE900431EC0 /* AlertRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415A670628994AE900431EC0 /* AlertRoutable.swift */; };
@@ -39,6 +40,7 @@
 		4151305A289948950070EA83 /* DetailPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageRouter.swift; sourceTree = "<group>"; };
 		4151305B289948950070EA83 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		4151305C289948950070EA83 /* DetailPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageInteractor.swift; sourceTree = "<group>"; };
+		41580D3B289EF8D30004FF3A /* DetailPageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageEntity.swift; sourceTree = "<group>"; };
 		415A66FF28994A9F00431EC0 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		415A670128994AB500431EC0 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
 		415A670628994AE900431EC0 /* AlertRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertRoutable.swift; sourceTree = "<group>"; };
@@ -84,10 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				41513058289948950070EA83 /* DetailPage.storyboard */,
-				41513059289948950070EA83 /* DetailPagePresenter.swift */,
-				4151305A289948950070EA83 /* DetailPageRouter.swift */,
 				4151305B289948950070EA83 /* DetailPageViewController.swift */,
 				4151305C289948950070EA83 /* DetailPageInteractor.swift */,
+				41513059289948950070EA83 /* DetailPagePresenter.swift */,
+				41580D3B289EF8D30004FF3A /* DetailPageEntity.swift */,
+				4151305A289948950070EA83 /* DetailPageRouter.swift */,
 			);
 			path = "Detail Page";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4151305E289948950070EA83 /* DetailPagePresenter.swift in Sources */,
+				41580D3C289EF8D30004FF3A /* DetailPageEntity.swift in Sources */,
 				415A670928994AE900431EC0 /* Presentable.swift in Sources */,
 				419A6DCD288B106D0013840D /* HomePagePresenter.swift in Sources */,
 				415A670228994AB500431EC0 /* StoryboardLoadable.swift in Sources */,
