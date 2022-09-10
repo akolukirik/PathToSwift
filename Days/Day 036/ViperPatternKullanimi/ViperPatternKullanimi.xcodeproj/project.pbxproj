@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		413E247428CCCBB0004B73A7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E247328CCCBB0004B73A7 /* Router.swift */; };
+		413E247628CCCE51004B73A7 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E247528CCCE51004B73A7 /* Interactor.swift */; };
+		413E247828CCCE65004B73A7 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E247728CCCE65004B73A7 /* Presenter.swift */; };
 		41DA653F28BCE4920097057D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA653E28BCE4920097057D /* AppDelegate.swift */; };
 		41DA654128BCE4920097057D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA654028BCE4920097057D /* SceneDelegate.swift */; };
 		41DA654328BCE4920097057D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DA654228BCE4920097057D /* ViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		413E247328CCCBB0004B73A7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		413E247528CCCE51004B73A7 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		413E247728CCCE65004B73A7 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		41DA653B28BCE4920097057D /* ViperPatternKullanimi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperPatternKullanimi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DA653E28BCE4920097057D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41DA654028BCE4920097057D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 		41DA655528BCF59B0097057D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				413E247728CCCE65004B73A7 /* Presenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -107,6 +114,7 @@
 		41DA655628BCF5A00097057D /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				413E247528CCCE51004B73A7 /* Interactor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 		41DA655728BCF5AB0097057D /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				413E247328CCCBB0004B73A7 /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -189,8 +198,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413E247628CCCE51004B73A7 /* Interactor.swift in Sources */,
+				413E247828CCCE65004B73A7 /* Presenter.swift in Sources */,
 				41DA654328BCE4920097057D /* ViewController.swift in Sources */,
 				41DA653F28BCE4920097057D /* AppDelegate.swift in Sources */,
+				413E247428CCCBB0004B73A7 /* Router.swift in Sources */,
 				41DA654128BCE4920097057D /* SceneDelegate.swift in Sources */,
 				41DA655928BCF5F00097057D /* Protocols.swift in Sources */,
 			);
