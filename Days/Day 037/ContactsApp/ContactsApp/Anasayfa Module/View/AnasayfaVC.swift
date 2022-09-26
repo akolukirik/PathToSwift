@@ -14,6 +14,8 @@ class AnasayfaVC: UIViewController {
 
     var kisilerListe = [Kisiler]()
 
+    var anasayfaPresenterNesnesi : ViewToPresenterAnasayfaProtocol?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,14 +23,12 @@ class AnasayfaVC: UIViewController {
         kisilerTableView.delegate = self
         kisilerTableView.dataSource = self
 
-        let k1 = Kisiler(kisi_id: 1, kisi_ad: "Ahmet", kisi_tel: "123123123")
-        let k2 = Kisiler(kisi_id: 1, kisi_ad: "qweqwe", kisi_tel: "56435")
-        let k3 = Kisiler(kisi_id: 1, kisi_ad: "asdasd", kisi_tel: "3333")
+        AnasayfaRouter.createModule(ref: self)
 
-        kisilerListe.append(k1)
-        kisilerListe.append(k2)
-        kisilerListe.append(k3)
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        anasayfaPresenterNesnesi?.kisileriYukle()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,10 +41,18 @@ class AnasayfaVC: UIViewController {
 
 }
 
+extension AnasayfaVC: PresenterToViewAnsayfaProtocol {
+    func vieweVeriGonder(kisilerListesi: Array<Kisiler>) {
+        self.kisilerListe = kisilerListesi
+        self.kisilerTableView.reloadData()
+    }
+}
+
+
 extension AnasayfaVC: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Arama Sonucu: \(searchText)")
+        anasayfaPresenterNesnesi?.ara(aramaKelimesi: searchText)
     }
 
 }
@@ -82,8 +90,8 @@ extension AnasayfaVC: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(iptalAction)
 
             let evetAction = UIAlertAction(title: "Evet", style: .destructive) { action in
-                print("\(kisi.kisi_ad!) silindi")
-                self.kisilerListe.remove(at: indexPath.row)
+                self.anasayfaPresenterNesnesi?.sil(kisi_id: indexPath.row)
+               // self.kisilerListe.remove(at: indexPath.row)
                 tableView.reloadData()
 
             }
