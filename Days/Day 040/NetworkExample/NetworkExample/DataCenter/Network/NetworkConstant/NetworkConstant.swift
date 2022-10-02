@@ -18,6 +18,11 @@ extension Constant {
             static func fetchCharacter() -> String {
                 "\(BASE_URL.rawValue)"
             }
+
+            static func fetchCharacterDetail(characterID: Int) -> String {
+                "\(BASE_URL.rawValue)/\(characterID)"
+            }
+
         }
     }
 }

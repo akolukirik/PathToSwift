@@ -12,6 +12,7 @@
 		419C899628E8DD8300241139 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C899528E8DD8300241139 /* NetworkConstant.swift */; };
 		419C899928E8DE7C00241139 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C899828E8DE7C00241139 /* Service.swift */; };
 		419C899B28E8DE8700241139 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419C899A28E8DE8700241139 /* ServiceManager.swift */; };
+		41C5DE9D28E9ADF90016162E /* CharacterDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C5DE9C28E9ADF90016162E /* CharacterDetailModel.swift */; };
 		41C6CC8F28E88F0F005EB8F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6CC8E28E88F0F005EB8F9 /* AppDelegate.swift */; };
 		41C6CC9128E88F0F005EB8F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6CC9028E88F0F005EB8F9 /* SceneDelegate.swift */; };
 		41C6CC9328E88F0F005EB8F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C6CC9228E88F0F005EB8F9 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		419C899528E8DD8300241139 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		419C899828E8DE7C00241139 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		419C899A28E8DE8700241139 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		41C5DE9C28E9ADF90016162E /* CharacterDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailModel.swift; sourceTree = "<group>"; };
 		41C6CC8B28E88F0F005EB8F9 /* NetworkExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41C6CC8E28E88F0F005EB8F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41C6CC9028E88F0F005EB8F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				41C6CCB628E89163005EB8F9 /* CharacterListModel.swift */,
+				41C5DE9C28E9ADF90016162E /* CharacterDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				41C6CCB428E8908B005EB8F9 /* NSObject+Ext.swift in Sources */,
 				41C6CC8F28E88F0F005EB8F9 /* AppDelegate.swift in Sources */,
 				419C899628E8DD8300241139 /* NetworkConstant.swift in Sources */,
+				41C5DE9D28E9ADF90016162E /* CharacterDetailModel.swift in Sources */,
 				419C899928E8DE7C00241139 /* Service.swift in Sources */,
 				41C6CCB728E89163005EB8F9 /* CharacterListModel.swift in Sources */,
 				41C6CCB128E88FEA005EB8F9 /* DetailTableViewCell.swift in Sources */,
