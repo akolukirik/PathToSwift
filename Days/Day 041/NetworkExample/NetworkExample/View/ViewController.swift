@@ -22,8 +22,6 @@ class ViewController: UIViewController {
                                  bundle: nil),
                            forCellReuseIdentifier: DetailTableViewCell.nameOfClass)
         fecthAllCharacters()
-       // fetchCharacterDetails(testID: "2")
-        deneme(testID: 1)
     }
 
     private let characterListService : ServiceProtocol = Service()
@@ -37,23 +35,13 @@ class ViewController: UIViewController {
         }
     }
 
-  /*  func fetchCharacterDetails(testID: String) {
-        characterListService.getCharacterDetail(characterID: testID, onSuccess: { (models) in
-            print(models?.name ?? "Olmadıııı kiii")
-           // print(models?.species ?? "Ağlaa")
-        }, onError: { (data) in
-            print(data)
-        })
-    }*/
-
-    func deneme(testID: Int) {
+    func fetchCharacterDetails(testID: Int) {
         characterListService.getCharacterDetail(characterID: testID) { (model) in
             print(model?.name ?? "ağla")
         } onError: { (error) in
             print(error)
             print("ağla")
         }
-
     }
 
 }
@@ -72,6 +60,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(name: model.name ?? "")
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        fetchCharacterDetails(testID: indexPath.row+1)
     }
 
 }

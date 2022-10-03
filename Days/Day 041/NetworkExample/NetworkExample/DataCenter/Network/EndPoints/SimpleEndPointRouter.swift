@@ -28,13 +28,15 @@ extension SimpleEndPointRouter {
 enum SimpleEndPointRouter: BaseEndPointRouter {
     case characters
     case characterDetail(id: Int)
-    case filterCharacter(name: String,status: CharacterStatus)
+    case filterCharacter(name: String, status: CharacterStatus)
     case test
 
     // MARK: - HTTPMethod
     var method: HTTPMethod {
         switch self {
         case .characters:
+            return .get
+        case .characterDetail:
             return .get
         default:
             return .post
