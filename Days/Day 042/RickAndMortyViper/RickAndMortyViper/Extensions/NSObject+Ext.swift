@@ -2,7 +2,7 @@
 //  NSObject+Ext.swift
 //  RickAndMortyViper
 //
-//  Created by İsmail Kılıç on 28.09.2022.
+//  Created by Ali Kolukirik on 5.10.2022.
 //
 
 import Foundation

@@ -2,7 +2,7 @@
 //  StoryboardLoadable.swift
 //  RickAndMortyViper
 //
-//  Created by İsmail Kılıç on 28.09.2022.
+//  Created by Ali Kolukirik on 5.10.2022.
 //
 
 import Foundation
@@ -19,7 +19,7 @@ extension StoryboardLoadable where Self: UIViewController {
     }
 
     static func storyboardIdentifier() -> String {
-        return String(describing: Self.self).replacingOccurrences(of: "ViewController", with: "")
+        return String(describing: Self.self)//.replacingOccurrences(of: "ViewController", with: "")
     }
 }
 
@@ -29,6 +29,6 @@ extension StoryboardLoadable where Self: UITableViewController {
     }
 
     static func storyboardIdentifier() -> String {
-        return String(describing: Self.self).replacingOccurrences(of: "TableViewController", with: "")
+        return String(describing: Self.self)//.replacingOccurrences(of: "TableViewController", with: "")
     }
 }

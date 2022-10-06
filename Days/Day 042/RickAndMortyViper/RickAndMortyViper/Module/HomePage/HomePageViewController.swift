@@ -20,6 +20,7 @@ class HomePageViewController: UIViewController, StoryboardLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: DetailsTableViewCell.nameOfClass,
@@ -51,8 +52,27 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(nameLabel: model.name ?? "",
                        statusLabel: model.status?.rawValue ?? "",
                        speciesLabel: model.species?.rawValue ?? "",
-                       photosImageView: model.image ?? "")
+                       photosImageView: model.image ?? "",
+                       index: indexPath.row,
+                       delegate: self)
 
         return cell
     }
+
 }
+
+extension HomePageViewController: CharacterTableViewCellDelegate {
+    func didTappedCharacter(rowIndex: Int) {
+        presenter.didTappedCharacter(characterID: rowIndex)
+        print(rowIndex)
+    }
+
+}
+
+/*/
+
+ cell tapped'ı cell'in presenter ına gidicek, delegeta ile homepagepresenter a gidecek
+
+ didTappedCharacter(characterID -> index ile değiştir
+
+ */

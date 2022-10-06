@@ -23,12 +23,6 @@ class HomepageInteractor: IHomePageInteractorProtocol {
     private let characterListService : ServiceProtocol = Service()
 
     func fecthAllCharacters() {
-        /*      characterListService.fetchAllPosts { [weak self] (models) in
-         self?.output?.sendDataToPresenter(dataList: models.self)
-         } onFail: { (data) in
-         print(data ?? "")
-         }
-         */
         characterListService.fetchCharacters { (models) in
             self.output?.sendDataToPresenter(dataList: models)
         } onError: { (data) in

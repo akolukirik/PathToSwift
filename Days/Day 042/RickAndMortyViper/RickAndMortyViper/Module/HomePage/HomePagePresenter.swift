@@ -12,11 +12,13 @@ protocol ViewToPresenterHomepageProtocol {
 
     func viewDidLoad()
     func getCharacter(index: Int) -> Character?
+    func didTappedCharacter(characterID: Int)
 }
 
 class HomepagePresenter : ViewToPresenterHomepageProtocol {
+
     var interactor: IHomePageInteractorProtocol?
-    weak var router: HomePageRouterProtocol?
+    var router: HomePageRouterProtocol?
     var view: PresenterToViewHomepageProtocol?
 
     private var characterList: [Character]?
@@ -27,11 +29,16 @@ class HomepagePresenter : ViewToPresenterHomepageProtocol {
 
     func viewDidLoad() {
         interactor?.fecthAllCharacters()
-        router?.navigateToCharacterDetailPage()
     }
 
     func getCharacter(index: Int) -> Character? {
         characterList?[index]
+    }
+
+    func didTappedCharacter(characterID: Int) {
+        guard let title = getCharacter(index: characterID)?.name else { return }
+        print(title)
+        router?.navigateToCharacterDetailPage(title: title)
     }
 }
 
