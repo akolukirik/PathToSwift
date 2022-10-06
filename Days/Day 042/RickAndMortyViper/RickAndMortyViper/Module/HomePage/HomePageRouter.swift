@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomePageRouterProtocol: AnyObject {
-    func navigateToCharacterDetailPage(title: String)
+    func navigateToCharacterDetailPage(title: Int)
 }
 
 class HomepageRouter {
@@ -38,7 +38,7 @@ class HomepageRouter {
 }
 
 extension HomepageRouter: HomePageRouterProtocol {
-    func navigateToCharacterDetailPage(title: String) {
+    func navigateToCharacterDetailPage(title: Int) {
         let detailPage = CharacterDetailPageRouter.setupModule(title: title)
        // viewController?.present(detailPage, animated: true)
        viewController?.navigationController?.pushViewController(detailPage, animated: true)

@@ -36,7 +36,7 @@ class HomepagePresenter : ViewToPresenterHomepageProtocol {
     }
 
     func didTappedCharacter(characterID: Int) {
-        guard let title = getCharacter(index: characterID)?.name else { return }
+        guard let title = getCharacter(index: characterID)?.id else { return }
         print(title)
         router?.navigateToCharacterDetailPage(title: title)
     }

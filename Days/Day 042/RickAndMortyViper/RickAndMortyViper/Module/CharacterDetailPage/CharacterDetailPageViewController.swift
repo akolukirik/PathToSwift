@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ICharacterDetailPageViewController: IBaseView {
-    func setTitleLabelText(_ text: String)
+    func setTitleLabelText(_ text: Int)
 }
 
 class CharacterDetailPageViewController: BaseViewController, StoryboardLoadable {
@@ -30,7 +30,7 @@ class CharacterDetailPageViewController: BaseViewController, StoryboardLoadable 
 }
 
 extension CharacterDetailPageViewController: ICharacterDetailPageViewController {
-    func setTitleLabelText(_ text: String) {
-        titleLabel.text = text
+    func setTitleLabelText(_ text: Int) {
+        titleLabel.text = String(text)
     }
 }

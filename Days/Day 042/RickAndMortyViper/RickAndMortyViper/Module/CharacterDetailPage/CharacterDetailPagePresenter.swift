@@ -18,9 +18,9 @@ class CharacterDetailPagePresenter {
     var router: ICharacterDetailPageRouter?
     var interactor: ICharacterDetailPageInteractor?
 
-    let title: String
+    let title: Int
 
-    init(title: String) {
+    init(title: Int) {
         self.title = title
     }
 }

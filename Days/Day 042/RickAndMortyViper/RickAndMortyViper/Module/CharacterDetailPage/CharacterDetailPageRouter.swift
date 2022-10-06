@@ -21,7 +21,7 @@ class CharacterDetailPageRouter {
 
     // MARK: Static methods
 
-    static func setupModule(title: String) -> CharacterDetailPageViewController {
+    static func setupModule(title: Int) -> CharacterDetailPageViewController {
         let viewController = UIStoryboard.loadViewController() as CharacterDetailPageViewController
         let presenter = CharacterDetailPagePresenter(title: title)
         let router = CharacterDetailPageRouter()

@@ -307,8 +307,8 @@
 				41DB5B8A28EE258600FFA987 /* CharacterDetailPageViewController.swift */,
 				41DB5B8B28EE258600FFA987 /* CharacterDetailPageInteractor.swift */,
 				41DB5B8828EE258600FFA987 /* CharacterDetailPagePresenter.swift */,
-				41DB5B8928EE258600FFA987 /* CharacterDetailPageRouter.swift */,
 				41DB5B9128EE268F00FFA987 /* CharacterDetailPageEntity.swift */,
+				41DB5B8928EE258600FFA987 /* CharacterDetailPageRouter.swift */,
 			);
 			path = CharacterDetailPage;
 			sourceTree = "<group>";

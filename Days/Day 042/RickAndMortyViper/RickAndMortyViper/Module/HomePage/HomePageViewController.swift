@@ -64,7 +64,6 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
 extension HomePageViewController: CharacterTableViewCellDelegate {
     func didTappedCharacter(rowIndex: Int) {
         presenter.didTappedCharacter(characterID: rowIndex)
-        print(rowIndex)
     }
 
 }
