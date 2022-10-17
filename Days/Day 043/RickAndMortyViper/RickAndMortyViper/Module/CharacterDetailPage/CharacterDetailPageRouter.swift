@@ -10,22 +10,18 @@ import Foundation
 import UIKit
 
 protocol ICharacterDetailPageRouter: AnyObject {
-    // TODO: Declare wireframe methods
+
 }
 
 class CharacterDetailPageRouter {
 
-    // MARK: Properties
-
     weak var view: UIViewController?
 
-    // MARK: Static methods
-
-    static func setupModule(title: Int) -> CharacterDetailPageViewController {
+    static func setupModule(characterID: Int) -> CharacterDetailPageViewController {
         let viewController = UIStoryboard.loadViewController() as CharacterDetailPageViewController
         let presenter = CharacterDetailPagePresenter()
         let router = CharacterDetailPageRouter()
-        let interactor = CharacterDetailPageInteractor(title: title)
+        let interactor = CharacterDetailPageInteractor(characterID: characterID)
 
         viewController.presenter =  presenter
         viewController.modalPresentationStyle = .fullScreen
@@ -43,5 +39,5 @@ class CharacterDetailPageRouter {
 }
 
 extension CharacterDetailPageRouter: ICharacterDetailPageRouter {
-    // TODO: Implement wireframe methods
+
 }

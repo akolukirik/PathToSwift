@@ -55,7 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="i2Z-2f-Val"/>
                     <connections>
-                        <outlet property="testImageView" destination="2Pf-cn-ynD" id="EjQ-bj-WMx"/>
+                        <outlet property="characterImageView" destination="2Pf-cn-ynD" id="EjQ-bj-WMx"/>
                         <outlet property="titleLabel" destination="508-5s-Q5C" id="AEm-pX-h0I"/>
                     </connections>
                 </viewController>

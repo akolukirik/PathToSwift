@@ -18,7 +18,7 @@ class CharacterDetailPageViewController: BaseViewController, StoryboardLoadable 
     // MARK: Properties
 
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var testImageView: UIImageView!
+    @IBOutlet var characterImageView: UIImageView!
 
     var presenter: ICharacterDetailPagePresenter?
 
@@ -33,6 +33,6 @@ class CharacterDetailPageViewController: BaseViewController, StoryboardLoadable 
 extension CharacterDetailPageViewController: ICharacterDetailPageViewController {
     func setTitleLabelText(_ text: String, image: String) {
         titleLabel.text = String(text)
-        testImageView.setImage(imageURL: image)
+        characterImageView.setImage(imageURL: image)
     }
 }

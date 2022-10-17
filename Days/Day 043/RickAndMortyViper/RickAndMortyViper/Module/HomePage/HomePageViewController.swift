@@ -43,7 +43,7 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.characterListCount
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailsTableViewCell.nameOfClass) as? DetailsTableViewCell else { return UITableViewCell() }
 
@@ -63,15 +63,7 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomePageViewController: CharacterTableViewCellDelegate {
     func didTappedCharacter(rowIndex: Int) {
-        presenter.didTappedCharacter(characterID: rowIndex)
+        presenter.didTappedCharacter(index: rowIndex)
     }
 
 }
-
-/*/
-
- cell tapped'ı cell'in presenter ına gidicek, delegeta ile homepagepresenter a gidecek
-
- didTappedCharacter(characterID -> index ile değiştir
-
- */

@@ -12,7 +12,7 @@ protocol ViewToPresenterHomepageProtocol {
 
     func viewDidLoad()
     func getCharacter(index: Int) -> Character?
-    func didTappedCharacter(characterID: Int)
+    func didTappedCharacter(index: Int)
 }
 
 class HomepagePresenter : ViewToPresenterHomepageProtocol {
@@ -35,8 +35,8 @@ class HomepagePresenter : ViewToPresenterHomepageProtocol {
         characterList?[index]
     }
 
-    func didTappedCharacter(characterID: Int) {
-        guard let index = getCharacter(index: characterID)?.id else { return }
+    func didTappedCharacter(index: Int) {
+        guard let index = getCharacter(index: index)?.id else { return }
         router?.navigateToCharacterDetailPage(characterID: index)
     }
 }

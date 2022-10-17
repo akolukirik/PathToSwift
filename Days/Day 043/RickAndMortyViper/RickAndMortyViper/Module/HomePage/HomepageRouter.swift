@@ -39,7 +39,7 @@ class HomepageRouter {
 
 extension HomepageRouter: HomePageRouterProtocol {
     func navigateToCharacterDetailPage(characterID: Int) {
-        let detailPage = CharacterDetailPageRouter.setupModule(title: characterID)
+        let detailPage = CharacterDetailPageRouter.setupModule(characterID: characterID)
         // viewController?.present(detailPage, animated: true)
         viewController?.navigationController?.pushViewController(detailPage, animated: true)
     }

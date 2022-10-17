@@ -9,28 +9,28 @@
 import Foundation
 
 protocol ICharacterDetailPageInteractor: AnyObject {
-    func deneme()
+    func fecthCharacterDetail()
 }
 
 protocol ICharacterDetailPageInteractorToPresenter: AnyObject {
-    func allahIcinVeriyiGonder(data: CharacterDetailResponse?)
+    func sendDataToPresenter(data: CharacterDetailResponse?)
 }
 
 class CharacterDetailPageInteractor: ICharacterDetailPageInteractor {
 
     weak var output: ICharacterDetailPageInteractorToPresenter?
 
-    private let lutfenVeriAl : ServiceProtocol = Service()
+    private let characterDetailService : ServiceProtocol = Service()
 
-    let title: Int
+    let characterID: Int
 
-    init(title: Int) {
-        self.title = title
+    init(characterID: Int) {
+        self.characterID = characterID
     }
 
-    func deneme() {
-        lutfenVeriAl.getCharacterDetail(characterID: title) { (model) in
-            self.output?.allahIcinVeriyiGonder(data: model)
+    func fecthCharacterDetail() {
+        characterDetailService.getCharacterDetail(characterID: characterID) { (model) in
+            self.output?.sendDataToPresenter(data: model)
             print(model?.name ?? "ağla")
         } onError: { (error) in
             print(error)

@@ -21,12 +21,13 @@ class CharacterDetailPagePresenter {
 
 extension CharacterDetailPagePresenter: ICharacterDetailPagePresenter {
     func viewDidLoad() {
-        interactor?.deneme()
+        interactor?.fecthCharacterDetail()
     }
 }
 
 extension CharacterDetailPagePresenter: ICharacterDetailPageInteractorToPresenter {
-    func allahIcinVeriyiGonder(data: CharacterDetailResponse?) {
-        view?.setTitleLabelText(data?.name ?? "noluurrrrrrrrrrrrr", image: data?.image ?? "otur ağla")
+    func sendDataToPresenter(data: CharacterDetailResponse?) {
+        view?.setTitleLabelText(data?.name ?? "noluurrrrrrrrrrrrr",
+                                image: data?.image ?? "otur ağla")
     }
 }
