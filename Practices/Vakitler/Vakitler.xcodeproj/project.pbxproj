@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8C9551329BF3828000A632C /* VakitlerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9551229BF3828000A632C /* VakitlerApp.swift */; };
+		E8C9551529BF3828000A632C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9551429BF3828000A632C /* ContentView.swift */; };
+		E8C9551729BF3829000A632C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C9551629BF3829000A632C /* Assets.xcassets */; };
+		E8C9551A29BF382A000A632C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C9551929BF382A000A632C /* Preview Assets.xcassets */; };
+		E8C9552429BF382A000A632C /* VakitlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9552329BF382A000A632C /* VakitlerTests.swift */; };
+		E8C9552E29BF382A000A632C /* VakitlerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9552D29BF382A000A632C /* VakitlerUITests.swift */; };
+		E8C9553029BF382A000A632C /* VakitlerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9552F29BF382A000A632C /* VakitlerUITestsLaunchTests.swift */; };
+		E8C9553D29BF5031000A632C /* Color+Vakitler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9553C29BF5031000A632C /* Color+Vakitler.swift */; };
+		E8C9553F29BF5062000A632C /* PrayerTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9553E29BF5062000A632C /* PrayerTimes.swift */; };
+		E8C9554129BF540E000A632C /* Font+Vakitler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9554029BF540E000A632C /* Font+Vakitler.swift */; };
+		E8C9554329BF61BD000A632C /* PrayerListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9554229BF61BD000A632C /* PrayerListItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8C9552029BF382A000A632C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8C9550729BF3828000A632C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8C9550E29BF3828000A632C;
+			remoteInfo = Vakitler;
+		};
+		E8C9552A29BF382A000A632C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8C9550729BF3828000A632C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8C9550E29BF3828000A632C;
+			remoteInfo = Vakitler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E8C9550F29BF3828000A632C /* Vakitler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vakitler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8C9551229BF3828000A632C /* VakitlerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VakitlerApp.swift; sourceTree = "<group>"; };
+		E8C9551429BF3828000A632C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8C9551629BF3829000A632C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8C9551929BF382A000A632C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E8C9551F29BF382A000A632C /* VakitlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VakitlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8C9552329BF382A000A632C /* VakitlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VakitlerTests.swift; sourceTree = "<group>"; };
+		E8C9552929BF382A000A632C /* VakitlerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VakitlerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8C9552D29BF382A000A632C /* VakitlerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VakitlerUITests.swift; sourceTree = "<group>"; };
+		E8C9552F29BF382A000A632C /* VakitlerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VakitlerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E8C9553C29BF5031000A632C /* Color+Vakitler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Vakitler.swift"; sourceTree = "<group>"; };
+		E8C9553E29BF5062000A632C /* PrayerTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimes.swift; sourceTree = "<group>"; };
+		E8C9554029BF540E000A632C /* Font+Vakitler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Vakitler.swift"; sourceTree = "<group>"; };
+		E8C9554229BF61BD000A632C /* PrayerListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerListItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8C9550C29BF3828000A632C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C9551C29BF382A000A632C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C9552629BF382A000A632C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E8C9550629BF3828000A632C = {
+			isa = PBXGroup;
+			children = (
+				E8C9551129BF3828000A632C /* Vakitler */,
+				E8C9552229BF382A000A632C /* VakitlerTests */,
+				E8C9552C29BF382A000A632C /* VakitlerUITests */,
+				E8C9551029BF3828000A632C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E8C9551029BF3828000A632C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8C9550F29BF3828000A632C /* Vakitler.app */,
+				E8C9551F29BF382A000A632C /* VakitlerTests.xctest */,
+				E8C9552929BF382A000A632C /* VakitlerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8C9551129BF3828000A632C /* Vakitler */ = {
+			isa = PBXGroup;
+			children = (
+				E8C9551229BF3828000A632C /* VakitlerApp.swift */,
+				E8C9551429BF3828000A632C /* ContentView.swift */,
+				E8C9553C29BF5031000A632C /* Color+Vakitler.swift */,
+				E8C9554029BF540E000A632C /* Font+Vakitler.swift */,
+				E8C9554229BF61BD000A632C /* PrayerListItem.swift */,
+				E8C9553E29BF5062000A632C /* PrayerTimes.swift */,
+				E8C9551629BF3829000A632C /* Assets.xcassets */,
+				E8C9551829BF382A000A632C /* Preview Content */,
+			);
+			path = Vakitler;
+			sourceTree = "<group>";
+		};
+		E8C9551829BF382A000A632C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E8C9551929BF382A000A632C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E8C9552229BF382A000A632C /* VakitlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8C9552329BF382A000A632C /* VakitlerTests.swift */,
+			);
+			path = VakitlerTests;
+			sourceTree = "<group>";
+		};
+		E8C9552C29BF382A000A632C /* VakitlerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E8C9552D29BF382A000A632C /* VakitlerUITests.swift */,
+				E8C9552F29BF382A000A632C /* VakitlerUITestsLaunchTests.swift */,
+			);
+			path = VakitlerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E8C9550E29BF3828000A632C /* Vakitler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8C9553329BF382A000A632C /* Build configuration list for PBXNativeTarget "Vakitler" */;
+			buildPhases = (
+				E8C9550B29BF3828000A632C /* Sources */,
+				E8C9550C29BF3828000A632C /* Frameworks */,
+				E8C9550D29BF3828000A632C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vakitler;
+			productName = Vakitler;
+			productReference = E8C9550F29BF3828000A632C /* Vakitler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E8C9551E29BF382A000A632C /* VakitlerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8C9553629BF382A000A632C /* Build configuration list for PBXNativeTarget "VakitlerTests" */;
+			buildPhases = (
+				E8C9551B29BF382A000A632C /* Sources */,
+				E8C9551C29BF382A000A632C /* Frameworks */,
+				E8C9551D29BF382A000A632C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8C9552129BF382A000A632C /* PBXTargetDependency */,
+			);
+			name = VakitlerTests;
+			productName = VakitlerTests;
+			productReference = E8C9551F29BF382A000A632C /* VakitlerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E8C9552829BF382A000A632C /* VakitlerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8C9553929BF382A000A632C /* Build configuration list for PBXNativeTarget "VakitlerUITests" */;
+			buildPhases = (
+				E8C9552529BF382A000A632C /* Sources */,
+				E8C9552629BF382A000A632C /* Frameworks */,
+				E8C9552729BF382A000A632C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8C9552B29BF382A000A632C /* PBXTargetDependency */,
+			);
+			name = VakitlerUITests;
+			productName = VakitlerUITests;
+			productReference = E8C9552929BF382A000A632C /* VakitlerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8C9550729BF3828000A632C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					E8C9550E29BF3828000A632C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					E8C9551E29BF382A000A632C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E8C9550E29BF3828000A632C;
+					};
+					E8C9552829BF382A000A632C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = E8C9550E29BF3828000A632C;
+					};
+				};
+			};
+			buildConfigurationList = E8C9550A29BF3828000A632C /* Build configuration list for PBXProject "Vakitler" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E8C9550629BF3828000A632C;
+			productRefGroup = E8C9551029BF3828000A632C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8C9550E29BF3828000A632C /* Vakitler */,
+				E8C9551E29BF382A000A632C /* VakitlerTests */,
+				E8C9552829BF382A000A632C /* VakitlerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E8C9550D29BF3828000A632C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8C9551A29BF382A000A632C /* Preview Assets.xcassets in Resources */,
+				E8C9551729BF3829000A632C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C9551D29BF382A000A632C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C9552729BF382A000A632C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8C9550B29BF3828000A632C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8C9551529BF3828000A632C /* ContentView.swift in Sources */,
+				E8C9553F29BF5062000A632C /* PrayerTimes.swift in Sources */,
+				E8C9554129BF540E000A632C /* Font+Vakitler.swift in Sources */,
+				E8C9551329BF3828000A632C /* VakitlerApp.swift in Sources */,
+				E8C9553D29BF5031000A632C /* Color+Vakitler.swift in Sources */,
+				E8C9554329BF61BD000A632C /* PrayerListItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C9551B29BF382A000A632C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8C9552429BF382A000A632C /* VakitlerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C9552529BF382A000A632C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8C9553029BF382A000A632C /* VakitlerUITestsLaunchTests.swift in Sources */,
+				E8C9552E29BF382A000A632C /* VakitlerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8C9552129BF382A000A632C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8C9550E29BF3828000A632C /* Vakitler */;
+			targetProxy = E8C9552029BF382A000A632C /* PBXContainerItemProxy */;
+		};
+		E8C9552B29BF382A000A632C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8C9550E29BF3828000A632C /* Vakitler */;
+			targetProxy = E8C9552A29BF382A000A632C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E8C9553129BF382A000A632C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E8C9553229BF382A000A632C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8C9553429BF382A000A632C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Vakitler/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akolukirik.Vakitler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E8C9553529BF382A000A632C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Vakitler/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akolukirik.Vakitler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E8C9553729BF382A000A632C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akolukirik.VakitlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vakitler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vakitler";
+			};
+			name = Debug;
+		};
+		E8C9553829BF382A000A632C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akolukirik.VakitlerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vakitler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vakitler";
+			};
+			name = Release;
+		};
+		E8C9553A29BF382A000A632C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akolukirik.VakitlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vakitler;
+			};
+			name = Debug;
+		};
+		E8C9553B29BF382A000A632C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akolukirik.VakitlerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vakitler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E8C9550A29BF3828000A632C /* Build configuration list for PBXProject "Vakitler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8C9553129BF382A000A632C /* Debug */,
+				E8C9553229BF382A000A632C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8C9553329BF382A000A632C /* Build configuration list for PBXNativeTarget "Vakitler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8C9553429BF382A000A632C /* Debug */,
+				E8C9553529BF382A000A632C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8C9553629BF382A000A632C /* Build configuration list for PBXNativeTarget "VakitlerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8C9553729BF382A000A632C /* Debug */,
+				E8C9553829BF382A000A632C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8C9553929BF382A000A632C /* Build configuration list for PBXNativeTarget "VakitlerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8C9553A29BF382A000A632C /* Debug */,
+				E8C9553B29BF382A000A632C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8C9550729BF3828000A632C /* Project object */;
+}
