@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E87FE7CB29C1EEB300E1B9BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E87FE7CD29C1EEB300E1B9BB /* Localizable.strings */; };
 		E8C9551329BF3828000A632C /* VakitlerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9551229BF3828000A632C /* VakitlerApp.swift */; };
-		E8C9551529BF3828000A632C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9551429BF3828000A632C /* ContentView.swift */; };
+		E8C9551529BF3828000A632C /* PrayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9551429BF3828000A632C /* PrayerList.swift */; };
 		E8C9551729BF3829000A632C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C9551629BF3829000A632C /* Assets.xcassets */; };
 		E8C9551A29BF382A000A632C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C9551929BF382A000A632C /* Preview Assets.xcassets */; };
 		E8C9552429BF382A000A632C /* VakitlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C9552329BF382A000A632C /* VakitlerTests.swift */; };
@@ -38,9 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E87FE7CC29C1EEB300E1B9BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E87FE7CE29C1EEC600E1B9BB /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E8C9550F29BF3828000A632C /* Vakitler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vakitler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C9551229BF3828000A632C /* VakitlerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VakitlerApp.swift; sourceTree = "<group>"; };
-		E8C9551429BF3828000A632C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8C9551429BF3828000A632C /* PrayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerList.swift; sourceTree = "<group>"; };
 		E8C9551629BF3829000A632C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8C9551929BF382A000A632C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E8C9551F29BF382A000A632C /* VakitlerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VakitlerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +82,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E83E7EFA29C1F8C600B0B68D /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				E8C9553C29BF5031000A632C /* Color+Vakitler.swift */,
+				E8C9554029BF540E000A632C /* Font+Vakitler.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		E83E7EFB29C1F8DC00B0B68D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8C9553E29BF5062000A632C /* PrayerTimes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E83E7EFC29C1F8EE00B0B68D /* Prayer List */ = {
+			isa = PBXGroup;
+			children = (
+				E8C9551429BF3828000A632C /* PrayerList.swift */,
+				E8C9554229BF61BD000A632C /* PrayerListItem.swift */,
+			);
+			path = "Prayer List";
+			sourceTree = "<group>";
+		};
 		E8C9550629BF3828000A632C = {
 			isa = PBXGroup;
 			children = (
@@ -103,12 +132,11 @@
 			isa = PBXGroup;
 			children = (
 				E8C9551229BF3828000A632C /* VakitlerApp.swift */,
-				E8C9551429BF3828000A632C /* ContentView.swift */,
-				E8C9553C29BF5031000A632C /* Color+Vakitler.swift */,
-				E8C9554029BF540E000A632C /* Font+Vakitler.swift */,
-				E8C9554229BF61BD000A632C /* PrayerListItem.swift */,
-				E8C9553E29BF5062000A632C /* PrayerTimes.swift */,
+				E83E7EFC29C1F8EE00B0B68D /* Prayer List */,
+				E83E7EFA29C1F8C600B0B68D /* Styles */,
+				E83E7EFB29C1F8DC00B0B68D /* Models */,
 				E8C9551629BF3829000A632C /* Assets.xcassets */,
+				E87FE7CD29C1EEB300E1B9BB /* Localizable.strings */,
 				E8C9551829BF382A000A632C /* Preview Content */,
 			);
 			path = Vakitler;
@@ -225,6 +253,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = E8C9550629BF3828000A632C;
 			productRefGroup = E8C9551029BF3828000A632C /* Products */;
@@ -244,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8C9551A29BF382A000A632C /* Preview Assets.xcassets in Resources */,
+				E87FE7CB29C1EEB300E1B9BB /* Localizable.strings in Resources */,
 				E8C9551729BF3829000A632C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8C9551529BF3828000A632C /* ContentView.swift in Sources */,
+				E8C9551529BF3828000A632C /* PrayerList.swift in Sources */,
 				E8C9553F29BF5062000A632C /* PrayerTimes.swift in Sources */,
 				E8C9554129BF540E000A632C /* Font+Vakitler.swift in Sources */,
 				E8C9551329BF3828000A632C /* VakitlerApp.swift in Sources */,
@@ -309,6 +339,18 @@
 			targetProxy = E8C9552A29BF382A000A632C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E87FE7CD29C1EEB300E1B9BB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E87FE7CC29C1EEB300E1B9BB /* en */,
+				E87FE7CE29C1EEC600E1B9BB /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E8C9553129BF382A000A632C /* Debug */ = {

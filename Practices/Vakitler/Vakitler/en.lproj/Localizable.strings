@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Vakitler
+
+  Created by Ali Kolukirik on 15.03.2023.
+  
+*/
+
+"PRAYER_DISPLAY_FAJR" = "Fajr";
+
+"PRAYER_DISPLAY_SUN" = "Sun";
+
+"PRAYER_DISPLAY_DHUHR" = "Dhuhr";
+
+"PRAYER_DISPLAY_ASR" = "Asr";
+
+"PRAYER_DISPLAY_MAGRIB"= "Magrib";
+
+"PRAYER_DISPLAY_ISHA" = "Isha";

@@ -35,4 +35,22 @@ enum PrayerTimes: String {
     var icon: Image {
         return Image(rawValue)
     }
+
+    var displayTime: String {
+        switch self {
+
+        case .fajr:
+            return "06:01"
+        case .sun:
+            return "07:25"
+        case .dhuhr:
+            return "13:21"
+        case .asr:
+            return "16:32"
+        case .magrib:
+            return "19:07"
+        case .isha:
+            return "20:26"
+        }
+    }
 }

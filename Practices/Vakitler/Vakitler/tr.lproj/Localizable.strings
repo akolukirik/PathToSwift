@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Vakitler
+
+  Created by Ali Kolukirik on 15.03.2023.
+  
+*/
+
+"PRAYER_DISPLAY_FAJR" = "İmsak";
+
+"PRAYER_DISPLAY_SUN" = "Güneş";
+
+"PRAYER_DISPLAY_DHUHR" = "Öğlen";
+
+"PRAYER_DISPLAY_ASR" = "İkindi";
+
+"PRAYER_DISPLAY_MAGRIB"= "Akşam";
+
+"PRAYER_DISPLAY_ISHA" = "Yatsı";
