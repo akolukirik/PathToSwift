@@ -17,6 +17,8 @@
 		E830096229C9D3DC00680A32 /* NavigationUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E830096129C9D3DC00680A32 /* NavigationUserModel.swift */; };
 		E8856EAE29C35AF100E9295C /* ModelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8856EAD29C35AF100E9295C /* ModelListView.swift */; };
 		E8856EB029C35B1F00E9295C /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8856EAF29C35B1F00E9295C /* TweetModel.swift */; };
+		E887FAFF29CC8D7B0049F21F /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FAFE29CC8D7B0049F21F /* CustomTabView.swift */; };
+		E887FB0129CC96830049F21F /* CustomTabIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E887FB0029CC96830049F21F /* CustomTabIndex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		E830096129C9D3DC00680A32 /* NavigationUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUserModel.swift; sourceTree = "<group>"; };
 		E8856EAD29C35AF100E9295C /* ModelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelListView.swift; sourceTree = "<group>"; };
 		E8856EAF29C35B1F00E9295C /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
+		E887FAFE29CC8D7B0049F21F /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		E887FB0029CC96830049F21F /* CustomTabIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabIndex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		E8039085298FD6DA00EC17B1 /* SwiftUITutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E887FAFD29CC8D0E0049F21F /* CustomTabView */,
 				E830095E29C9D39B00680A32 /* Navigation */,
 				E8856EAC29C35AD800E9295C /* ModelList */,
 				E8039088298FD6DA00EC17B1 /* ContentView.swift */,
@@ -99,6 +104,15 @@
 				E830095C29C9CF6800680A32 /* TweetCards.swift */,
 			);
 			path = ModelList;
+			sourceTree = "<group>";
+		};
+		E887FAFD29CC8D0E0049F21F /* CustomTabView */ = {
+			isa = PBXGroup;
+			children = (
+				E887FAFE29CC8D7B0049F21F /* CustomTabView.swift */,
+				E887FB0029CC96830049F21F /* CustomTabIndex.swift */,
+			);
+			path = CustomTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +191,10 @@
 				E8856EAE29C35AF100E9295C /* ModelListView.swift in Sources */,
 				E82C8ABF29CC81900086CD42 /* UserViewDetail.swift in Sources */,
 				E830095D29C9CF6800680A32 /* TweetCards.swift in Sources */,
+				E887FAFF29CC8D7B0049F21F /* CustomTabView.swift in Sources */,
 				E8039087298FD6DA00EC17B1 /* SwiftUITutorialApp.swift in Sources */,
 				E830096229C9D3DC00680A32 /* NavigationUserModel.swift in Sources */,
+				E887FB0129CC96830049F21F /* CustomTabIndex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
